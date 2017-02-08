@@ -1,0 +1,278 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<diagram program="umlet" version="14.2">
+  <zoom_level>8</zoom_level>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>248</x>
+      <y>456</y>
+      <w>224</w>
+      <h>96</h>
+    </coordinates>
+    <panel_attributes>Mother
+--
+- howMuchRemind: int
+--
++ Mother(home: Home)
++ remind(babyk: Babyk): void
++ cleanUp(toClean: Cleanable): void
+</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>552</x>
+      <y>368</y>
+      <w>320</w>
+      <h>224</h>
+    </coordinates>
+    <panel_attributes>Carlson
+--
+_- instance: Carlson_
+- Carlson()
+- Fan
+--
+_+ get(): Carlson_
+_+ create(home: Home): void_
+cleanUp(toClean: Cleanable): void
+{innerclass
+Fan
+--
+- isOn
+--
++ startRotate(): void
++ stopRotate(): void
++ isOn(): bool
+
+innerclass}</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>0</x>
+      <y>400</y>
+      <w>224</w>
+      <h>96</h>
+    </coordinates>
+    <panel_attributes>Babyk
+--
+- minAttempts
+--
++ Babyk(home: Home)
++ cleanUp(toClean: Cleanable): void
+</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>216</x>
+      <y>96</y>
+      <w>312</w>
+      <h>240</h>
+    </coordinates>
+    <panel_attributes>/Human/
+--
+# name: String
+# mood: Mood
+# home: Home
+{innerclass
+_&lt;&lt;ENUM&gt;&gt;_
+--
+BAD
+NORMAL
+GOOD
+--
+_+ getRand(): Mood
+
+innerclass}
+--
++ Human(home: Home)
++ getHome(): Home
++ getName(): String
++ equals(): boolean
++ toString(): String
+/+ cleanUp(cleanable: Cleanable)/</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLInterface</id>
+    <coordinates>
+      <x>272</x>
+      <y>0</y>
+      <w>208</w>
+      <h>80</h>
+    </coordinates>
+    <panel_attributes>Cleaner
+--
+cleanUp(toClean: Cleanable): void
+</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>328</x>
+      <y>328</y>
+      <w>32</w>
+      <h>144</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;&lt;-</panel_attributes>
+    <additional_attributes>20.0;10.0;10.0;160.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>104</x>
+      <y>328</y>
+      <w>248</w>
+      <h>88</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;&lt;-</panel_attributes>
+    <additional_attributes>290.0;10.0;10.0;90.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>344</x>
+      <y>328</y>
+      <w>392</w>
+      <h>96</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;&lt;-</panel_attributes>
+    <additional_attributes>10.0;10.0;70.0;100.0;470.0;50.0</additional_attributes>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>584</x>
+      <y>136</y>
+      <w>256</w>
+      <h>136</h>
+    </coordinates>
+    <panel_attributes>Home
+--
+- isClean: boolean
+- things: ArrayList&lt;PhysicalObject&gt;
+_- count_: int
+--
++ Home()
++ cleanUp(): void
++ equals(Object obj): boolean
++ toString(): String
++ hashCode(): int
+</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>928</x>
+      <y>176</y>
+      <w>240</w>
+      <h>112</h>
+    </coordinates>
+    <panel_attributes>/PhysicalObject/
+--
+# isClean: boolean
+--
++ PhysicalObject()
++ CleanUp(): void
++ isClean(): boolean
++ equals(Object object): boolean
++ toString(): String
+</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLInterface</id>
+    <coordinates>
+      <x>952</x>
+      <y>24</y>
+      <w>112</w>
+      <h>80</h>
+    </coordinates>
+    <panel_attributes>Cleanable
+--
+cleanUp(): void
+isClean(): boolean</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>920</x>
+      <y>312</y>
+      <w>240</w>
+      <h>96</h>
+    </coordinates>
+    <panel_attributes>Toy
+--
+# name: String
+--
++ Toy()
++ CleanUp(): void
++ isClean(): boolean
++ toString(): String
+</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>1032</x>
+      <y>280</y>
+      <w>24</w>
+      <h>48</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;&lt;-</panel_attributes>
+    <additional_attributes>10.0;10.0;10.0;40.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>344</x>
+      <y>56</y>
+      <w>48</w>
+      <h>56</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;&lt;.</panel_attributes>
+    <additional_attributes>40.0;10.0;10.0;50.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>1000</x>
+      <y>96</y>
+      <w>64</w>
+      <h>96</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;&lt;.</panel_attributes>
+    <additional_attributes>10.0;10.0;60.0;100.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>528</x>
+      <y>104</y>
+      <w>200</w>
+      <h>48</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;-
+</panel_attributes>
+    <additional_attributes>10.0;10.0;230.0;40.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>832</x>
+      <y>136</y>
+      <w>224</w>
+      <h>56</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;-</panel_attributes>
+    <additional_attributes>10.0;10.0;260.0;50.0</additional_attributes>
+  </element>
+</diagram>
