@@ -6,6 +6,12 @@ class Toy extends PhysicalObject{
     Toy(String name){
         super();
         this.name = name;
+        weight = 8;
+    }
+    Toy(String name,double weight){
+        super();
+        this.name  = name;
+        this.weight = weight;
     }
     @Override
     public void cleanUp(){

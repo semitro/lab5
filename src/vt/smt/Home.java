@@ -1,6 +1,9 @@
 package vt.smt;
 
-import java.util.ArrayList;
+//import java.util.ArrayList;
+import java.util.Collections;
+import java.util.Comparator;
+import java.util.Vector;
 
 class Home implements Cleanable{
     public void cleanUp() throws AlreadyCleanException{
@@ -13,15 +16,47 @@ class Home implements Cleanable{
     }
     Home(){
         isClean = false;
-        things = new ArrayList<>();
+        //things = new ArrayList<>();
+        things = new Vector<>();
         for(int i = 0; i<10;i++)
             things.add(new Toy("Игрушка" + Integer.toString(i)));
         count++;
 
     }
     void addThing(PhysicalObject obj) { things.add(obj); }
+ //////////////////////////////////////////////////////////////////
+
+    public void reorder(){
+        Collections.reverse(things);
+    }
+    public void addIfMax(PhysicalObject obj){
+        for(PhysicalObject i : things){
+            if(obj.compareTo(i) < 0)
+                return;
+            addThing(obj);
+        }
+    }
+
+    public void insert(int index, PhysicalObject obj) {
+        things.insertElementAt(obj,index);
+    }
+
+    public void clear() {
+        things.clear();
+    }
+    private void sortThings(){
+        Collections.sort(things, new Comparator<PhysicalObject>() {
+            @Override
+            public int compare(PhysicalObject physicalObject, PhysicalObject t1) {
+                return physicalObject.compareTo(t1);
+            }
+        });
+    }
+    //////////////////////////////////////////////
+
     public boolean isClean(){return isClean;}
-    private ArrayList<PhysicalObject> things;
+   // private ArrayList<PhysicalObject> things;
+    private Vector<PhysicalObject> things;
     private boolean isClean;
 
     @Override

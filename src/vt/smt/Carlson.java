@@ -35,8 +35,8 @@ class Carlson extends Human{
         fan.startRotate();
         class ThreadChecker{
             public void check(){
-                for(int i = 0; i< 1000;i++)
-                    System.out.print(" " + i);
+//                for(int i = 0; i< 1000;i++)
+//                    System.out.print(" " + i);
             }
         }
         ThreadChecker checker = new ThreadChecker();

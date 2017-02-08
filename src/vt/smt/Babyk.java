@@ -22,7 +22,6 @@ class Babyk extends Human{
             }catch(AlreadyCleanException e){
                 System.out.println("Малыш: исключительно не желаю убирать чистое!");
             }
-
             System.out.println("Clean is down.");
             return;
         }

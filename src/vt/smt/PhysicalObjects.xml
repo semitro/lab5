@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<PhysicalObjects>
+	<Thing>	
+		<Toy>
+			<Name>Петров</Name>
+			<Weight>1.8</Weight>
+			<IsCleaning>true</IsCleaning>
+		</Toy>
+	</Thing>
+	<Thing>
+		<Toy>
+			<Name>Privet</Name>
+			<Weight>2.4</Weight>
+		</Toy>
+	</Thing>
+	<Thing>
+		<Agaga>
+		</Agaga>
+	</Thing>
+</PhysicalObjects>
