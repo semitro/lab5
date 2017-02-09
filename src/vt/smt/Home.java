@@ -57,7 +57,13 @@ class Home implements Cleanable{
     }
     //////////////////////////////////////////////
     public void saveThingsToFile(String pathToFile){
-
+       try {
+           XmlParser parser = new XmlParser(pathToFile);
+//            parser.saveObjects(things);
+        }
+        catch (FileNotFoundException e){
+            Debug.println("Home.SaveThingsToFile", "File not found exception" + pathToFile);
+        }
     }
     public void loadThingsFromFile(String pathToFile){
         things.clear();

@@ -47,9 +47,9 @@ public class Main {
             mother.getHome().clear();
         try {
             XmlParser parser = new XmlParser("src/vt/smt/PhysicalObjects.xml");
-            while (parser.hasNext())
-                currentHome.addThing(parser.getNext());
-
+//            while (parser.hasNext())
+//                currentHome.addThing(parser.getNext());
+            currentHome.saveThingsToFile("src/vt/smt/Carl1.xml");
             while (str.equals("exit") == false) {
                 str = sc.next();
                 switch (str) {

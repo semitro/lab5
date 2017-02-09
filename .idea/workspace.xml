@@ -2,20 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="77a8a249-03e5-49ff-b2c8-7f115b1798d8" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/vcs.xml" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/out/production/labGoodObject/vt/smt/Main$1.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/out/production/labGoodObject/vt/smt/Main.class" afterPath="" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/labGoodObject/vt/smt/Babyk.class" afterPath="$PROJECT_DIR$/out/production/labGoodObject/vt/smt/Babyk.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/labGoodObject/vt/smt/Carlson$1ThreadChecker.class" afterPath="$PROJECT_DIR$/out/production/labGoodObject/vt/smt/Carlson$1ThreadChecker.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/labGoodObject/vt/smt/Home.class" afterPath="$PROJECT_DIR$/out/production/labGoodObject/vt/smt/Home.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/labGoodObject/vt/smt/PhysicalObject.class" afterPath="$PROJECT_DIR$/out/production/labGoodObject/vt/smt/PhysicalObject.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/labGoodObject/vt/smt/Toy.class" afterPath="$PROJECT_DIR$/out/production/labGoodObject/vt/smt/Toy.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/vt/smt/Home.java" afterPath="$PROJECT_DIR$/src/vt/smt/Home.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/vt/smt/Main.java" afterPath="$PROJECT_DIR$/src/vt/smt/Main.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/vt/smt/PhysicalObject.java" afterPath="$PROJECT_DIR$/src/vt/smt/PhysicalObject.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/vt/smt/PhysicalObjects.xml" afterPath="$PROJECT_DIR$/src/vt/smt/PhysicalObjects.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/vt/smt/Toy.java" afterPath="$PROJECT_DIR$/src/vt/smt/Toy.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/vt/smt/XmlParser.java" afterPath="$PROJECT_DIR$/src/vt/smt/XmlParser.java" />
     </list>
     <ignored path="labGoodObject.iws" />
@@ -27,6 +15,9 @@
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="CoverageDataManager">
+    <SUITE FILE_PATH="coverage/labGoodObject$Main.coverage" NAME="Main Coverage Results" MODIFIED="1486661247202" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" />
   </component>
   <component name="CreatePatchCommitExecutor">
     <option name="PATCH_PATH" value="" />
@@ -41,21 +32,26 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="Cleanable.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/vt/smt/Cleanable.java">
+      <file leaf-file-name="Human.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/vt/smt/Human.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="90">
-              <caret line="5" column="0" selection-start-line="5" selection-start-column="0" selection-end-line="10" selection-end-column="0" />
-              <folding />
+            <state relative-caret-position="252">
+              <caret line="24" column="10" selection-start-line="24" selection-start-column="10" selection-end-line="24" selection-end-column="10" />
+              <folding>
+                <element signature="method#Human#0;class#Human#0" expanded="false" />
+                <element signature="method#getHome#0;class#Human#0" expanded="false" />
+                <element signature="method#equals#0;class#Human#0" expanded="false" />
+                <element signature="class#Mood#0;class#Human#0" expanded="false" />
+              </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="Main.java" pinned="false" current-in-tab="false">
+      <file leaf-file-name="Main.java" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/vt/smt/Main.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="157">
-              <caret line="51" column="0" selection-start-line="51" selection-start-column="0" selection-end-line="51" selection-end-column="0" />
+            <state relative-caret-position="346">
+              <caret line="49" column="2" selection-start-line="49" selection-start-column="2" selection-end-line="49" selection-end-column="2" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -73,14 +69,13 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="XmlParser.java" pinned="false" current-in-tab="true">
+      <file leaf-file-name="XmlParser.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/vt/smt/XmlParser.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="157">
-              <caret line="39" column="0" selection-start-line="39" selection-start-column="0" selection-end-line="39" selection-end-column="0" />
+            <state relative-caret-position="139">
+              <caret line="41" column="71" selection-start-line="41" selection-start-column="71" selection-end-line="41" selection-end-column="71" />
               <folding>
                 <element signature="imports" expanded="true" />
-                <element signature="method#hasNext#0;class#XmlParser#0" expanded="false" />
                 <element signature="method#getNext#0;class#XmlParser#0" expanded="false" />
               </folding>
             </state>
@@ -90,7 +85,7 @@
       <file leaf-file-name="PhysicalObject.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/vt/smt/PhysicalObject.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="175">
+            <state relative-caret-position="216">
               <caret line="21" column="48" selection-start-line="21" selection-start-column="48" selection-end-line="21" selection-end-column="48" />
               <folding>
                 <element signature="method#PhysicalObject#0;class#PhysicalObject#0" expanded="false" />
@@ -152,15 +147,15 @@
       <file leaf-file-name="Home.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/vt/smt/Home.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="302">
-              <caret line="66" column="9" selection-start-line="66" selection-start-column="9" selection-end-line="66" selection-end-column="9" />
+            <state relative-caret-position="211">
+              <caret line="62" column="0" selection-start-line="62" selection-start-column="0" selection-end-line="62" selection-end-column="0" />
               <folding>
                 <element signature="imports" expanded="true" />
                 <element signature="method#cleanUp#0;class#Home#0" expanded="false" />
                 <element signature="method#Home#0;class#Home#0" expanded="false" />
                 <element signature="method#addIfMax#0;class#Home#0" expanded="false" />
                 <element signature="method#sortThings#0;class#Home#0" expanded="false" />
-                <marker date="1486657922098" expanded="false" signature="2378:2478" ph="..." />
+                <marker date="1486661025874" expanded="false" signature="2643:2743" ph="..." />
               </folding>
             </state>
           </provider>
@@ -201,11 +196,11 @@
         <option value="$PROJECT_DIR$/src/vt/smt/CollectionHandler.java" />
         <option value="$PROJECT_DIR$/src/vt/smt/Carlson.java" />
         <option value="$PROJECT_DIR$/src/vt/smt/UnkownXMLTagException.java" />
-        <option value="$PROJECT_DIR$/src/vt/smt/Home.java" />
         <option value="$PROJECT_DIR$/src/vt/smt/PhysicalObject.java" />
         <option value="$PROJECT_DIR$/src/vt/smt/Toy.java" />
-        <option value="$PROJECT_DIR$/src/vt/smt/Main.java" />
+        <option value="$PROJECT_DIR$/src/vt/smt/Home.java" />
         <option value="$PROJECT_DIR$/src/vt/smt/XmlParser.java" />
+        <option value="$PROJECT_DIR$/src/vt/smt/Main.java" />
       </list>
     </option>
   </component>
@@ -584,17 +579,18 @@
     <layout>
       <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32817337" sideWeight="0.5" order="10" side_tool="false" content_ui="tabs" />
-      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.18111455" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
+      <window_info id="Messages" active="true" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.18111455" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Palette&#9;" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Capture Analysis" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5060606" order="1" side_tool="true" content_ui="tabs" />
-      <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.0" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3498452" sideWeight="0.4939394" order="6" side_tool="false" content_ui="tabs" />
+      <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.0" sideWeight="0.49338374" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.27708977" sideWeight="0.4939394" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32972136" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
-      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.20897833" sideWeight="0.88257575" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Coverage" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.0" sideWeight="0.50661623" order="-1" side_tool="true" content_ui="tabs" />
+      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.31733745" sideWeight="0.88257575" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Capture Tool" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Designer" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.25984848" sideWeight="0.5" order="4" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.22045454" sideWeight="0.5" order="4" side_tool="false" content_ui="combo" />
       <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3287037" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.24963397" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
@@ -659,7 +655,7 @@
           <option name="timeStamp" value="18" />
         </line-breakpoint>
       </breakpoints>
-      <option name="time" value="19" />
+      <option name="time" value="20" />
     </breakpoint-manager>
     <watches-manager />
   </component>
@@ -701,7 +697,7 @@
             <element signature="method#Home#0;class#Home#0" expanded="false" />
             <element signature="method#addIfMax#0;class#Home#0" expanded="false" />
             <element signature="method#sortThings#0;class#Home#0" expanded="false" />
-            <marker date="1486657922098" expanded="false" signature="2378:2478" ph="..." />
+            <marker date="1486661025874" expanded="false" signature="2643:2743" ph="..." />
           </folding>
         </state>
       </provider>
@@ -801,7 +797,7 @@
             <element signature="method#Home#0;class#Home#0" expanded="false" />
             <element signature="method#addIfMax#0;class#Home#0" expanded="false" />
             <element signature="method#sortThings#0;class#Home#0" expanded="false" />
-            <marker date="1486657922098" expanded="false" signature="2378:2478" ph="..." />
+            <marker date="1486661025874" expanded="false" signature="2643:2743" ph="..." />
           </folding>
         </state>
       </provider>
@@ -901,7 +897,7 @@
             <element signature="method#Home#0;class#Home#0" expanded="false" />
             <element signature="method#addIfMax#0;class#Home#0" expanded="false" />
             <element signature="method#sortThings#0;class#Home#0" expanded="false" />
-            <marker date="1486657922098" expanded="false" signature="2378:2478" ph="..." />
+            <marker date="1486661025874" expanded="false" signature="2643:2743" ph="..." />
           </folding>
         </state>
       </provider>
@@ -1001,19 +997,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/vt/smt/Human.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="252">
-          <caret line="24" column="10" selection-start-line="24" selection-start-column="10" selection-end-line="24" selection-end-column="10" />
-          <folding>
-            <element signature="method#Human#0;class#Human#0" expanded="false" />
-            <element signature="method#getHome#0;class#Human#0" expanded="false" />
-            <element signature="method#equals#0;class#Human#0" expanded="false" />
-            <element signature="class#Mood#0;class#Human#0" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/vt/smt/ThereIsNotHomeException.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="90">
@@ -1049,34 +1032,11 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/vt/smt/CollectionHandler.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="162">
-          <caret line="9" column="20" selection-start-line="9" selection-start-column="20" selection-end-line="9" selection-end-column="20" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/vt/smt/PhysicalObjects.xml">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="216">
           <caret line="12" column="23" selection-start-line="12" selection-start-column="23" selection-end-line="12" selection-end-column="23" />
           <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/vt/smt/Home.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="302">
-          <caret line="66" column="9" selection-start-line="66" selection-start-column="9" selection-end-line="66" selection-end-column="9" />
-          <folding>
-            <element signature="imports" expanded="true" />
-            <element signature="method#cleanUp#0;class#Home#0" expanded="false" />
-            <element signature="method#Home#0;class#Home#0" expanded="false" />
-            <element signature="method#addIfMax#0;class#Home#0" expanded="false" />
-            <element signature="method#sortThings#0;class#Home#0" expanded="false" />
-            <marker date="1486657922098" expanded="false" signature="2378:2478" ph="..." />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -1103,19 +1063,30 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/vt/smt/Main.java">
+    <entry file="file://$PROJECT_DIR$/src/vt/smt/CollectionHandler.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="157">
-          <caret line="51" column="0" selection-start-line="51" selection-start-column="0" selection-end-line="51" selection-end-column="0" />
+        <state relative-caret-position="162">
+          <caret line="9" column="20" selection-start-line="9" selection-start-column="20" selection-end-line="9" selection-end-column="20" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/vt/smt/Human.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="252">
+          <caret line="24" column="10" selection-start-line="24" selection-start-column="10" selection-end-line="24" selection-end-column="10" />
           <folding>
-            <element signature="imports" expanded="true" />
+            <element signature="method#Human#0;class#Human#0" expanded="false" />
+            <element signature="method#getHome#0;class#Human#0" expanded="false" />
+            <element signature="method#equals#0;class#Human#0" expanded="false" />
+            <element signature="class#Mood#0;class#Human#0" expanded="false" />
           </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/vt/smt/PhysicalObject.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="175">
+        <state relative-caret-position="216">
           <caret line="21" column="48" selection-start-line="21" selection-start-column="48" selection-end-line="21" selection-end-column="48" />
           <folding>
             <element signature="method#PhysicalObject#0;class#PhysicalObject#0" expanded="false" />
@@ -1126,14 +1097,38 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/vt/smt/XmlParser.java">
+    <entry file="file://$PROJECT_DIR$/src/vt/smt/Home.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="157">
-          <caret line="39" column="0" selection-start-line="39" selection-start-column="0" selection-end-line="39" selection-end-column="0" />
+        <state relative-caret-position="211">
+          <caret line="62" column="0" selection-start-line="62" selection-start-column="0" selection-end-line="62" selection-end-column="0" />
           <folding>
             <element signature="imports" expanded="true" />
-            <element signature="method#hasNext#0;class#XmlParser#0" expanded="false" />
+            <element signature="method#cleanUp#0;class#Home#0" expanded="false" />
+            <element signature="method#Home#0;class#Home#0" expanded="false" />
+            <element signature="method#addIfMax#0;class#Home#0" expanded="false" />
+            <element signature="method#sortThings#0;class#Home#0" expanded="false" />
+            <marker date="1486661025874" expanded="false" signature="2643:2743" ph="..." />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/vt/smt/XmlParser.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="139">
+          <caret line="41" column="71" selection-start-line="41" selection-start-column="71" selection-end-line="41" selection-end-column="71" />
+          <folding>
+            <element signature="imports" expanded="true" />
             <element signature="method#getNext#0;class#XmlParser#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/vt/smt/Main.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="346">
+          <caret line="49" column="2" selection-start-line="49" selection-start-column="2" selection-end-line="49" selection-end-column="2" />
+          <folding>
+            <element signature="imports" expanded="true" />
           </folding>
         </state>
       </provider>

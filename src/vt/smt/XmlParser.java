@@ -32,8 +32,12 @@ public class XmlParser {
             return true;
     }
     XmlParser(String path) throws FileNotFoundException{
-            File file = new File(path);
+        this.filePath = path;
+
+        File file = new File(filePath);
             try {
+                if(!file.exists())
+                    file.createNewFile();
                 DocumentBuilderFactory factory = DocumentBuilderFactory.newInstance();
                 DocumentBuilder builder = factory.newDocumentBuilder();
                 doc = builder.parse(file);
@@ -44,7 +48,7 @@ public class XmlParser {
                // list = doc.getChildNodes().item(0).getChildNodes();
               //  Debug.println("List len", Integer.toString(list.getLength()));
             }catch (Exception e){
-                Debug.println("Exception: ", "Something wrongs with XML-file: " + path);
+               // Debug.println("Exception: ", "Something wrongs with XML-file: " + path);
 
             }
     }
@@ -64,13 +68,16 @@ public class XmlParser {
     }
     public void saveObjects(Vector<PhysicalObject> objects){
         try {
+            Debug.println("We are in Save", filePath);
 
-
-            BufferedWriter bw = new BufferedWriter( new FileWriter(filePath + "TEST"));
-            bw.write("Hello");
+            BufferedWriter bw = new BufferedWriter( new FileWriter(filePath));
+            bw.write("HelloHey");
+            bw.newLine();
             for (PhysicalObject i : objects) {
 
             }
+            bw.flush();
+            bw.close();
         }catch (Exception e){
             Debug.println("XmlParser.saveObjects","Something wrongs with file" + filePath);
         }
