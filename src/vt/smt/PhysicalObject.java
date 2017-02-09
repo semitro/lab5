@@ -20,7 +20,6 @@ abstract class PhysicalObject implements Cleanable, Comparable<PhysicalObject>{
         System.out.println("Я убрана. Я вещь.");
     }
     public boolean isClean(){return isCleaning;}
-
     @Override
     public int compareTo(PhysicalObject obj){
         if(this.getWeight() > obj.getWeight())

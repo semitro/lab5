@@ -1,8 +1,10 @@
 package vt.smt;
 
+import org.omg.IOP.ExceptionDetailMessage;
 import sun.security.ssl.Debug;
 
 import java.io.FileNotFoundException;
+import java.util.IllegalFormatCodePointException;
 import java.util.Scanner;
 
 public class Main {
@@ -46,7 +48,8 @@ public class Main {
         try {
             XmlParser parser = new XmlParser("src/vt/smt/PhysicalObjects.xml");
             while (parser.hasNext())
-                System.out.println("Parser: " + parser.getNext().getWeight());
+                currentHome.addThing(parser.getNext());
+
             while (str.equals("exit") == false) {
                 str = sc.next();
                 switch (str) {
@@ -67,7 +70,7 @@ public class Main {
                 }
             }
         }catch (FileNotFoundException e){
-            Debug.println("Xml: ", "File not found");
+            Debug.println("Xml", "File not found");
         }
 
     }

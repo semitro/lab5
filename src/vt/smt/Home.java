@@ -1,6 +1,9 @@
 package vt.smt;
 
 //import java.util.ArrayList;
+import sun.security.ssl.Debug;
+
+import java.io.FileNotFoundException;
 import java.util.Collections;
 import java.util.Comparator;
 import java.util.Vector;
@@ -53,7 +56,20 @@ class Home implements Cleanable{
         });
     }
     //////////////////////////////////////////////
+    public void saveThingsToFile(String pathToFile){
 
+    }
+    public void loadThingsFromFile(String pathToFile){
+        things.clear();
+        try {
+            XmlParser parser = new XmlParser(pathToFile);
+            while (parser.hasNext()) things.add(parser.getNext());
+        }
+        catch (FileNotFoundException e){
+            Debug.println("Home.loadThingsFromFile","File not found" + pathToFile);
+        }
+    }
+    ////////////////////////////////////////////////
     public boolean isClean(){return isClean;}
    // private ArrayList<PhysicalObject> things;
     private Vector<PhysicalObject> things;

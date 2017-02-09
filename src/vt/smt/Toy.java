@@ -8,10 +8,15 @@ class Toy extends PhysicalObject{
         this.name = name;
         weight = 8;
     }
-    Toy(String name,double weight){
+    Toy(String name,double weight, boolean isClean){
         super();
         this.name  = name;
         this.weight = weight;
+        this.isCleaning = isClean;
+
+    }
+    public String getName(){
+        return name;
     }
     @Override
     public void cleanUp(){
