@@ -4,20 +4,23 @@ import java.io.FileNotFoundException;
 import java.util.Scanner;
 
 public class Main {
+    static final String fileMotherAndBabyksThings = "src/vt/smt/BabykAndMotherThings.xml";
+    static final String fileCarlsonsThings = "src/vt/smt/CarlsonsThings.xml";
 
     public static void main(String[] args) {
-            Home home = new Home(); // У Мамы и Малыша один дом
-            Mother mother = new Mother(home);
-            Babyk babyk = new Babyk(home);
-            home = new Home();
+        Home home = new Home(); // У Мамы и Малыша один дом
+        Mother mother = new Mother(home);
+        Babyk babyk = new Babyk(home);
+        home.loadThingsFromFile(fileMotherAndBabyksThings); // Подгрузка коллекции из файла
+        home = new Home();
+        home.loadThingsFromFile(fileCarlsonsThings);
         try {
             Carlson.create(home);
         } catch (Exception e) {
             e.printStackTrace();
         }
-
-
         final Carlson carlson = Carlson.get();
+
             Thread t = new Thread(
                     new Runnable() {
                         @Override
@@ -32,7 +35,7 @@ public class Main {
 
             t.start();
             babyk.cleanUp(carlson.getHome());
-
+///////////////////////////////////////////////////////////////////lab5///////////////////////
             String str = new String();
             Home currentHome = carlson.getHome();
             java.util.Scanner sc = new Scanner(System.in);
@@ -68,8 +71,8 @@ public class Main {
         }catch (FileNotFoundException e){
             Debug.println("Xml", "File not found");
         }
-        carlson.getHome().saveThingsToFile("src/vt/smt/CarlsonsThings.xml");
-        babyk.getHome().saveThingsToFile("src/vt/smt/BabykAndMotherThings.xml");
+        carlson.getHome().saveThingsToFile(fileCarlsonsThings);
+        babyk.getHome().saveThingsToFile(fileMotherAndBabyksThings);
 
     }
 }

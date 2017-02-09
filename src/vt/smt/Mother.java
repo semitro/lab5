@@ -21,9 +21,7 @@ class Mother extends Human{
             case GOOD:
                 howRemind = "Малыш, сегодня можешь не убираться, я сама :) ";
                 break;
-
         }
-
         if(howMuchRemind == 0)
             System.out.println("Mother: " + howRemind);
         else

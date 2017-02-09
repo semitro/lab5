@@ -25,6 +25,8 @@ public class XmlParser {
     }
     XmlParser(String path) throws FileNotFoundException{
         File file = new File(path);
+        if(!file.exists())
+            throw new FileNotFoundException();
             try {
                 DocumentBuilderFactory factory = DocumentBuilderFactory.newInstance();
                 DocumentBuilder builder = factory.newDocumentBuilder();

@@ -1,8 +1,6 @@
 package vt.smt;
 
-//import java.util.ArrayList;
 import sun.security.ssl.Debug;
-
 import java.io.BufferedWriter;
 import java.io.FileNotFoundException;
 import java.io.FileWriter;
@@ -24,14 +22,13 @@ class Home implements Cleanable{
         isClean = false;
         //things = new ArrayList<>();
         things = new Vector<>();
-        for(int i = 0; i<10;i++)
-            things.add(new Toy("Игрушка" + Integer.toString(i)));
-        count++;
+//        for(int i = 0; i<10;i++)
+//            things.add(new Toy("Игрушка" + Integer.toString(i)));
+//        count++;
 
     }
     void addThing(PhysicalObject obj) { things.add(obj); }
  //////////////////////////////////////////////////////////////////
-
     public void reorder(){
         Collections.reverse(things);
     }
@@ -42,11 +39,9 @@ class Home implements Cleanable{
             addThing(obj);
         }
     }
-
     public void insert(int index, PhysicalObject obj) {
         things.insertElementAt(obj,index);
     }
-
     public void clear() {
         things.clear();
     }
@@ -100,8 +95,6 @@ class Home implements Cleanable{
     }
     ////////////////////////////////////////////////
     public boolean isClean(){return isClean;}
-    private Vector<PhysicalObject> things;
-    private boolean isClean;
 
     @Override
     public boolean equals(Object obj) {
@@ -116,4 +109,7 @@ class Home implements Cleanable{
         return things.size();
     }
     private static int count = 0;
+    private Vector<PhysicalObject> things;
+    private boolean isClean;
+
 }

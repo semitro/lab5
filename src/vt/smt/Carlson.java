@@ -24,8 +24,6 @@ class Carlson extends Human{
         name = "Karlson";
         System.out.println("Karlson was born");
         fan = new Fan();
-        // У Карлсона много игрушек
-        for(int i = 0; i < 5; i++) this.home.addThing(new Toy("Супер-игрушка Карслона " + Integer.toString(i)));
     }
     @Override
     public void cleanUp(Cleanable cleanable) {
