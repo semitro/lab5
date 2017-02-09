@@ -3,7 +3,10 @@ package vt.smt;
 //import java.util.ArrayList;
 import sun.security.ssl.Debug;
 
+import java.io.BufferedWriter;
 import java.io.FileNotFoundException;
+import java.io.FileWriter;
+import java.io.IOException;
 import java.util.Collections;
 import java.util.Comparator;
 import java.util.Vector;
@@ -58,11 +61,31 @@ class Home implements Cleanable{
     //////////////////////////////////////////////
     public void saveThingsToFile(String pathToFile){
        try {
-           XmlParser parser = new XmlParser(pathToFile);
-//            parser.saveObjects(things);
+           BufferedWriter writer = new BufferedWriter(new FileWriter(pathToFile));
+           writer.write("<?xml version=\"1.0\" encoding=\"UTF-8\"?>");
+           writer.newLine();
+           writer.write("<PhysicalObjects>");
+           writer.newLine();
+           for (PhysicalObject i : things){
+               writer.write("<Thing>"); writer.newLine();
+               if(i instanceof Toy) {
+                   writer.write("<Toy>"); writer.newLine();
+                   writer.write("<Name>" + ((Toy) i).getName() + "</Name>"); writer.newLine();
+                   writer.write("<Weight>" + ((Toy)i).getWeight() + "</Weight>"); writer.newLine();
+                   writer.write("<IsClean>" + i.isClean() + "</IsClean>"); writer.newLine();
+                   writer.write("</Toy>"); writer.newLine();
+               }
+               writer.write("</Thing>"); writer.newLine();
+           }
+           writer.write("</PhysicalObjects>"); writer.newLine();
+           writer.flush();
+           writer.close();
         }
         catch (FileNotFoundException e){
             Debug.println("Home.SaveThingsToFile", "File not found exception" + pathToFile);
+        }
+        catch (IOException e){
+            Debug.println("Home.SaveThingsToFile()", e.getMessage());
         }
     }
     public void loadThingsFromFile(String pathToFile){
@@ -77,7 +100,6 @@ class Home implements Cleanable{
     }
     ////////////////////////////////////////////////
     public boolean isClean(){return isClean;}
-   // private ArrayList<PhysicalObject> things;
     private Vector<PhysicalObject> things;
     private boolean isClean;
 
@@ -91,9 +113,7 @@ class Home implements Cleanable{
     }
     @Override
     public int hashCode(){
-        return count;
+        return things.size();
     }
-
-
     private static int count = 0;
 }

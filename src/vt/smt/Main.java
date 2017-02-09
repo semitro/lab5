@@ -1,17 +1,11 @@
 package vt.smt;
-
-import org.omg.IOP.ExceptionDetailMessage;
 import sun.security.ssl.Debug;
-
 import java.io.FileNotFoundException;
-import java.util.IllegalFormatCodePointException;
 import java.util.Scanner;
 
 public class Main {
 
     public static void main(String[] args) {
-
-
             Home home = new Home(); // У Мамы и Малыша один дом
             Mother mother = new Mother(home);
             Babyk babyk = new Babyk(home);
@@ -36,12 +30,11 @@ public class Main {
             while (!babyk.getHome().isClean())
                 mother.remind(babyk);
 
-
             t.start();
             babyk.cleanUp(carlson.getHome());
 
             String str = new String();
-            Home currentHome = new Home();
+            Home currentHome = carlson.getHome();
             java.util.Scanner sc = new Scanner(System.in);
             System.out.println("Интерактивный режим.");
             mother.getHome().clear();
@@ -49,15 +42,18 @@ public class Main {
             XmlParser parser = new XmlParser("src/vt/smt/PhysicalObjects.xml");
 //            while (parser.hasNext())
 //                currentHome.addThing(parser.getNext());
-            currentHome.saveThingsToFile("src/vt/smt/Carl1.xml");
+            //currentHome.saveThingsToFile("src/vt/smt/CarlsonsThings.xml");
             while (str.equals("exit") == false) {
                 str = sc.next();
                 switch (str) {
                     case "reorder":
                         currentHome.reorder();
                         break;
-                    case "clear":
+                    case "clear": {
+                        System.out.println(currentHome.hashCode());
                         currentHome.clear();
+                        System.out.println(currentHome.hashCode());
+                    }
                         break;
                     default:
                         break;
@@ -65,13 +61,15 @@ public class Main {
 
                 if (str.contains("switch")) {
                     if (str.contains("carlson")) currentHome = carlson.getHome();
-                    if (str.contains("mother")) currentHome = mother.getHome();
-                    if (str.contains("babyk")) currentHome = babyk.getHome();
+                    if (str.contains("mother")) currentHome = mother.getHome(); // У Мамы и Малыша
+                    if (str.contains("babyk")) currentHome = babyk.getHome(); // Один и тот же дом
                 }
             }
         }catch (FileNotFoundException e){
             Debug.println("Xml", "File not found");
         }
+        carlson.getHome().saveThingsToFile("src/vt/smt/CarlsonsThings.xml");
+        babyk.getHome().saveThingsToFile("src/vt/smt/BabykAndMotherThings.xml");
 
     }
 }
