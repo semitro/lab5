@@ -46,12 +46,7 @@ class Home implements Cleanable{
         things.clear();
     }
     private void sortThings(){
-        Collections.sort(things, new Comparator<PhysicalObject>() {
-            @Override
-            public int compare(PhysicalObject physicalObject, PhysicalObject t1) {
-                return physicalObject.compareTo(t1);
-            }
-        });
+        Collections.sort(things);
     }
     //////////////////////////////////////////////
     public void saveThingsToFile(String pathToFile){
@@ -90,7 +85,8 @@ class Home implements Cleanable{
             while (parser.hasNext()) things.add(parser.getNext());
         }
         catch (FileNotFoundException e){
-            Debug.println("Home.loadThingsFromFile","File not found" + pathToFile);
+            Debug.println("Home.loadThingsFromFile", "Файл" + pathToFile + "не существовал, но теперь он создан");
+            //Debug.println("Home.loadThingsFromFile","File not found" + pathToFile);
         }
     }
     ////////////////////////////////////////////////
