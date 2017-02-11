@@ -7,6 +7,8 @@ import javax.xml.parsers.DocumentBuilder;
 import javax.xml.parsers.DocumentBuilderFactory;
 import java.io.File;
 import java.io.FileNotFoundException;
+import java.io.FileWriter;
+
 import org.w3c.dom.Document;
 
 
@@ -23,11 +25,18 @@ public class XmlParser {
         else
             return true;
     }
-    XmlParser(String path) throws FileNotFoundException{
+    XmlParser(String path) {//throws FileNotFoundException{
         File file = new File(path);
-        if(!file.exists())
-            throw new FileNotFoundException();
             try {
+                if(!file.exists()) {
+                    file.createNewFile();
+                    FileWriter writer = new FileWriter(file);
+                    writer.write("<?xml version=\"1.0\" encoding=\"UTF-8\"?>\n" +
+                            "<PhysicalObjects>\n</PhysicalObjects>");
+                    writer.flush();
+                    writer.close();
+                    Debug.println("XmlParser()", "Файл" + path + " не существовал, но теперь он создан");
+                }
                 DocumentBuilderFactory factory = DocumentBuilderFactory.newInstance();
                 DocumentBuilder builder = factory.newDocumentBuilder();
                 doc = builder.parse(file);
@@ -38,7 +47,7 @@ public class XmlParser {
                // list = doc.getChildNodes().item(0).getChildNodes();
               //  Debug.println("List len", Integer.toString(list.getLength()));
             }catch (Exception e){
-                Debug.println("Exception: ", "Something wrongs with XML-file: " + path);
+                Debug.println("Exception: ", "Something wrongs with the XML-file: " + path);
 
             }
     }

@@ -20,12 +20,7 @@ class Home implements Cleanable{
     }
     Home(){
         isClean = false;
-        //things = new ArrayList<>();
         things = new Vector<>();
-//        for(int i = 0; i<10;i++)
-//            things.add(new Toy("Игрушка" + Integer.toString(i)));
-//        count++;
-
     }
     void addThing(PhysicalObject obj) { things.add(obj); }
  //////////////////////////////////////////////////////////////////
@@ -80,14 +75,8 @@ class Home implements Cleanable{
     }
     public void loadThingsFromFile(String pathToFile){
         things.clear();
-        try {
             XmlParser parser = new XmlParser(pathToFile);
             while (parser.hasNext()) things.add(parser.getNext());
-        }
-        catch (FileNotFoundException e){
-            Debug.println("Home.loadThingsFromFile", "Файл" + pathToFile + "не существовал, но теперь он создан");
-            //Debug.println("Home.loadThingsFromFile","File not found" + pathToFile);
-        }
     }
     ////////////////////////////////////////////////
     public boolean isClean(){return isClean;}
@@ -97,13 +86,15 @@ class Home implements Cleanable{
         return super.equals(obj);
     }
     @Override
-    public String toString(){
-        return new String("Home #" + this.hashCode());
+    public String toString() {
+        return Integer.toString(things.size());
     }
     @Override
     public int hashCode(){
         return things.size();
     }
+
+
     private static int count = 0;
     private Vector<PhysicalObject> things;
     private boolean isClean;
