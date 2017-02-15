@@ -1,3 +1,17 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <PhysicalObjects>
+<Thing>
+<Toy>
+<Name>Aga</Name>
+<Weight>24.4</Weight>
+<IsClean>true</IsClean>
+</Toy>
+</Thing>
+<Thing>
+<Toy>
+<Name>A</Name>
+<Weight>24.4</Weight>
+<IsClean>true</IsClean>
+</Toy>
+</Thing>
 </PhysicalObjects>

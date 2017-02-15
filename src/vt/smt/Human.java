@@ -6,6 +6,9 @@ package vt.smt;
 abstract class Human implements Cleaner{
     protected Home home;
     protected String name;
+    private Human(){
+      // Потребовалось для старины Джэксона
+    }
     protected Mood mood;
     public Human(Home home){
         this.home = home;

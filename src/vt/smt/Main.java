@@ -1,16 +1,16 @@
 package vt.smt;
+import org.codehaus.jackson.jaxrs.JacksonJsonProvider;
+import org.codehaus.jackson.map.ObjectMapper;
+import org.codehaus.jackson.type.JavaType;
+import sun.org.mozilla.javascript.json.JsonParser;
 import sun.security.ssl.Debug;
 
 import java.io.File;
-import java.io.FileNotFoundException;
-import java.nio.file.FileSystem;
-import java.nio.file.Files;
-import java.nio.file.Path;
-import java.nio.file.Paths;
 import java.util.Scanner;
-
+import org.codehaus.jackson.*;
 // Подумать, как правильнее работать с файлом
 public class Main {
+
     static final String fileMotherAndBabyksThings =
             System.getProperty("user.dir") + File.separator + "things" + File.separator + "BabykAndMotherThings.xml";
     static       String fileCarlsonsThings = System.getProperty("user.dir") + File.separator + "things" + File.separator + "CarlsonsThings.xml";
@@ -22,13 +22,13 @@ public class Main {
 
     public static void main(String[] args) throws Exception{
 
-
-              Home home = new Home(); // У Мамы и Малыша один дом
+        Home home = new Home(); // У Мамы и Малыша один дом
         Mother mother = new Mother(home);
         Babyk babyk = new Babyk(home);
 
         home.loadThingsFromFile(fileMotherAndBabyksThings); // Подгрузка коллекции из файла
         home = new Home();
+
         // Вещи Карлсона загружаются из командной строки, поскольку Карлсон летает, где хочет
         // И берёт всё, что пожелает
         if(args.length >0 && args[0].length() > 0)
@@ -56,13 +56,16 @@ public class Main {
             t.start();
             babyk.cleanUp(carlson.getHome());
 ///////////////////////////////////////////////////////////////////lab5///////////////////////
+        ObjectMapper jMapper = new ObjectMapper();
+
             String str = new String();
             Home currentHome = carlson.getHome();
             java.util.Scanner sc = new Scanner(System.in);
-
-            System.out.println("Интерактивный режим.\n Дом Карлсона \n Вводи ? для посказки\n");
+            currentHome.addIfMax(new Toy("dgdg",109.5,true));
+            System.out.println("Интерактивный режим.\nДом Карлсона \nВводи ? для посказки\n");
+        try { // Считаю это решение грамотным. Коллекции должны быть сохранены гарантированно.
             while (str.equals("exit") == false) {
-                str = sc.next();
+                str = sc.nextLine();
                 switch (str) {
                     case "?":
                         System.out.println(interactiveModeHelp);
@@ -72,7 +75,7 @@ public class Main {
                     case "clear": {
                         currentHome.clear();
                     }
-                        break;
+                    break;
                     default:
                         break;
                 }
@@ -82,9 +85,32 @@ public class Main {
                     if (str.contains("mother")) currentHome = mother.getHome(); // У Мамы и Малыша
                     if (str.contains("babyk")) currentHome = babyk.getHome(); // Один и тот же дом
                 }
+                if (str.contains("insert")){
+                    str = str.replace("insert ", "");
+                    try {
+                        Toy toyParse = jMapper.readValue(str, Toy.class);
+                        currentHome.addThing(toyParse);
+                        //insert {"weight":24.4,"name":"A","isCleaning":true}
+                    } catch (Exception e) {
+                        System.out.println("Скорее всего, вы ввели неправильный jSon-код");
+                    }
+                }
+                else
+                    if(str.contains("add_if_max")){
+                        str = str.replace("add_if_max ", "");
+                        try {
+                            currentHome.addIfMax(jMapper.readValue(str, Toy.class));
+                        } catch (Exception e) {
+                            System.out.println("Скорее всего, вы ввели неправильный jSon-код");
+                        }
+                    }
             }
-        carlson.getHome().saveThingsToFile(fileCarlsonsThings);
-        babyk.getHome().saveThingsToFile(fileMotherAndBabyksThings);
+        }
+        finally {
+            carlson.getHome().saveThingsToFile(fileCarlsonsThings);
+            babyk.getHome().saveThingsToFile(fileMotherAndBabyksThings);
+        }
+
 
     }
 }

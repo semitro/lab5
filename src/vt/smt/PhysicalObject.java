@@ -7,6 +7,10 @@ abstract class PhysicalObject implements Cleanable, Comparable<PhysicalObject>{
     // Вещи, которые могут быть в доме
     protected boolean isCleaning;
     protected double weight; // Вес
+    public void setisCleaning(boolean clean){
+        isCleaning = clean;
+
+    }
     public double getWeight(){
         return weight;
     }
