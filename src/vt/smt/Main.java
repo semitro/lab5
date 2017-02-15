@@ -61,7 +61,7 @@ public class Main {
             String str = new String();
             Home currentHome = carlson.getHome();
             java.util.Scanner sc = new Scanner(System.in);
-            currentHome.addIfMax(new Toy("dgdg",109.5,true));
+
             System.out.println("Интерактивный режим.\nДом Карлсона \nВводи ? для посказки\n");
         try { // Считаю это решение грамотным. Коллекции должны быть сохранены гарантированно.
             while (str.equals("exit") == false) {

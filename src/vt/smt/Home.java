@@ -30,8 +30,8 @@ class Home implements Cleanable{
         for(PhysicalObject i : things){
             if(obj.compareTo(i) < 0)
                 return;
-            addThing(obj);
         }
+        addThing(obj);
     }
     public void insert(int index, PhysicalObject obj) {
         things.insertElementAt(obj,index);
