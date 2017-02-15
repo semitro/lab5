@@ -16,6 +16,13 @@
 </Thing>
 <Thing>
 <Toy>
+<Name>Second</Name>
+<Weight>2.2</Weight>
+<IsClean>false</IsClean>
+</Toy>
+</Thing>
+<Thing>
+<Toy>
 <Name>Big</Name>
 <Weight>224.4</Weight>
 <IsClean>true</IsClean>

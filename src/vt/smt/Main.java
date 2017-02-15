@@ -17,7 +17,9 @@ public class Main {
     static final String interactiveModeHelp = "exit  - выход\n" +
             "switch carlson/mother/babyk - смена дома, чьими вещами сейчас управляем\n" +
             "clear - очистка вещей текущего дома\n" +
-            "reorder - реверс вещей текущего дома";
+            "reorder - реверс вещей текущего дома\n" +
+            "add_if_max {\"weight\":double,\"name\":\"String\",\"isCleaning\":bool} - добавить, если тяжелейший\n" +
+            "insert {index} {element} - аккуратно и точно вставить в коллекцию.";
 
 
     public static void main(String[] args) throws Exception{
@@ -88,10 +90,15 @@ public class Main {
                 if (str.contains("insert")){
                     str = str.replace("insert ", "");
                     try {
-                        Toy toyParse = jMapper.readValue(str, Toy.class);
-                        currentHome.addThing(toyParse);
-                        //insert {"weight":24.4,"name":"A","isCleaning":true}
-                    } catch (Exception e) {
+                        String temp[] = str.split(" ");
+                        if(temp.length != 2){
+                            System.out.println("Некорректная команда");
+                            break;
+                        }
+                        Toy toyParse = jMapper.readValue(temp[1], Toy.class);
+                        currentHome.insert(Integer.parseInt(temp[0])-1,toyParse);
+                    }
+                    catch (Exception e) {
                         System.out.println("Скорее всего, вы ввели неправильный jSon-код");
                     }
                 }
