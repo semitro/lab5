@@ -1,13 +1,7 @@
 package vt.smt;
-import org.codehaus.jackson.jaxrs.JacksonJsonProvider;
 import org.codehaus.jackson.map.ObjectMapper;
-import org.codehaus.jackson.type.JavaType;
-import sun.org.mozilla.javascript.json.JsonParser;
-import sun.security.ssl.Debug;
-
 import java.io.File;
 import java.util.Scanner;
-import org.codehaus.jackson.*;
 // Подумать, как правильнее работать с файлом
 public class Main {
 

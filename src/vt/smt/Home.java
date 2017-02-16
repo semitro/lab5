@@ -23,9 +23,16 @@ class Home implements Cleanable{
     }
     void addThing(PhysicalObject obj) { things.add(obj); }
  //////////////////////////////////////////////////////////////////
+    /**
+     * <p>Задом-наперёдит коллекцию things</p>
+     */
     public void reorder(){
         Collections.reverse(things);
     }
+    /**
+     * Добавляет элемент в коллекцию, если его вес превосходит вес остальных элеметов коллекции
+     * @param obj Элемент, потенциально добавляемый в коллекцию
+     */
     public void addIfMax(PhysicalObject obj){
         for(PhysicalObject i : things){
             if(obj.compareTo(i) < 0)
@@ -33,9 +40,17 @@ class Home implements Cleanable{
         }
         addThing(obj);
     }
+    /**
+     * <p> Вставляет элемент в коллекцию на заданную позицию</p>
+     * @param index позиция элемента (счёт от нуля)
+     * @param obj сам элемент
+     */
     public void insert(int index, PhysicalObject obj) {
         things.insertElementAt(obj,index);
     }
+    /**
+     * <p>Очищает коллекцию things</p>
+     */
     public void clear() {
         things.clear();
     }
