@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<PhysicalObjects>
+<Thing>
+<Toy>
+<Name>Petya</Name>
+<Weight>24.12212512124125</Weight>
+<IsClean>true</IsClean>
+</Toy>
+</Thing>
+</PhysicalObjects>

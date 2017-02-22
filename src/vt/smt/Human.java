@@ -1,6 +1,6 @@
 package vt.smt;
 
-/**
+/**hj
  * Created by semitro on 03.12.16.
  */
 abstract class Human implements Cleaner{

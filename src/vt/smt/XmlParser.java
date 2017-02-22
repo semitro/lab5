@@ -8,6 +8,7 @@ import javax.xml.parsers.DocumentBuilderFactory;
 import java.io.File;
 import java.io.FileNotFoundException;
 import java.io.FileWriter;
+import java.util.Scanner;
 
 import org.w3c.dom.Document;
 
@@ -19,13 +20,12 @@ import org.w3c.dom.Document;
 //Как сделать так, чтобы при добавлении наследников физического объекта не приходилось дописывать парсер?
 public class XmlParser {
     public boolean hasNext(){
-      //  Debug.println("Has next" , Integer.toString(currentNode));
         if(list.getLength()-currentNode <= 0)
             return false;
         else
             return true;
     }
-    XmlParser(String path) {//throws FileNotFoundException{
+    XmlParser(String path) {
         File file = new File(path);
             try {
                 if(!file.exists()) {
@@ -40,15 +40,13 @@ public class XmlParser {
                 DocumentBuilderFactory factory = DocumentBuilderFactory.newInstance();
                 DocumentBuilder builder = factory.newDocumentBuilder();
                 doc = builder.parse(file);
+                Scanner sc = new Scanner(file);
                 doc.getDocumentElement().normalize();
                 doc.normalize();
                 doc.normalizeDocument();
                 list = doc.getDocumentElement().getElementsByTagName("Thing");
-               // list = doc.getChildNodes().item(0).getChildNodes();
-              //  Debug.println("List len", Integer.toString(list.getLength()));
             }catch (Exception e){
                 Debug.println("Exception: ", "Something wrongs with the XML-file: " + path);
-
             }
     }
     public PhysicalObject getNext(){

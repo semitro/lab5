@@ -88,7 +88,7 @@ class Home implements Cleanable{
         }
     }
     public void loadThingsFromFile(String pathToFile){
-        things.clear();
+            things.clear();
             XmlParser parser = new XmlParser(pathToFile);
             while (parser.hasNext()) things.add(parser.getNext());
     }
