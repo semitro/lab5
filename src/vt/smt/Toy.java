@@ -28,6 +28,6 @@ class Toy extends PhysicalObject{
     }
     @Override
     public String toString(){
-        return name;
+        return  new String("Вес: " + this.getWeight() + " Имя: "  + this.getName() + " Убарно: " + this.isClean());
     }
 }

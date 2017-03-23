@@ -26,7 +26,7 @@ abstract class PhysicalObject implements Cleanable, Comparable<PhysicalObject>{
     public boolean isClean(){return isCleaning;}
     @Override
     public int compareTo(PhysicalObject obj){
-        return (int)(this.getWeight()-obj.getWeight());
+        return (int)Math.floor(this.getWeight()-obj.getWeight());
     }
 
     @Override
@@ -38,7 +38,7 @@ abstract class PhysicalObject implements Cleanable, Comparable<PhysicalObject>{
     }
     @Override
     public String toString(){
-        return new String(this.getClass().toString() + " #" + hashCode());
+        return new String();
     }
 
 }

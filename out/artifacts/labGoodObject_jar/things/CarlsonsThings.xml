@@ -2,6 +2,13 @@
 <PhysicalObjects>
 <Thing>
 <Toy>
+<Name>Sample</Name>
+<Weight>30.0</Weight>
+<IsClean>true</IsClean>
+</Toy>
+</Thing>
+<Thing>
+<Toy>
 <Name>Iwan</Name>
 <Weight>25.5</Weight>
 <IsClean>true</IsClean>

@@ -54,8 +54,14 @@ class Home implements Cleanable{
     public void clear() {
         things.clear();
     }
-    private void sortThings(){
+    public void sortThings(){
         Collections.sort(things);
+    }
+    public void showCollection(){
+        if(things.size() == 0)
+            System.out.println("Коллекция пуста");
+        for(PhysicalObject i : things)
+            System.out.println(i.toString());
     }
     //////////////////////////////////////////////
     public void saveThingsToFile(String pathToFile){

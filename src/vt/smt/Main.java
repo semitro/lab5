@@ -15,6 +15,7 @@ public class Main {
             "switch carlson/mother/babyk - смена дома, чьими вещами сейчас управляем\n" +
             "clear - очистка вещей текущего дома\n" +
             "reorder - реверс вещей текущего дома\n" +
+            "sort - сортировка коллекции\n" +
             "add_if_max {\"weight\":double,\"name\":\"String\",\"isCleaning\":bool} - добавить, если тяжелейший\n" +
             "insert {index} {element} - аккуратно и точно вставить в коллекцию.";
 
@@ -64,41 +65,83 @@ public class Main {
         Home currentHome = carlson.getHome();
         java.util.Scanner sc = new Scanner(System.in);
         System.out.println("Интерактивный режим.\nДом Карлсона \nВводи ? для посказки\n");
+        boolean commandFind = false;
         try { // Коллекции должны быть сохранены гарантированно.
             while (str.equals("exit") == false) {
+                commandFind = false;
                 str = sc.nextLine();
+                if(str.contains("exit"))
+                    commandFind = true;
                 switch (str) {
-                    case "?":
+                    case "?": {
                         System.out.println(interactiveModeHelp);
-                    case "reorder":
+                        commandFind = true;
+                    }
+                    break; // Не было написано break;
+                    case "reorder": {
                         currentHome.reorder();
+                        System.out.println("reorder: выполнено");
+                        commandFind = true;
+                    }
                         break;
                     case "clear": {
                         currentHome.clear();
+                        System.out.println("clear: выполнено");
+                        commandFind = true;
+                    }
+                    break;
+                    case "sort": {
+                        currentHome.sortThings();
+                        System.out.println("sort: выполнено");
+                        commandFind = true;
                     }
                     break;
                     default:
                         break;
                 }
+                if(commandFind)
+                    continue;
                 // Переключатель текущей коллекции
                 if (str.contains("switch")) {
-                    if (str.contains("carlson")) currentHome = carlson.getHome();
-                    if (str.contains("mother")) currentHome = mother.getHome(); // У Мамы и Малыша
-                    if (str.contains("babyk")) currentHome = babyk.getHome(); // Один и тот же дом
-                }
+                    commandFind = true;
+
+                    if (str.contains("carlson")) {
+                        currentHome = carlson.getHome();
+                        System.out.println("Switch: выполнено");
+                        continue;
+                    }
+
+                    else
+                    if (str.contains("mother")){
+                        currentHome = mother.getHome();
+                        System.out.println("Switch: выполнено");// У Мамы и Малыша
+                        continue;
+                    }
+                    else
+                    if (str.contains("babyk")) {
+                        currentHome = babyk.getHome();
+                        System.out.println("Switch: выполнено");
+                        continue;
+                    }// Один и тот же дом
+                    System.out.println("Switch.. куда?");
+                    }
+                else
+                if(str.contains("show")) {
+                    commandFind = true;
+                    currentHome.showCollection();
+                } else
                 if (str.contains("insert")){
                     str = str.replace("insert ", "");
                     try {
-                        String temp[] = str.split(" ");
-                        if(temp.length != 2){
-                            System.out.println("Некорректная команда");
-                            continue;
-                        }
+                        String temp[] = str.substring(0,5).split(" ");
+                        temp[1] = str.substring(str.indexOf(" "),str.length());
+                        commandFind = true;
                         Toy toyParse = jMapper.readValue(temp[1], Toy.class);
                         currentHome.insert(Integer.parseInt(temp[0])-1,toyParse);
+                        System.out.println("Insert: выполнено");
                     }
                     catch (IndexOutOfBoundsException e){
-                        System.out.print("Указанная позиция несуществует");
+                        System.out.println("Указанная позиция несуществует");
                     }
                     catch (Exception e) {
                         System.out.println("Скорее всего, вы ввели неправильный jSon-код");
@@ -110,11 +153,15 @@ public class Main {
                     if(str.contains("add_if_max")){
                         str = str.replace("add_if_max ", "");
                         try {
+                            commandFind = true;
                             currentHome.addIfMax(jMapper.readValue(str, Toy.class));
+                            System.out.println("add_if_max: выполнено");
                         } catch (Exception e) {
                             System.out.println("Скорее всего, вы ввели неправильный jSon-код");
                         }
                     }
+                if(!commandFind)
+                    System.out.println("Запрашиваемая команда не существует!");
             }
         }
         finally {
