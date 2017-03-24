@@ -11,14 +11,15 @@ import javafx.scene.control.MenuItem;
  */
 public class FallingList extends ContextMenu{
     BearGenerator bearGenerator;
-        FallingList(){
+    // Нуждается в информации о том, какой медведь его вызывает, потомушто модифицирует именно его.
+        FallingList(Bear bearCaller){
             super();
-            bearGenerator = new BearGenerator();
+            bearGenerator = new BearGenerator(bearCaller);
             MenuItem add = new MenuItem("Добавить");
             add.setOnAction(e->bearGenerator.show());
             this.getItems().add(add);
+            this.getItems().add(new MenuItem("Изменить"));
 
-            this.getItems().add(new MenuItem("Добавить"));
         }
 
 }

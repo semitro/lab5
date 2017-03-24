@@ -43,6 +43,7 @@ import java.util.Vector;
 
 
 public class MainGUI extends Application {
+    // BearsLine является HBox'ом
     private BearsLine bearsLine;
     @Override
     public void start(Stage primaryStage) {
@@ -60,10 +61,10 @@ public class MainGUI extends Application {
                         BackgroundRepeat.NO_REPEAT,BackgroundRepeat.NO_REPEAT,
                         BackgroundPosition.DEFAULT,BackgroundSize.DEFAULT)));
 
-        pane.setCenter(bearsLine.getNode());
+        pane.setCenter(bearsLine);
         primaryStage.setScene(new Scene(pane,600,250));
         primaryStage.setTitle("Медведики сущие");
-        pane.getCenter().setTranslateY(pane.getHeight()/2+bearsLine.getNode().getLayoutY());
+        pane.getCenter().setTranslateY(pane.getHeight()/2+bearsLine.getLayoutY());
         primaryStage.setResizable(false);
         primaryStage.show();
     }

@@ -17,7 +17,7 @@ import java.io.File;
 import java.net.URI;
 
 /**
- * Окно генерации новых медведей
+ * Окно генерации новых медведей / изменения существующих
  */
 public class BearGenerator {
     Stage stage;
@@ -30,7 +30,10 @@ public class BearGenerator {
     CheckBox isCleanBox;
     TextField nameInput;
     Image defaultImage;
-    BearGenerator(){
+    // Нужно знать, какой медведь нас вызвал
+    Bear caller;
+    BearGenerator(Bear caller){
+        this.caller = caller;
         camSnapshot = new Thread(new Runnable() {
             @Override
             public void run() {
@@ -65,8 +68,11 @@ public class BearGenerator {
 
         pane.getChildren().add(imageAvatar);
         rightBox.getChildren().add(new Label("Ggg"));
-
-        nameInput = new TextField("Имя медведя");
+       // if( ((BearsLine)caller.getParent()).getInfoAbout())
+        nameInput = new TextField(
+                // Модель медведя принадлежит главному боксу BearsLine, который сам является боксом
+                ((BearsLine)caller.getParent().getParent()).getInfoAbout(Integer.valueOf(caller.getId())).getName()
+        );
         rightBox.getChildren().add(nameInput);
 
         isCleanBox = new CheckBox("Чистый");
@@ -83,16 +89,12 @@ public class BearGenerator {
         centerBox.getChildren().add(rightBox);
         centerBox.setSpacing(8);
         rightBox.setSpacing(8);
-
-       // centerBox.setMaxSize(centerBox.getWidth(),centerBox.getMaxHeight());
         pane.getChildren().add(centerBox);
         stage.setTitle("Медведогенератор");
         stage.setScene(new Scene(pane,380,120));
         stage.setOnHiding(e->{
             imageView.setImage(defaultImage);
-
         });
-
     }
     public void show(){
         stage.show();

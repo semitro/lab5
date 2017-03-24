@@ -8,8 +8,10 @@ import javafx.scene.effect.Reflection;
 import javafx.scene.effect.Shadow;
 import javafx.scene.image.Image;
 import javafx.scene.input.MouseEvent;
+import javafx.scene.layout.HBox;
 import javafx.scene.paint.Color;
 import javafx.util.Duration;
+import vt.smt.Toy;
 
 import java.awt.*;
 
@@ -25,10 +27,12 @@ public class Bear extends javafx.scene.image.ImageView {
     }
     Bear(String imgPath){
         super();
-        fallingList = new FallingList();
         img = new Image(getClass().getResourceAsStream("defaultBear.png"));
         this.setImage(img);
         initAnim();
+        this.setOnMouseEntered(e->{
+            System.out.println(this.getId());
+        });
     }
     void initAnim(){
         // Scaling grow
@@ -51,9 +55,12 @@ public class Bear extends javafx.scene.image.ImageView {
         this.setEffect(reflection);
         //
         setOnContextMenuRequested(e->{
+            if(fallingList == null)
+                fallingList = new FallingList(this);
             fallingList.show(this,e.getScreenX(),e.getScreenY());
 
         });
 
     }
+
 }
