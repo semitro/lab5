@@ -1,11 +1,6 @@
 package vt.smt.GUI;
 
-
 import com.github.sarxos.webcam.Webcam;
-import com.sun.javafx.iio.common.ImageTools;
-import com.sun.javafx.tk.*;
-import com.sun.javafx.tk.Toolkit;
-import javafx.fxml.FXML;
 import javafx.scene.Scene;
 import javafx.scene.control.Button;
 import javafx.scene.control.CheckBox;
@@ -18,7 +13,6 @@ import javafx.stage.Stage;
 import sun.text.normalizer.UTF16;
 
 import javax.imageio.ImageIO;
-import java.awt.*;
 import java.io.File;
 import java.net.URI;
 
@@ -31,8 +25,6 @@ public class BearGenerator {
     Button imageAvatar;
     Button addButton;
     ImageView imageView;
-
-
     VBox rightBox;
     HBox centerBox;
     CheckBox isCleanBox;
@@ -105,7 +97,6 @@ public class BearGenerator {
     public void show(){
         stage.show();
         stage.toFront();
-
     }
     // Класс, поставляемый библиотекой
     private Webcam webcam;

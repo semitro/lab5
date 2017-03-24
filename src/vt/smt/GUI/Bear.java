@@ -26,7 +26,6 @@ public class Bear extends javafx.scene.image.ImageView {
     Bear(String imgPath){
         super();
         fallingList = new FallingList();
-
         img = new Image(getClass().getResourceAsStream("defaultBear.png"));
         this.setImage(img);
         initAnim();

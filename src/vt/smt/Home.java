@@ -6,9 +6,10 @@ import java.io.FileNotFoundException;
 import java.io.FileWriter;
 import java.io.IOException;
 import java.util.Collections;
+import java.util.List;
 import java.util.Vector;
 
-class Home implements Cleanable{
+public class Home implements Cleanable{
     public void cleanUp() throws AlreadyCleanException{
         if(isClean())
             throw new AlreadyCleanException();
@@ -17,7 +18,7 @@ class Home implements Cleanable{
             i.cleanUp();
         isClean = true;
     }
-    Home(){
+    public Home(){
         isClean = false;
         things = new Vector<>();
     }
@@ -63,28 +64,31 @@ class Home implements Cleanable{
         for(PhysicalObject i : things)
             System.out.println(i.toString());
     }
+    public List<PhysicalObject> getThings(){
+        return this.things;
+    }
     //////////////////////////////////////////////
-    public void saveThingsToFile(String pathToFile){
-       try {
-           BufferedWriter writer = new BufferedWriter(new FileWriter(pathToFile));
-           writer.write("<?xml version=\"1.0\" encoding=\"UTF-8\"?>");
-           writer.newLine();
-           writer.write("<PhysicalObjects>");
-           writer.newLine();
-           for (PhysicalObject i : things){
-               writer.write("<Thing>"); writer.newLine();
-               if(i instanceof Toy) {
-                   writer.write("<Toy>"); writer.newLine();
-                   writer.write("<Name>" + ((Toy) i).getName() + "</Name>"); writer.newLine();
-                   writer.write("<Weight>" + ((Toy)i).getWeight() + "</Weight>"); writer.newLine();
-                   writer.write("<IsClean>" + i.isClean() + "</IsClean>"); writer.newLine();
-                   writer.write("</Toy>"); writer.newLine();
-               }
-               writer.write("</Thing>"); writer.newLine();
-           }
-           writer.write("</PhysicalObjects>"); writer.newLine();
-           writer.flush();
-           writer.close();
+    public void saveThingsToFile(String pathToFile, List<PhysicalObject> collection){
+        try {
+            BufferedWriter writer = new BufferedWriter(new FileWriter(pathToFile));
+            writer.write("<?xml version=\"1.0\" encoding=\"UTF-8\"?>");
+            writer.newLine();
+            writer.write("<PhysicalObjects>");
+            writer.newLine();
+            for (PhysicalObject i : collection){
+                writer.write("<Thing>"); writer.newLine();
+                if(i instanceof Toy) {
+                    writer.write("<Toy>"); writer.newLine();
+                    writer.write("<Name>" + ((Toy) i).getName() + "</Name>"); writer.newLine();
+                    writer.write("<Weight>" + ((Toy)i).getWeight() + "</Weight>"); writer.newLine();
+                    writer.write("<IsClean>" + i.isClean() + "</IsClean>"); writer.newLine();
+                    writer.write("</Toy>"); writer.newLine();
+                }
+                writer.write("</Thing>"); writer.newLine();
+            }
+            writer.write("</PhysicalObjects>"); writer.newLine();
+            writer.flush();
+            writer.close();
         }
         catch (FileNotFoundException e){
             Debug.println("Home.SaveThingsToFile", "File not found exception" + pathToFile);
@@ -92,6 +96,9 @@ class Home implements Cleanable{
         catch (IOException e){
             Debug.println("Home.SaveThingsToFile()", e.getMessage());
         }
+    }
+    public void saveThingsToFile(String pathToFile){
+       saveThingsToFile(pathToFile,this.things);
     }
     public void loadThingsFromFile(String pathToFile){
             things.clear();
@@ -113,9 +120,6 @@ class Home implements Cleanable{
     public int hashCode(){
         return things.size();
     }
-
-
-    private static int count = 0;
     private Vector<PhysicalObject> things;
     private boolean isClean;
 

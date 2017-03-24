@@ -4,13 +4,14 @@ package vt.smt;
  * Created by semitro on 23.03.17.
  */
 
+import javafx.application.Application;
 import org.codehaus.jackson.map.ObjectMapper;
+import vt.smt.GUI.MainGUI;
 
 import java.io.File;
 import java.util.Scanner;
 
 /**
-
  Сюжет лабораторной из текста
  */
 public class Plot {
@@ -40,6 +41,8 @@ public class Plot {
         //Запуск консольного мода из первой весенней лабы при необходимости
         if(consoleMode)
             startConsoleMode();
+        else
+            startGUI();
     }
     private void startConsoleMode(){
         ObjectMapper jMapper = new ObjectMapper();
@@ -152,6 +155,9 @@ public class Plot {
         }
     }
     private void startGUI(){
+       // MainGUI mg = new MainGUI(carlson.getHome().getThings());
+       // mg.launch(MainGUI.class,null);
+        Application.launch(MainGUI.class,null);
 
     }
     static final String fileMotherAndBabyksThings =

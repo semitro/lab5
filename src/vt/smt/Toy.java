@@ -1,17 +1,17 @@
 package vt.smt;
 
 
-class Toy extends PhysicalObject{
+public class Toy extends PhysicalObject{
     private String name;
     private Toy(){
         super();
     }
-    Toy(String name){
+    public Toy(String name){
         super();
         this.name = name;
         weight = 8;
     }
-    Toy(String name,double weight, boolean isClean){
+    public Toy(String name,double weight, boolean isClean){
         super();
         this.name  = name;
         this.weight = weight;

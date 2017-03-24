@@ -1,6 +1,7 @@
 package vt.smt.GUI;
 
 import com.github.sarxos.webcam.Webcam;
+import com.sun.istack.internal.NotNull;
 import javafx.animation.*;
 import javafx.application.Application;
 import javafx.event.Event;
@@ -27,68 +28,30 @@ import javafx.scene.effect.*;
 import javafx.stage.StageStyle;
 import javafx.stage.Window;
 import javafx.util.Duration;
+import vt.smt.Home;
+import vt.smt.Main;
+import vt.smt.PhysicalObject;
+import vt.smt.Toy;
 
 import javax.annotation.Resource;
 import javax.swing.*;
 import java.io.File;
 import java.net.URI;
 import java.nio.file.Paths;
+import java.util.List;
+import java.util.Vector;
 
 
 public class MainGUI extends Application {
-    public static void main(String[] args) throws Exception{
-
-//        File f = new File("snap");
-//
-//        f.createNewFile();
-        launch(args);
-    }
-    private HBox outerLine;
-    private HBox mainLine;
+    private BearsLine bearsLine;
     @Override
-    public void start(Stage primaryStage) throws Exception {
+    public void start(Stage primaryStage) {
+        bearsLine = new BearsLine();
         BorderPane pane = new BorderPane();
-        outerLine = new HBox();
-        mainLine = new HBox();
-        mainLine.setSpacing(20);
         ContextMenu cm = new ContextMenu();
         MenuItem mi = new MenuItem("sgs");
         cm.getItems().add(mi);
 
-      //  mainLine.getChildren().add();
-
-        mainLine.getChildren().add(new Bear());
-        for (int i = 0; i < 1; i++) {
-            mainLine.getChildren().add(new Bear());
-        }
-
-        TranslateTransition translateTransition =
-                new TranslateTransition(Duration.millis(1800));
-        translateTransition.setCycleCount(1);
-        translateTransition.setAutoReverse(true);
-        translateTransition.setNode(mainLine);
-
-        class MouseDraggedWrapper{
-            public double value;
-        }
-        MouseDraggedWrapper mouseDragged = new MouseDraggedWrapper();
-
-        outerLine.setOnMousePressed(start->{
-            mouseDragged.value = start.getSceneX();
-
-        });
-        outerLine.setOnMouseDragged(drag->{
-
-        });
-        outerLine.setOnMouseReleased(end->{
-            translateTransition.setFromX(mainLine.getTranslateX());
-            translateTransition.setToX(
-                    mainLine.getTranslateX() + end.getSceneX() - mouseDragged.value);
-            translateTransition.play();
-
-        });
-
-        outerLine.getChildren().add(mainLine);
         pane.setBackground(
                 new Background(
                 new BackgroundImage(
@@ -97,11 +60,10 @@ public class MainGUI extends Application {
                         BackgroundRepeat.NO_REPEAT,BackgroundRepeat.NO_REPEAT,
                         BackgroundPosition.DEFAULT,BackgroundSize.DEFAULT)));
 
-        pane.setCenter(outerLine);
-
+        pane.setCenter(bearsLine.getNode());
         primaryStage.setScene(new Scene(pane,600,250));
         primaryStage.setTitle("Медведики сущие");
-        pane.getCenter().setTranslateY(pane.getHeight()/2+mainLine.getHeight());
+        pane.getCenter().setTranslateY(pane.getHeight()/2+bearsLine.getNode().getLayoutY());
         primaryStage.setResizable(false);
         primaryStage.show();
     }

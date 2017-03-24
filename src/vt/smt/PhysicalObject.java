@@ -3,7 +3,7 @@ package vt.smt;
 /**
  * Created by semitro on 03.12.16.
  */
-abstract class PhysicalObject implements Cleanable, Comparable<PhysicalObject>{
+public abstract class PhysicalObject implements Cleanable, Comparable<PhysicalObject>{
     // Вещи, которые могут быть в доме
     protected boolean isCleaning;
     protected double weight; // Вес
