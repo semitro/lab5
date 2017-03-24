@@ -14,6 +14,7 @@ import javafx.util.Duration;
 import vt.smt.Toy;
 
 import java.awt.*;
+import java.util.Enumeration;
 
 
 /**
@@ -22,6 +23,8 @@ import java.awt.*;
 public class Bear extends javafx.scene.image.ImageView {
     private FallingList fallingList;
     private Image img;
+
+
     Bear(){
         this("defaultBear.png");
     }
@@ -30,9 +33,6 @@ public class Bear extends javafx.scene.image.ImageView {
         img = new Image(getClass().getResourceAsStream("defaultBear.png"));
         this.setImage(img);
         initAnim();
-        this.setOnMouseEntered(e->{
-            System.out.println(this.getId());
-        });
     }
     void initAnim(){
         // Scaling grow
@@ -62,5 +62,10 @@ public class Bear extends javafx.scene.image.ImageView {
         });
 
     }
-
+    Toy getInfo(){
+        if(this.getId() == null)
+            return null;
+        else // Модель медведя принадлежит главному боксу BearsLine, который сам является боксом
+            return ((BearsLine)this.getParent().getParent()).getInfoAbout(Integer.valueOf(this.getId()));
+    }
 }

@@ -16,9 +16,12 @@ public class FallingList extends ContextMenu{
             super();
             bearGenerator = new BearGenerator(bearCaller);
             MenuItem add = new MenuItem("Добавить");
-            add.setOnAction(e->bearGenerator.show());
+            add.setOnAction(e->bearGenerator.show(BearGenerator.GeneratorMode.GENERATOR));
             this.getItems().add(add);
-            this.getItems().add(new MenuItem("Изменить"));
+
+            MenuItem modify = new MenuItem("Изменить");
+            modify.setOnAction(e->bearGenerator.show(BearGenerator.GeneratorMode.MODIFYDER));
+            this.getItems().add(modify);
 
         }
 

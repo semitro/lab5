@@ -10,6 +10,7 @@ import javafx.scene.image.Image;
 import javafx.scene.image.ImageView;
 import javafx.scene.layout.*;
 import javafx.stage.Stage;
+import sun.nio.cs.Surrogate;
 import sun.text.normalizer.UTF16;
 
 import javax.imageio.ImageIO;
@@ -32,6 +33,13 @@ public class BearGenerator {
     Image defaultImage;
     // Нужно знать, какой медведь нас вызвал
     Bear caller;
+    // Окно вызвано для изменения или добавления медведя?
+    public enum GeneratorMode{
+        GENERATOR,
+        MODIFYDER
+    }
+
+
     BearGenerator(Bear caller){
         this.caller = caller;
         camSnapshot = new Thread(new Runnable() {
@@ -67,18 +75,17 @@ public class BearGenerator {
         );
 
         pane.getChildren().add(imageAvatar);
-        rightBox.getChildren().add(new Label("Ggg"));
+        rightBox.getChildren().add(new Label("Я не знал, что здесь написать.."));
        // if( ((BearsLine)caller.getParent()).getInfoAbout())
         nameInput = new TextField(
-                // Модель медведя принадлежит главному боксу BearsLine, который сам является боксом
-                ((BearsLine)caller.getParent().getParent()).getInfoAbout(Integer.valueOf(caller.getId())).getName()
+               caller.getInfo().getName()
         );
         rightBox.getChildren().add(nameInput);
 
         isCleanBox = new CheckBox("Чистый");
+        isCleanBox.setSelected(caller.getInfo().isClean());
         rightBox.getChildren().add(isCleanBox);
-
-        addButton = new Button("Сотворить медведя");
+            addButton = new Button("Сотворить медведя!");
         addButton.setOnAction(e->{
             stage.close();
 
@@ -90,15 +97,23 @@ public class BearGenerator {
         centerBox.setSpacing(8);
         rightBox.setSpacing(8);
         pane.getChildren().add(centerBox);
-        stage.setTitle("Медведогенератор");
+        stage.setTitle("Медведогенератор 2.0");
         stage.setScene(new Scene(pane,380,120));
         stage.setOnHiding(e->{
             imageView.setImage(defaultImage);
         });
     }
-    public void show(){
+    public void show(GeneratorMode currentMode){
+        if(currentMode == GeneratorMode.GENERATOR)
+            addButton.setText("Сотворить медведя!");
+        else
+            addButton.setText("Преобразовать медведя!");
+
+        if(currentMode == GeneratorMode.MODIFYDER) stage.setTitle("Медведоизменятор");
+        else
+            stage.setTitle("Медведогенератор 2.0");
         stage.show();
-        stage.toFront();
+
     }
     // Класс, поставляемый библиотекой
     private Webcam webcam;
