@@ -100,6 +100,7 @@ public class BearGenerator {
             imageView.setImage(defaultImage);
 
         });
+
     }
     public void show(){
         stage.show();
@@ -113,8 +114,8 @@ public class BearGenerator {
     // Вызывается потоком camSnapshot
     private void camSnapshot(){
         try {
-
-            webcam = Webcam.getDefault();
+            if(webcam == null)
+                webcam = Webcam.getDefault();
             webcam.open();
             ImageIO.write(webcam.getImage(), "PNG", new File(
                     System.getProperty("user.dir") + File.separator + "things" + File.separator + "shot.png"

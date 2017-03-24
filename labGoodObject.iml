@@ -11,5 +11,14 @@
     <orderEntry type="library" exported="" name="Webcam" level="project" />
     <orderEntry type="library" exported="" name="slf4j-api-1.7.2" level="project" />
     <orderEntry type="library" exported="" name="bridj-0.6.2" level="project" />
+    <orderEntry type="module-library">
+      <library name="slf4j-nop">
+        <CLASSES>
+          <root url="jar://$MODULE_DIR$/src/vt/smt/slf4j-nop.jar!/" />
+        </CLASSES>
+        <JAVADOC />
+        <SOURCES />
+      </library>
+    </orderEntry>
   </component>
 </module>
