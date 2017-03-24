@@ -39,7 +39,14 @@ public class BearGenerator {
     TextField nameInput;
     Image defaultImage;
     BearGenerator(){
-
+        camSnapshot = new Thread(new Runnable() {
+            @Override
+            public void run() {
+                // Фотография с камеры устанавливается на кнопку
+                camSnapshot();
+                return;
+            }
+        });
         stage = new Stage();
         pane = new Pane();
         rightBox = new VBox();
@@ -49,7 +56,20 @@ public class BearGenerator {
         defaultImage = new Image(getClass().getResourceAsStream("defaultBear.png"));
         imageView = new ImageView(defaultImage);
         imageAvatar.setGraphic(imageView);
-        imageAvatar.setOnAction(e->camSnapshot());
+        imageAvatar.setOnAction(e-> {
+            // Адекватен ли этот код? + повторение в начале конструктора.
+                    // Ну, зато работает)0
+            if(!camSnapshot.isAlive())
+                camSnapshot = new Thread(new Runnable() {
+                    @Override
+                    public void run() {
+                        // Фотография с камеры устанавливается на кнопку
+                        camSnapshot();
+                    }
+                });
+            camSnapshot.start();
+        }
+        );
 
         pane.getChildren().add(imageAvatar);
         rightBox.getChildren().add(new Label("Ggg"));
@@ -80,16 +100,20 @@ public class BearGenerator {
             imageView.setImage(defaultImage);
 
         });
-
     }
     public void show(){
         stage.show();
         stage.toFront();
 
     }
+    // Класс, поставляемый библиотекой
     private Webcam webcam;
+    // Довольно долго записать в файл и получить изображение, чтобы окно не висло, сделаем отдельный поток
+    private Thread camSnapshot;
+    // Вызывается потоком camSnapshot
     private void camSnapshot(){
         try {
+
             webcam = Webcam.getDefault();
             webcam.open();
             ImageIO.write(webcam.getImage(), "PNG", new File(
