@@ -65,8 +65,9 @@ public class BearsLine extends HBox{
    }
 
 
-    // Отображение коллекции в видимых медведей
+    // Отображение коллекции в видимых медведей ???
     public void refreshVisible() {
+        mainLine.getChildren().clear();
         for (int i = 0; i < collection.size(); i++) {
             Bear bear = new Bear(); // Спасибо огромное составителям JavaFX за возможность присудить ID!
             bear.setId(Integer.toString(i));
@@ -76,6 +77,12 @@ public class BearsLine extends HBox{
     public void updateElement(int index, Toy element){
         if(collection.size() < index)
             collection.set(index,element);
+    }
+    public void removeElement(String index){
+        removeElement(Integer.valueOf(index));
+    }
+    public void removeElement(int index){
+        collection.remove(index);
     }
     public Toy getInfoAbout(int index){
         return index < collection.size() ? (Toy)collection.get(index) : null;

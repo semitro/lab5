@@ -64,7 +64,7 @@ public class MainGUI extends Application {
         pane.setCenter(bearsLine);
         primaryStage.setScene(new Scene(pane,600,250));
         primaryStage.setTitle("Медведики сущие");
-        pane.getCenter().setTranslateY(pane.getHeight()/2+bearsLine.getLayoutY());
+        pane.getCenter().setTranslateY(pane.getHeight()/5);
         primaryStage.setResizable(false);
         primaryStage.show();
     }

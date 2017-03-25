@@ -11,6 +11,19 @@ public abstract class PhysicalObject implements Cleanable, Comparable<PhysicalOb
         isCleaning = clean;
 
     }
+
+    public boolean isCleaning() {
+        return isCleaning;
+    }
+
+    public void setCleaning(boolean cleaning) {
+        isCleaning = cleaning;
+    }
+
+    public void setWeight(double weight) {
+        this.weight = weight;
+    }
+
     public double getWeight(){
         return weight;
     }

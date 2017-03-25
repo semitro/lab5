@@ -3,6 +3,11 @@ package vt.smt;
 
 public class Toy extends PhysicalObject{
     private String name;
+
+    public void setName(String name) {
+        this.name = name;
+    }
+
     private Toy(){
         super();
     }
