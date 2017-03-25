@@ -12,9 +12,8 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="77a8a249-03e5-49ff-b2c8-7f115b1798d8" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/vt/smt/GUI/Titleses.java" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/.~lock.lab5Отчёт.odt#" afterPath="" />
       <change type="DELETED" beforePath="$PROJECT_DIR$/Uml2.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/nullTEST" afterPath="" />
       <change type="DELETED" beforePath="$PROJECT_DIR$/out/production/labGoodObject/lab5.odt" afterPath="" />
       <change type="DELETED" beforePath="$PROJECT_DIR$/out/production/labGoodObject/things/BabykAndMotherThings.xml" afterPath="" />
       <change type="DELETED" beforePath="$PROJECT_DIR$/out/production/labGoodObject/things/CarlsonsThings.xml" afterPath="" />
@@ -31,6 +30,8 @@
       <change type="DELETED" beforePath="$PROJECT_DIR$/out/production/labGoodObject/vt/smt/Main$1.class" afterPath="" />
       <change type="DELETED" beforePath="$PROJECT_DIR$/out/production/labGoodObject/vt/smt/MotherThings.xml" afterPath="" />
       <change type="DELETED" beforePath="$PROJECT_DIR$/out/production/labGoodObject/vt/smt/slf4j-api-1.7.2.jar" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/snap" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/META-INF/MANIFEST.MF" afterPath="" />
       <change type="DELETED" beforePath="$PROJECT_DIR$/src/vt/smt/BabykThings.xml" afterPath="" />
       <change type="DELETED" beforePath="$PROJECT_DIR$/src/vt/smt/Carl.xml" afterPath="" />
       <change type="DELETED" beforePath="$PROJECT_DIR$/src/vt/smt/Carl1.xml" afterPath="" />
@@ -51,24 +52,9 @@
       <change type="DELETED" beforePath="$PROJECT_DIR$/things/566807075" afterPath="" />
       <change type="DELETED" beforePath="$PROJECT_DIR$/things/914362164" afterPath="" />
       <change type="DELETED" beforePath="$PROJECT_DIR$/things/999987486" afterPath="" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/labGoodObject/vt/smt/GUI/Bear.class" afterPath="$PROJECT_DIR$/out/production/labGoodObject/vt/smt/GUI/Bear.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/labGoodObject/vt/smt/GUI/BearGenerator.class" afterPath="$PROJECT_DIR$/out/production/labGoodObject/vt/smt/GUI/BearGenerator.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/labGoodObject/vt/smt/GUI/BearModifyder.class" afterPath="$PROJECT_DIR$/out/production/labGoodObject/vt/smt/GUI/BearModifyder.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/labGoodObject/vt/smt/GUI/BearWindow.class" afterPath="$PROJECT_DIR$/out/production/labGoodObject/vt/smt/GUI/BearWindow.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/labGoodObject/vt/smt/GUI/BearsLine$1MouseDraggedWrapper.class" afterPath="$PROJECT_DIR$/out/production/labGoodObject/vt/smt/GUI/BearsLine$1MouseDraggedWrapper.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/labGoodObject/vt/smt/GUI/BearsLine.class" afterPath="$PROJECT_DIR$/out/production/labGoodObject/vt/smt/GUI/BearsLine.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/labGoodObject/vt/smt/Plot.class" afterPath="$PROJECT_DIR$/out/production/labGoodObject/vt/smt/Plot.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/img/fone.jpg" afterPath="$PROJECT_DIR$/src/img/fone.jpg" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/vt/smt/GUI/fone.jpg" afterPath="$PROJECT_DIR$/src/vt/smt/GUI/fone.jpg" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/things/-709453076" afterPath="$PROJECT_DIR$/things/-709453076" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/vt/smt/GUI/Bear.java" afterPath="$PROJECT_DIR$/src/vt/smt/GUI/Bear.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/vt/smt/GUI/BearGenerator.java" afterPath="$PROJECT_DIR$/src/vt/smt/GUI/BearGenerator.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/vt/smt/GUI/BearModifyder.java" afterPath="$PROJECT_DIR$/src/vt/smt/GUI/BearModifyder.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/vt/smt/GUI/BearWindow.java" afterPath="$PROJECT_DIR$/src/vt/smt/GUI/BearWindow.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/vt/smt/GUI/BearsLine.java" afterPath="$PROJECT_DIR$/src/vt/smt/GUI/BearsLine.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/vt/smt/GUI/MainGUI.java" afterPath="$PROJECT_DIR$/src/vt/smt/GUI/MainGUI.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/vt/smt/Plot.java" afterPath="$PROJECT_DIR$/src/vt/smt/Plot.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/artifacts/labGoodObject_jar.xml" afterPath="$PROJECT_DIR$/.idea/artifacts/labGoodObject_jar.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.~lock.lab5Отчёт.odt#" afterPath="$PROJECT_DIR$/.~lock.lab5Отчёт.odt#" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Sring_GUI.uxf" afterPath="$PROJECT_DIR$/Sring_GUI.uxf" />
     </list>
     <ignored path="labGoodObject.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -148,10 +134,10 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="Titleses.java" pinned="false" current-in-tab="true">
+      <file leaf-file-name="Titleses.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/vt/smt/GUI/Titleses.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="321">
+            <state relative-caret-position="427">
               <caret line="70" column="30" lean-forward="false" selection-start-line="70" selection-start-column="30" selection-end-line="70" selection-end-column="30" />
               <folding>
                 <element signature="imports" expanded="true" />
@@ -159,6 +145,16 @@
                 <element signature="method#Titleses#1;class#Titleses#0" expanded="false" />
                 <element signature="method#start#0;class#Titleses#0" expanded="false" />
               </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="Main.java" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/vt/smt/Main.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="198">
+              <caret line="13" column="0" lean-forward="false" selection-start-line="13" selection-start-column="0" selection-end-line="13" selection-end-column="0" />
+              <folding />
             </state>
           </provider>
         </entry>
@@ -403,7 +399,7 @@
     <property name="SearchEverywhereHistoryKey" value="List&#9;PSI&#9;JAVA://java.util.List" />
     <property name="settings.editor.selected.configurable" value="configurable.group.language" />
     <property name="settings.editor.splitter.proportion" value="0.2" />
-    <property name="project.structure.last.edited" value="Problems" />
+    <property name="project.structure.last.edited" value="Artifacts" />
     <property name="project.structure.proportion" value="0.15" />
     <property name="project.structure.side.proportion" value="0.2" />
     <property name="GenerateAntBuildDialog.enableUiFormCompile" value="true" />
@@ -898,12 +894,12 @@
       <workItem from="1490374982323" duration="1127000" />
       <workItem from="1490381608562" duration="24586000" />
       <workItem from="1490439333486" duration="9207000" />
-      <workItem from="1490449583157" duration="18467000" />
+      <workItem from="1490449583157" duration="20517000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="60740000" />
+    <option name="totallyTimeSpent" value="62790000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -918,7 +914,7 @@
     </todo-panel>
   </component>
   <component name="ToolWindowManager">
-    <frame x="0" y="24" width="1366" height="744" extended-state="7" />
+    <frame x="0" y="24" width="1366" height="744" extended-state="6" />
     <editor active="true" />
     <layout>
       <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
@@ -931,9 +927,9 @@
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.367713" sideWeight="0.23133236" order="1" side_tool="true" content_ui="tabs" />
       <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.012878788" sideWeight="0.48407644" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32972136" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.16408668" sideWeight="0.76866764" order="6" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.49535602" sideWeight="0.76866764" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Properties" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
-      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.02012384" sideWeight="0.88257575" order="5" side_tool="false" content_ui="tabs" />
+      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.30959752" sideWeight="0.88257575" order="5" side_tool="false" content_ui="tabs" />
       <window_info id="Capture Tool" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Designer" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.22575757" sideWeight="0.5" order="5" side_tool="false" content_ui="combo" />
@@ -1329,14 +1325,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/vt/smt/Main.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="198">
-          <caret line="13" column="0" lean-forward="false" selection-start-line="13" selection-start-column="0" selection-end-line="13" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/vt/smt/Home.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="1170">
@@ -1454,7 +1442,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/vt/smt/GUI/Titleses.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="321">
+        <state relative-caret-position="427">
           <caret line="70" column="30" lean-forward="false" selection-start-line="70" selection-start-column="30" selection-end-line="70" selection-end-column="30" />
           <folding>
             <element signature="imports" expanded="true" />
@@ -1462,6 +1450,14 @@
             <element signature="method#Titleses#1;class#Titleses#0" expanded="false" />
             <element signature="method#start#0;class#Titleses#0" expanded="false" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/vt/smt/Main.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="198">
+          <caret line="13" column="0" lean-forward="false" selection-start-line="13" selection-start-column="0" selection-end-line="13" selection-end-column="0" />
+          <folding />
         </state>
       </provider>
     </entry>
@@ -1532,7 +1528,7 @@
       </state>
       <state key="ProjectLibrariesConfigurable.UI">
         <settings>
-          <last-edited>bridj-0.6.2</last-edited>
+          <last-edited>slf4j-api-1.7.2</last-edited>
           <splitter-proportions>
             <option name="proportions">
               <list>

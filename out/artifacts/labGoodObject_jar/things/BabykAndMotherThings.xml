@@ -3,7 +3,21 @@
 <Thing>
 <Toy>
 <Name>Petya</Name>
-<Weight>24.12212512124125</Weight>
+<Weight>24.0</Weight>
+<IsClean>true</IsClean>
+</Toy>
+</Thing>
+<Thing>
+<Toy>
+<Name>Степан Степаныч</Name>
+<Weight>24.0</Weight>
+<IsClean>true</IsClean>
+</Toy>
+</Thing>
+<Thing>
+<Toy>
+<Name>Фёдор</Name>
+<Weight>2.0</Weight>
 <IsClean>true</IsClean>
 </Toy>
 </Thing>

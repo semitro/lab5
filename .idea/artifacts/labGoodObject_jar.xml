@@ -2,8 +2,15 @@
   <artifact type="jar" name="labGoodObject:jar">
     <output-path>$PROJECT_DIR$/out/artifacts/labGoodObject_jar</output-path>
     <root id="archive" name="labGoodObject.jar">
+      <element id="directory" name="META-INF">
+        <element id="file-copy" path="$PROJECT_DIR$/META-INF/MANIFEST.MF" />
+      </element>
       <element id="module-output" name="labGoodObject" />
+      <element id="library" level="project" name="slf4j-api-1.7.2" />
       <element id="extracted-dir" path="$PROJECT_DIR$/src/vt/smt/jackson.jar" path-in-jar="/" />
+      <element id="extracted-dir" path="$PROJECT_DIR$/src/vt/smt/slf4j-nop.jar" path-in-jar="/" />
+      <element id="extracted-dir" path="$PROJECT_DIR$/src/vt/smt/bridj-0.6.2.jar" path-in-jar="/" />
+      <element id="extracted-dir" path="$PROJECT_DIR$/src/vt/smt/Webcam.jar" path-in-jar="/" />
     </root>
   </artifact>
 </component>
