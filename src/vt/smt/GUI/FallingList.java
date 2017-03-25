@@ -24,11 +24,10 @@ public class FallingList extends ContextMenu{
             MenuItem modify = new MenuItem("Изменить");
             modify.setOnAction(e->bearModifyder.show());
             this.getItems().add(modify);
-
             MenuItem delete = new MenuItem("Удалить");
             delete.setOnAction(e-> {
                 ((BearsLine) (bearCaller.getParent().getParent())).removeElement(bearCaller.getId());
-                ((BearsLine)(bearCaller.getParent().getParent())).refreshVisible();
+               // ((BearsLine)(bearCaller.getParent().getParent())).refreshVisible();
                     }
             );
             this.getItems().add(delete);

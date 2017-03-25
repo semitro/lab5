@@ -7,8 +7,10 @@ package vt.smt.GUI;
  *  отображения (class Bear) и непосредственно управляемой коллекции
  */
 import com.sun.istack.internal.NotNull;
+import javafx.animation.FadeTransition;
 import javafx.animation.TranslateTransition;
 import javafx.scene.Node;
+import javafx.scene.effect.MotionBlur;
 import javafx.scene.layout.HBox;
 import javafx.util.Duration;
 import vt.smt.Home;
@@ -24,6 +26,7 @@ public class BearsLine extends HBox{
     // Зависим от абстракции collection
     private List<PhysicalObject> collection;
     private HBox mainLine;  // Полоска медведей
+    private HBox greenLine; // Полоска умирающих медведей
    // private HBox outerLine; // В нём будет ездить основная полоска. Зачем? Для корректой обработки жестов
                             // Особенно, при выезде за края
     private static String collectionXMLFile = System.getProperty("user.dir") +
@@ -35,7 +38,7 @@ public class BearsLine extends HBox{
        collection = loader.getThings();
        mainLine = new HBox();
        mainLine.setSpacing(20);
-
+       greenLine = new HBox(20);
        refreshVisible();
 
        // Анимация для медведиков
@@ -72,17 +75,30 @@ public class BearsLine extends HBox{
             Bear bear = new Bear(); // Спасибо огромное составителям JavaFX за возможность присудить ID!
             bear.setId(Integer.toString(i));
             mainLine.getChildren().add(bear);
+
         }
+        MotionBlur blur = new MotionBlur();
     }
     public void updateElement(int index, Toy element){
         if(collection.size() < index)
             collection.set(index,element);
+    }
+    public void insertElemtnt(int index, Toy element){
+        collection.add(index, element);
+        refreshVisible();
     }
     public void removeElement(String index){
         removeElement(Integer.valueOf(index));
     }
     public void removeElement(int index){
         collection.remove(index);
+        // Анимация исчезновения медведя
+        FadeTransition fd = new FadeTransition(Duration.millis(200));
+        fd.setNode(mainLine.getChildren().get(index));
+        fd.setFromValue(1);
+        fd.setToValue(0);
+        fd.play();
+        fd.setOnFinished(e->refreshVisible());
     }
     public Toy getInfoAbout(int index){
         return index < collection.size() ? (Toy)collection.get(index) : null;

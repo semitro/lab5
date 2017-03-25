@@ -12,6 +12,7 @@ import javafx.scene.layout.*;
 import javafx.stage.Stage;
 import sun.nio.cs.Surrogate;
 import sun.text.normalizer.UTF16;
+import vt.smt.Toy;
 
 import javax.imageio.ImageIO;
 import java.io.File;
@@ -30,6 +31,10 @@ public class BearGenerator extends BearWindow {
     @Override
     void initActions(){
         addButton.setOnAction(e->{
+            ((BearsLine) (caller.getParent().getParent())).insertElemtnt(
+                    Integer.valueOf(caller.getId())+1,
+                    new Toy(nameInput.getText())
+            );
             stage.close();
         });
     }
