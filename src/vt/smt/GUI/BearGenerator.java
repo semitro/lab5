@@ -24,12 +24,12 @@ import java.net.URI;
 public class BearGenerator extends BearWindow {
 
     @Override
-    void initTitles(){
+    protected void initTitles(){
 
     }
     BearGenerator(Bear caller){super(caller);}
     @Override
-    void initActions(){
+    protected void initActions(){
         addButton.setOnAction(e->{
             Toy newToy = new Toy(nameInput.getText());
             renameImage(Integer.toString(newToy.hashCode()));

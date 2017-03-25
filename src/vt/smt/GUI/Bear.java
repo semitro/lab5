@@ -16,8 +16,6 @@ import vt.smt.Toy;
 import java.awt.*;
 import java.io.File;
 import java.util.Enumeration;
-
-
 /**
  * Created by semitro on 22.03.17.
  */

@@ -6,7 +6,7 @@ package vt.smt.GUI;
 public class BearModifyder extends  BearWindow{
     BearModifyder(Bear caller){super(caller);}
     @Override
-    void initActions(){
+    protected void initActions(){
         addButton.setOnAction(e->{
             caller.getInfo().setName(nameInput.getText());
             caller.getInfo().setCleaning(isCleanBox.selectedProperty().getValue());
@@ -17,7 +17,7 @@ public class BearModifyder extends  BearWindow{
                stage.close();
         });
     }
-    void initTitles(){
+    protected void initTitles(){
         addButton.setText("Преобразовать медедя!");
         stage.setTitle("Медведопреобразоватор три тысячи");
     }

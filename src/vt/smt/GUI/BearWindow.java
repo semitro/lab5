@@ -108,8 +108,8 @@ public abstract class BearWindow {
         initTitles();
         initActions();
     }
-    abstract void initActions();
-    abstract void initTitles();
+    abstract protected void initActions();
+    abstract protected void initTitles();
     public void show(){
         stage.show();
     }

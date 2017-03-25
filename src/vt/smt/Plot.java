@@ -155,10 +155,7 @@ public class Plot {
         }
     }
     private void startGUI(){
-       // MainGUI mg = new MainGUI(carlson.getHome().getThings());
-       // mg.launch(MainGUI.class,null);
         Application.launch(MainGUI.class,null);
-
     }
     static final String fileMotherAndBabyksThings =
             System.getProperty("user.dir") +
