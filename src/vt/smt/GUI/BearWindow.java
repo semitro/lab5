@@ -124,12 +124,12 @@ public abstract class BearWindow {
                 webcam = Webcam.getDefault();
             webcam.open();
             ImageIO.write(webcam.getImage(), "PNG", new File(
-                            System.getProperty("user.dir") + File.separator + "things" + File.separator + "shot.png"
+                            System.getProperty("user.dir") + File.separator + "things" + File.separator + caller.getInfo().hashCode()
                     )
             );
             webcam.close();
             imageView.setImage(new Image("file:" +
-                    System.getProperty("user.dir") + File.separator + "things" + File.separator + "shot.png" )
+                    System.getProperty("user.dir") + File.separator + "things" + File.separator + caller.getInfo().hashCode() )
             );
 
 

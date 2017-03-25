@@ -35,4 +35,8 @@ public class Toy extends PhysicalObject{
     public String toString(){
         return  new String("Вес: " + this.getWeight() + " Имя: "  + this.getName() + " Убарно: " + this.isClean());
     }
+    @Override
+    public int hashCode() {
+        return name.hashCode() + Double.hashCode(this.weight) + Boolean.hashCode(this.isCleaning);
+    }
 }

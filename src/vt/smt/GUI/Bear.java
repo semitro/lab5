@@ -14,6 +14,7 @@ import javafx.util.Duration;
 import vt.smt.Toy;
 
 import java.awt.*;
+import java.io.File;
 import java.util.Enumeration;
 
 
@@ -67,5 +68,24 @@ public class Bear extends javafx.scene.image.ImageView {
             return null;
         else // Модель медведя принадлежит главному боксу BearsLine, который сам является боксом
             return ((BearsLine)this.getParent().getParent()).getInfoAbout(Integer.valueOf(this.getId()));
+    }
+    public void loadImgFromFile(String path){
+        File file = new File(path);
+        if(!file.exists())
+            return;
+        img = new Image("file:" + path);
+        System.out.println("path: " + path);
+       this.setImage(img);
+        if(this.getOwner() != null)
+            this.getOwner().refreshVisible();
+
+    }
+    public BearsLine getOwner(){
+        if( this.getParent() != null && (this.getParent().getParent() instanceof  BearsLine))
+             return ((BearsLine) (this.getParent().getParent()));
+        else {
+            System.out.println("Ну ничего, разберёмся)");
+            return null;
+        }
     }
 }

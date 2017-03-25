@@ -51,17 +51,25 @@ public class BearsLine extends HBox{
        class MouseDraggedWrapper{
            public double value;
        }
-       MouseDraggedWrapper mouseDragged = new MouseDraggedWrapper();
+        MotionBlur blur = new MotionBlur();
+
+        MouseDraggedWrapper mouseDragged = new MouseDraggedWrapper();
        // Ловим жест
        this.setOnMousePressed(start->{
            mouseDragged.value = start.getSceneX();
+           mainLine.setEffect(blur);
+           blur.setAngle(45);
+           blur.setRadius(3);
        });
        this.setOnMouseReleased(end->{
            translateTransition.setFromX(mainLine.getTranslateX());
            translateTransition.setToX(
                    mainLine.getTranslateX() + end.getSceneX() - mouseDragged.value);
            translateTransition.play();
-
+           translateTransition.setOnFinished(f->{
+           });
+           blur.setRadius(0);
+           blur.setAngle(0);
        });
        this.getChildren().add(mainLine);
 
@@ -71,9 +79,13 @@ public class BearsLine extends HBox{
     // Отображение коллекции в видимых медведей ???
     public void refreshVisible() {
         mainLine.getChildren().clear();
+
         for (int i = 0; i < collection.size(); i++) {
             Bear bear = new Bear(); // Спасибо огромное составителям JavaFX за возможность присудить ID!
             bear.setId(Integer.toString(i));
+            bear.loadImgFromFile(System.getProperty("user.dir") +
+                    File.separator + "things" + File.separator +
+                    Integer.toString(collection.get(i).hashCode()));
             mainLine.getChildren().add(bear);
 
         }
