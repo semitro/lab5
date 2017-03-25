@@ -76,7 +76,7 @@ public class BearsLine extends HBox{
    }
 
 
-    // Отображение коллекции в видимых медведей ???
+    // Отображение коллекции в видимых медведей
     public void refreshVisible() {
         mainLine.getChildren().clear();
 
@@ -89,14 +89,13 @@ public class BearsLine extends HBox{
             mainLine.getChildren().add(bear);
 
         }
-        MotionBlur blur = new MotionBlur();
     }
-    public void updateElement(int index, Toy element){
-        if(collection.size() < index)
-            collection.set(index,element);
-    }
+
     public void insertElemtnt(int index, Toy element){
-        collection.add(index, element);
+        if(index > collection.size())
+            collection.add(element);
+                else
+            collection.add(index, element);
         refreshVisible();
     }
     public void removeElement(String index){

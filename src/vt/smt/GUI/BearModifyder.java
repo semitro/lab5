@@ -8,8 +8,12 @@ public class BearModifyder extends  BearWindow{
     @Override
     void initActions(){
         addButton.setOnAction(e->{
+            caller.getInfo().setName(nameInput.getText());
+            caller.getInfo().setCleaning(isCleanBox.selectedProperty().getValue());
+            // Внимание! Сначала нужно изменить поля объекта, чтобы получить действительный хэш-код
+            this.renameImage(Integer.toString(caller.getInfo().hashCode()));
             caller.loadImgFromFile(Integer.toString(caller.getInfo().hashCode()));
-               caller.getOwner().refreshVisible();
+            caller.getOwner().refreshVisible();
                stage.close();
         });
     }

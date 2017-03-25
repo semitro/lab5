@@ -124,12 +124,12 @@ public abstract class BearWindow {
                 webcam = Webcam.getDefault();
             webcam.open();
             ImageIO.write(webcam.getImage(), "PNG", new File(
-                            System.getProperty("user.dir") + File.separator + "things" + File.separator + caller.getInfo().hashCode()
+                            System.getProperty("user.dir") + File.separator + "things" + File.separator + "temp"
                     )
             );
             webcam.close();
             imageView.setImage(new Image("file:" +
-                    System.getProperty("user.dir") + File.separator + "things" + File.separator + caller.getInfo().hashCode() )
+                    System.getProperty("user.dir") + File.separator + "things" + File.separator + "temp" )
             );
 
 
@@ -139,5 +139,15 @@ public abstract class BearWindow {
             return;
         }
 
+    }
+    /**
+        Камера сохраняет в темп-файл.
+        При закрытии окна нужно определиться,
+        к какому медведю относится данное изображение
+     */
+    protected void renameImage(String newName){
+        File file = new File(System.getProperty("user.dir") + File.separator + "things" + File.separator + "temp");
+        if(file.exists())
+            file.renameTo(new File(System.getProperty("user.dir") + File.separator + "things" + File.separator + newName));
     }
 }

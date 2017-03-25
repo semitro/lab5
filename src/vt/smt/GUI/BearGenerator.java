@@ -31,9 +31,11 @@ public class BearGenerator extends BearWindow {
     @Override
     void initActions(){
         addButton.setOnAction(e->{
-            ((BearsLine) (caller.getParent().getParent())).insertElemtnt(
-                    Integer.valueOf(caller.getId())+1,
-                    new Toy(nameInput.getText())
+            Toy newToy = new Toy(nameInput.getText());
+            renameImage(Integer.toString(newToy.hashCode()));
+            caller.getOwner().insertElemtnt(
+                    Integer.valueOf(caller.getId())+1, // вставляем после
+                    newToy
             );
             stage.close();
         });
