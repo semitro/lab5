@@ -10,6 +10,7 @@ import com.sun.istack.internal.NotNull;
 import javafx.animation.FadeTransition;
 import javafx.animation.TranslateTransition;
 import javafx.scene.Node;
+import javafx.scene.control.Alert;
 import javafx.scene.effect.BlurType;
 import javafx.scene.effect.InnerShadow;
 import javafx.scene.effect.MotionBlur;
@@ -30,6 +31,7 @@ public class BearsLine extends HBox{
     private List<PhysicalObject> collection;
     private HBox mainLine;  // Полоска медведей
     private Titleses titleses; // Стих после удаления всего
+    protected Alert confirmExit; // Сохранять ли файлы при выходе?
     private static String collectionXMLFile = System.getProperty("user.dir") +
                                     File.separator + "things" + File.separator + "BabykAndMotherThings.xml";
     // По-умолчанию - загружаем коллекцию из файла

@@ -1,5 +1,7 @@
 package vt.smt;
 
+import java.io.IOException;
+
 /**
  * Created by semitro on 03.12.16.
  */
@@ -22,7 +24,13 @@ class Babyk extends Human{
             }catch(AlreadyCleanException e){
                 System.out.println("Малыш: исключительно не желаю убирать чистое!");
             }
-            System.out.println("Clean is down.");
+            System.out.println("Уборка окончена");
+            try {
+
+                Runtime.getRuntime().exec("cowsay -f dragon \"" + "Уборка окончена" + "\"");
+            }catch (IOException e){
+                System.out.println("Установи cowsay`!!!!");
+            }
             return;
         }
         if(--minAttempts <= 0){

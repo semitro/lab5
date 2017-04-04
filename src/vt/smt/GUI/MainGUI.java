@@ -18,6 +18,7 @@ public class MainGUI extends Application {
     private BearsLine bearsLine;
     private Stage primaryStage;
     private BorderPane pane;
+    protected Alert confirmExit; // Сохранять ли файлы при выходе?
     @Override
     public void start(Stage inputStage) {
         primaryStage = inputStage;
@@ -42,6 +43,9 @@ public class MainGUI extends Application {
         pane.getCenter().setTranslateY(pane.getHeight()/5);
         primaryStage.setResizable(false);
         primaryStage.show();
+//        confirmExit = new Alert(Alert.AlertType.CONFIRMATION);
+//        confirmExit.getButtonTypes().add(new Button("hey"));
+        primaryStage.setOnHiding(e->confirmExit.show());
 
     }
 }
