@@ -1,9 +1,12 @@
 package vt.smt;
 
+import java.io.Serializable;
+
 /**
  * Created by semitro on 03.12.16.
  */
-public abstract class PhysicalObject implements Cleanable, Comparable<PhysicalObject>{
+public abstract class PhysicalObject
+        implements Cleanable, Comparable<PhysicalObject>,Serializable {
     // Вещи, которые могут быть в доме
     protected boolean isCleaning;
     protected double weight; // Вес
