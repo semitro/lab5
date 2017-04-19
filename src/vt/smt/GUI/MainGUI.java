@@ -43,9 +43,8 @@ public class MainGUI extends Application {
         pane.getCenter().setTranslateY(pane.getHeight()/5);
         primaryStage.setResizable(false);
         primaryStage.show();
-//        confirmExit = new Alert(Alert.AlertType.CONFIRMATION);
-//        confirmExit.getButtonTypes().add(new Button("hey"));
-        primaryStage.setOnHiding(e->confirmExit.show());
+
+       // primaryStage.setOnHiding(e->confirmExit.show());
 
     }
 }

@@ -7,12 +7,7 @@ import java.io.IOException;
  */
 public class Main {
     public static void main(String argv[]){
-        Receiver reciever;
-        try {
-            reciever = new Receiver(2055);
-        }catch (IOException e){
-            e.printStackTrace();
-        }
-       // server.nextCommand()
+        Server server = new Server();
+        server.start();
     }
 }

@@ -1,5 +1,6 @@
-package vt.smt.DBInter;
+package vt.smt.Client;
 
+import vt.smt.Server.Commands.GetBearsFromServer;
 import vt.smt.Toy;
 
 import java.io.IOException;
@@ -9,10 +10,11 @@ import java.io.IOException;
  */
 public class TestRunner {
     public static void main(String argv[]){
-        Sender sender = new Sender();
+        Sender sender = new Sender("127.0.0.1",2552);
         Toy toy = new Toy("Hello");
         try {
-            sender.send(toy);
+            while (true)
+            sender.sendCommand(new GetBearsFromServer());
         }catch (IOException e){
             e.printStackTrace();
         }

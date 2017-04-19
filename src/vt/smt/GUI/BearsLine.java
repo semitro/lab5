@@ -17,12 +17,15 @@ import javafx.scene.effect.MotionBlur;
 import javafx.scene.effect.Shadow;
 import javafx.scene.layout.HBox;
 import javafx.util.Duration;
+import vt.smt.Client.Sender;
 import vt.smt.Home;
 import vt.smt.PhysicalObject;
+import vt.smt.Server.Commands.GetBearsFromServer;
 import vt.smt.Toy;
 
 
 import java.io.File;
+import java.io.IOException;
 import java.util.List;
 
 
@@ -35,10 +38,13 @@ public class BearsLine extends HBox{
     private static String collectionXMLFile = System.getProperty("user.dir") +
                                     File.separator + "things" + File.separator + "BabykAndMotherThings.xml";
     // По-умолчанию - загружаем коллекцию из файла
-    public BearsLine(){
+    private void initCollection(){
         Home loader = new Home(); // Возможно, следовало бы добавить нечто вроде util.
-       loader.loadThingsFromFile(collectionXMLFile);
-       collection = loader.getThings();
+        loader.loadThingsFromFile(collectionXMLFile);
+        collection = loader.getThings();
+    }
+    public BearsLine(){
+       initCollection();
         titleses = new Titleses();
         mainLine = new HBox();
        mainLine.setSpacing(20);

@@ -1,49 +1,54 @@
 package vt.smt.Server;
 
+import javafx.beans.InvalidationListener;
+import javafx.beans.Observable;
+import vt.smt.Server.Commands.Command;
+import vt.smt.Server.Commands.ServerCommand;
+
 import java.io.IOException;
 import java.io.ObjectInputStream;
 import java.net.ServerSocket;
-import java.net.Socket;
 import java.util.LinkedList;
-import java.util.List;
+import java.util.Observer;
 import java.util.concurrent.ConcurrentLinkedDeque;
 /**
  * Created by semitro on 18.04.17.
  */
-public class Receiver {
-    ServerSocket socket;
-    // Потокобезопасной коллекция б
-    // ыть не обязана, поскольку список меняется лишь из одного места
-//    List<Socket> clients;
-//    List<ObjectInputStream> inputStreams;
+class Receiver{
+    private ServerSocket socket;
     public Receiver(int port) throws IOException{
         socket = new ServerSocket(port);
-//        clients = new LinkedList<>();
-//        inputStreams = new LinkedList<>();
         Thread t = new Thread(this::listen);
+        t.setDaemon(true);
         t.start();
+        System.out.println("Сервер запущен.");
     }
-    public Command nextCommand(){
-        return new SaveOnServer();
-    }
-    // Ждём новых клиентов
-    private Socket client;
-    private void listen(){
-        try {
-            client = socket.accept();
-            System.out.println("Подключился.");
-        }catch (IOException e){
-            e.printStackTrace();
+
+    // Паттерн "наблюдатель" - сервер ждёт команды
+    private LinkedList<Observer> commandObservers;
+    private ConcurrentLinkedDeque<Client> clients = new ConcurrentLinkedDeque<>();
+    ServerCommand nextCommand(){
+        for(Client currentClient : clients) {
+            try {
+                return (ServerCommand) currentClient.getObjectInputStream().readObject();
+            }catch (ClassNotFoundException | IOException e){
+                System.out.println("Беда в next command:");
+                System.out.println(e.getMessage());
+            }
         }
-//        while (true){
-//            try {
-//                Socket newClient = socket.accept();
-//                clients.add(newClient);
-//                System.out.println("Клиент " + clients.size() +
-//                        " " + socket.toString() " подключён");
-//            }catch (Exception e){
-//                e.printStackTrace();
-//            }
-//        }
+        return null;
+    }
+
+    //Добавить демон удаления ушедших клиетов ?
+    private void listen(){
+        while (true) {
+            try {
+                Client newClient = new Client(socket.accept());
+                clients.add(newClient);
+                System.out.println("Подключился новый клиент" + newClient.getSocket().getInetAddress());
+            } catch (IOException e) {
+                System.out.println(e.getMessage());
+            }
+        }
     }
 }

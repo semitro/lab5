@@ -7,6 +7,11 @@ import java.io.Serializable;
  */
 public abstract class PhysicalObject
         implements Cleanable, Comparable<PhysicalObject>,Serializable {
+
+    public PhysicalObject(PhysicalObject copy){
+        this.setWeight(copy.getWeight());
+        this.setisCleaning(copy.isClean());
+    }
     // Вещи, которые могут быть в доме
     protected boolean isCleaning;
     protected double weight; // Вес
@@ -14,19 +19,15 @@ public abstract class PhysicalObject
         isCleaning = clean;
 
     }
-
     public boolean isCleaning() {
         return isCleaning;
     }
-
     public void setCleaning(boolean cleaning) {
         isCleaning = cleaning;
     }
-
     public void setWeight(double weight) {
         this.weight = weight;
     }
-
     public double getWeight(){
         return weight;
     }
@@ -52,6 +53,7 @@ public abstract class PhysicalObject
         else
             return false;
     }
+
     @Override
     public String toString(){
         return new String();
