@@ -20,7 +20,6 @@ import javafx.util.Duration;
 import vt.smt.Client.Sender;
 import vt.smt.Home;
 import vt.smt.PhysicalObject;
-import vt.smt.Server.Commands.GetBearsFromServer;
 import vt.smt.Toy;
 
 

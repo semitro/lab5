@@ -1,11 +1,10 @@
 package vt.smt.Client;
 
-import vt.smt.Server.Commands.Command;
 
 import java.io.IOException;
 import java.io.ObjectOutputStream;
 import java.net.Socket;
-
+import vt.smt.Commands.*;
 /**
  * Created by semitro on 17.04.17.
  */
@@ -25,7 +24,7 @@ public class Sender {
      *  должна существовать команда, принимающая в конструктор необходимые данные
      *  @param command <b> команда для отправки на сервер</b>
      */
-    public void sendCommand(Command command) throws IOException{
+    public void sendCommand(ServerCommand command) throws IOException{
         out.writeObject(command);
         out.flush();
     }
