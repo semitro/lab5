@@ -32,14 +32,14 @@ public class MainGUI extends Application {
                 new Background(
                 new BackgroundImage(
                 new Image(
-                        getClass().getResourceAsStream("fone.jpg")),
+                        getClass().getResourceAsStream("img/fone.jpg")),
                         BackgroundRepeat.NO_REPEAT,BackgroundRepeat.NO_REPEAT,
                         BackgroundPosition.DEFAULT,BackgroundSize.DEFAULT)));
 
         pane.setCenter(bearsLine);
         primaryStage.setScene(new Scene(pane,600,250));
         primaryStage.getScene().setFill(Paint.valueOf("black"));
-        primaryStage.setTitle("Медведики сущие");
+        primaryStage.setTitle("Медведики сущие, себя сквозь Космос несущие");
         pane.getCenter().setTranslateY(pane.getHeight()/5);
         primaryStage.setResizable(false);
         primaryStage.show();

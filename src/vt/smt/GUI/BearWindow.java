@@ -50,7 +50,7 @@ public abstract class BearWindow {
         centerBox = new HBox();
 
         imageAvatar = new Button();
-        defaultImage = new Image(getClass().getResourceAsStream("defaultBear.png"));
+        defaultImage = new Image(getClass().getResourceAsStream("img/defaultBear.png"));
         imageView = new ImageView(defaultImage);
 
         imageAvatar.setGraphic(imageView);

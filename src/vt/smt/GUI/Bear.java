@@ -23,13 +23,13 @@ public class Bear extends javafx.scene.image.ImageView {
     private FallingList fallingList;
     private Image img;
 
-
+    //GUI/img/*
     Bear(){
-        this("defaultBear.png");
+        this("img/defaultBear.png");
     }
     Bear(String imgPath){
         super();
-        img = new Image(getClass().getResourceAsStream("defaultBear.png"));
+        img = new Image(getClass().getResourceAsStream("img/defaultBear.png"));
         this.setImage(img);
         initAnim();
     }

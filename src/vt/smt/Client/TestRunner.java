@@ -6,6 +6,7 @@ import vt.smt.Toy;
 import java.io.IOException;
 import java.util.LinkedList;
 import vt.smt.Commands.*;
+import vt.smt.Commands.*;
 /**
  * Created by semitro on 18.04.17.
  */
@@ -15,9 +16,8 @@ public class TestRunner {
         Toy toy = new Toy("Hello");
 
         try {
-            while (true)
-            sender.sendCommand(new SaveOnServer(new LinkedList<Integer>()) );
-        }catch (IOException e){
+            System.out.println(sender.getBearsFromServer());
+        }catch (Exception e){
             e.printStackTrace();
         }
     }
