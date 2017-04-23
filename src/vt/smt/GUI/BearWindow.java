@@ -73,7 +73,6 @@ public abstract class BearWindow {
         weightInput = new TextField();
         weightInput.setTextFormatter(new TextFormatter<Double>(new DoubleStringConverter()));
         weightInput.setText(Double.toString(caller.getInfo().getWeight()));
-        System.out.println(caller.getInfo().getWeight());
         rightBox.getChildren().add(weightInput);
         isCleanBox = new CheckBox("Чистый");
         isCleanBox.setSelected(caller.getInfo().isClean());

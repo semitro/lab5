@@ -24,19 +24,17 @@ import java.io.IOException;
 import java.util.LinkedList;
 import java.util.List;
 import vt.smt.Commands.*;
-
+import vt.smt.Client.InputCommandsHandler;
 public class BearsLine extends HBox{
     // Зависим от абстракции collection
-    private List<Toy> collection;
+    private List<Toy> collection = new LinkedList<>();
     private HBox mainLine = new HBox();  // Полоска медведей
     private Titleses titleses = new Titleses(); // Стих после удаления всего
-    protected Alert confirmExit; // Сохранять ли файлы при выходе?
-    private static String collectionXMLFile = System.getProperty("user.dir") +
-                                    File.separator + "things" + File.separator + "BabykAndMotherThings.xml";
-    // По-умолчанию - загружаем коллекцию из файла
     private ProgressIndicator waitingIndicator;
+    private InputCommandsHandler serverListener;
+
     public BearsLine(){
-        collection = new LinkedList<>();
+        serverListener = new InputCommandsHandler(this);
         waitingIndicator = new ProgressIndicator();
         waitingIndicator.setTooltip(new Tooltip("Ожидание соединения с cервером.."));
         try {
@@ -92,7 +90,8 @@ public class BearsLine extends HBox{
                 while (true)
                 try {
                     Thread.currentThread().sleep(500);
-                    collection = Sender.getInstance().getBearsFromServer();
+                   // collection = Sender.getInstance().getBearsFromServer();
+                    Sender.getInstance().sendCommand(new GetAllBears());
                     Platform.runLater(()->{refreshVisible();});
                     return;
                 } catch (Exception e) {
@@ -152,12 +151,12 @@ public class BearsLine extends HBox{
 
     }
     public void changeElement(int index, Toy element){
-        try {
-            Sender.getInstance().sendCommand(new ChangeBear(element, index));
-            System.out.println("Отправил change");
-        }catch (IOException e){
-            System.out.println("Не удалось изменить медведя на сервере");
-        }
+        collection.set(index,element);
+        System.out.println("Изменено");
+    }
+    public void setCollection(LinkedList<Toy> list){
+        collection = list;
+        Platform.runLater(()->refreshVisible());
     }
     public Toy getInfoAbout(int index){
         return index < collection.size() ? (Toy)collection.get(index) : null;

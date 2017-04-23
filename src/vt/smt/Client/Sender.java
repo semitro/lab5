@@ -38,20 +38,14 @@ public class Sender {
         out.writeObject(command);
         out.flush();
     }
-    public LinkedList<Toy> getBearsFromServer() throws  IOException,
-            ClassNotFoundException,ClassCastException{
-//        try {
-            sendCommand(new GetAllBears());
-            return ((SaveAllBears)in.readObject()).getData();
-//        }catch (IOException e){
-//            System.out.println("Неудачная попытка получения всех медведей Sender::getBears");
-//            System.out.println(e.getMessage());
-//        }catch (ClassNotFoundException | ClassCastException e){
-//            System.out.println("Sender:getBearsFromServer(): сервер прислал не тот тип данных");
-//            System.out.println(e.getMessage());
-//        }catch (Exception e){
-//            e.printStackTrace();
-//        }
+    public ServerAnswer nextCommand(){
+        try {
+            return (ServerAnswer)in.readObject();
+        }catch (Exception e){
+            System.out.println("Сервер попытался прислать фигню");
+            System.out.println(e.getMessage());
+        }
+        return null;
+    }
 
-    };
 }
