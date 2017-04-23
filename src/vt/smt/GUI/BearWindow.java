@@ -11,6 +11,7 @@ import javafx.scene.layout.Pane;
 import javafx.scene.layout.VBox;
 import javafx.scene.paint.Paint;
 import javafx.stage.Stage;
+import javafx.util.StringConverter;
 import javafx.util.converter.DoubleStringConverter;
 
 import javax.imageio.ImageIO;
@@ -54,7 +55,7 @@ public abstract class BearWindow {
         imageView = new ImageView(defaultImage);
 
         imageAvatar.setGraphic(imageView);
-        imageAvatar.setOnAction(e-> {
+        imageAvatar.setOnAction(e->{
                     // Адекватен ли этот код? + повторение в начале конструктора.
                     // Ну, зато работает)0
                     if(!camSnapshot.isAlive())
@@ -71,28 +72,19 @@ public abstract class BearWindow {
 
         pane.getChildren().add(imageAvatar);
         rightBox.getChildren().add(new Label("Я не знал, что здесь написать.."));
-        nameInput = new TextField(
-                caller.getInfo().getName()
-        );
+        nameInput = new TextField(caller.getInfo().getName());
         rightBox.getChildren().add(nameInput);
 
-        weightInput = new TextField("Вес");
-//        weightInput.setTextFormatter(new TextFormatter<String>(
-//               new DoubleStringConverter(),
-//                "Вес",
-//
-//
-//        )
-
+        weightInput = new TextField();
+        weightInput.setTextFormatter(new TextFormatter<Double>(new DoubleStringConverter()));
+        weightInput.setText(Double.toString(caller.getInfo().getWeight()));
+        System.out.println(caller.getInfo().getWeight());
         rightBox.getChildren().add(weightInput);
         isCleanBox = new CheckBox("Чистый");
         isCleanBox.setSelected(caller.getInfo().isClean());
         rightBox.getChildren().add(isCleanBox);
         addButton = new Button("Сотворить медведя!");
-        addButton.setOnAction(e->{
-            stage.close();
-
-        });
+        addButton.setOnAction(e->{stage.close();});
         rightBox.getChildren().add(addButton);
         centerBox.getChildren().add(imageAvatar);
         centerBox.getChildren().add(rightBox);
@@ -102,9 +94,7 @@ public abstract class BearWindow {
         stage.setTitle("Медведогенератор 2.0");
         stage.setScene(new Scene(pane,430,155));
         stage.setResizable(false);
-        stage.setOnHiding(e->{
-            imageView.setImage(defaultImage);
-        });
+        stage.setOnHiding(e->{imageView.setImage(defaultImage);});
         initTitles();
         initActions();
     }
@@ -131,8 +121,6 @@ public abstract class BearWindow {
             imageView.setImage(new Image("file:" +
                     System.getProperty("user.dir") + File.separator + "things" + File.separator + "temp" )
             );
-
-
         }
         catch (java.io.IOException e){
             System.out.println("Беда с вебкамерой.");
@@ -140,7 +128,6 @@ public abstract class BearWindow {
         }
 
     }
-
     /**
         Камера сохраняет в темп-файл.
         При закрытии окна нужно определиться,

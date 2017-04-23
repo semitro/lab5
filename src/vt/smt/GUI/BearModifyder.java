@@ -10,6 +10,10 @@ public class BearModifyder extends  BearWindow{
         addButton.setOnAction(e->{
             caller.getInfo().setName(nameInput.getText());
             caller.getInfo().setCleaning(isCleanBox.selectedProperty().getValue());
+
+            double weight = 0.5;
+            try{weight = Double.parseDouble(weightInput.getText());}catch (Exception bad){}
+            caller.getInfo().setWeight(weight);
             // Внимание! Сначала нужно изменить поля объекта, чтобы получить действительный хэш-код
             this.renameImage(Integer.toString(caller.getInfo().hashCode()));
             caller.loadImgFromFile(Integer.toString(caller.getInfo().hashCode()));

@@ -26,10 +26,7 @@ public class FallingList extends ContextMenu{
             this.getItems().add(modify);
             MenuItem delete = new MenuItem("Удалить");
             delete.setOnAction(e-> {
-                bearCaller.getOwner().removeElement(bearCaller.getId());
-              //  ((BearsLine) (bearCaller.getParent().getParent())).removeElement(bearCaller.getId());
-               // ((BearsLine)(bearCaller.getParent().getParent())).refreshVisible();
-                    }
+                bearCaller.getOwner().removeElement(bearCaller.getId());}
             );
             this.getItems().add(delete);
 

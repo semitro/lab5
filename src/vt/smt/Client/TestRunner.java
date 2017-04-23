@@ -12,11 +12,8 @@ import vt.smt.Commands.*;
  */
 public class TestRunner {
     public static void main(String argv[]){
-        Sender sender = new Sender("127.0.0.1",2552);
-        Toy toy = new Toy("Hello");
-
         try {
-            System.out.println(sender.getBearsFromServer());
+
         }catch (Exception e){
             e.printStackTrace();
         }

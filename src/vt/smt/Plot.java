@@ -15,43 +15,11 @@ import java.util.Scanner;
  Сюжет лабораторной из текста
  */
 public class Plot {
-    private Mother mother;
-    private Babyk babyk;
-    private Carlson carlson;
-    Plot(){
-        Home home = new Home(); // У Мамы и Малыша один дом
-        home.loadThingsFromFile(fileMotherAndBabyksThings); // Подгрузка коллекции из файла
-        mother = new Mother(home);
-        babyk = new Babyk(home);
-        home = new Home();
-        home.loadThingsFromFile(fileCarlsonsThings);
-        try {
-            // Давний костыль ещё из первой лабы
-            Carlson.create(home);
-        }catch (Exception e){
-            System.out.println("Карлсон не роился :(");
-        }
-        carlson = Carlson.get();
-    };
-    void start(boolean consoleMode){
-        /// Сюжет из лабораторной работы номер давно
-        while (!babyk.getHome().isClean())
-            mother.remind(babyk);
-        babyk.cleanUp(carlson.getHome());
-        //Запуск консольного мода из первой весенней лабы при необходимости
-        if(consoleMode)
-            startConsoleMode();
-        else
-            startGUI();
-    }
-    private void startConsoleMode(){
+    public static void startConsoleMode(){
         ObjectMapper jMapper = new ObjectMapper();
         java.util.Scanner sc = new Scanner(System.in);
-
         String str = new String();
-        Home currentHome = carlson.getHome();
         boolean commandFind = false;
-        try {
         while (str.equals("exit") == false) {
                     commandFind = false;
                     str = sc.nextLine();
@@ -64,19 +32,17 @@ public class Plot {
                         }
                         break; // Не было написано break;
                         case "reorder": {
-                            currentHome.reorder();
+
                             System.out.println("reorder: выполнено");
                             commandFind = true;
                         }
                         break;
                         case "clear": {
-                            currentHome.clear();
                             System.out.println("clear: выполнено");
                             commandFind = true;
                         }
                         break;
                         case "sort": {
-                            currentHome.sortThings();
                             System.out.println("sort: выполнено");
                             commandFind = true;
                         }
@@ -91,20 +57,18 @@ public class Plot {
                         commandFind = true;
 
                         if (str.contains("carlson")) {
-                            currentHome = carlson.getHome();
                             System.out.println("Switch: выполнено");
                             continue;
                         }
 
                         else
                         if (str.contains("mother")){
-                            currentHome = mother.getHome();
                             System.out.println("Switch: выполнено");// У Мамы и Малыша
                             continue;
                         }
                         else
                         if (str.contains("babyk")) {
-                            currentHome = babyk.getHome();
+
                             System.out.println("Switch: выполнено");
                             continue;
                         }// Один и тот же дом
@@ -113,7 +77,7 @@ public class Plot {
                     else
                     if(str.contains("show")) {
                         commandFind = true;
-                        currentHome.showCollection();
+
                     } else
                     if (str.contains("insert")){
                         str = str.replace("insert ", "");
@@ -122,7 +86,6 @@ public class Plot {
                             temp[1] = str.substring(str.indexOf(" "),str.length());
                             commandFind = true;
                             Toy toyParse = jMapper.readValue(temp[1], Toy.class);
-                            currentHome.insert(Integer.parseInt(temp[0])-1,toyParse);
                             System.out.println("Insert: выполнено");
                         }
                         catch (IndexOutOfBoundsException e){
@@ -139,7 +102,7 @@ public class Plot {
                         str = str.replace("add_if_max ", "");
                         try {
                             commandFind = true;
-                            currentHome.addIfMax(jMapper.readValue(str, Toy.class));
+
                             System.out.println("add_if_max: выполнено");
                         } catch (Exception e) {
                             System.out.println("Скорее всего, вы ввели неправильный jSon-код");
@@ -148,13 +111,10 @@ public class Plot {
                     if(!commandFind)
                         System.out.println("Запрашиваемая команда не существует!");
                 }
-        }
-        finally {
-            carlson.getHome().saveThingsToFile(fileCarlsonsThings);
-            babyk.getHome().saveThingsToFile(fileMotherAndBabyksThings);
-        }
+
+
     }
-    private void startGUI(){
+    public static void startGUI(){
         Application.launch(MainGUI.class,null);
     }
     static final String fileMotherAndBabyksThings =

@@ -11,6 +11,8 @@ import javafx.animation.FadeTransition;
 import javafx.animation.TranslateTransition;
 import javafx.scene.Node;
 import javafx.scene.control.Alert;
+import javafx.scene.control.ProgressIndicator;
+import javafx.scene.control.Tooltip;
 import javafx.scene.effect.BlurType;
 import javafx.scene.effect.InnerShadow;
 import javafx.scene.effect.MotionBlur;
@@ -25,30 +27,35 @@ import vt.smt.Toy;
 
 import java.io.File;
 import java.io.IOException;
+import java.net.ConnectException;
+import java.util.LinkedList;
 import java.util.List;
 
 
 public class BearsLine extends HBox{
     // Зависим от абстракции collection
-    private List<PhysicalObject> collection;
-    private HBox mainLine;  // Полоска медведей
-    private Titleses titleses; // Стих после удаления всего
+    private List<Toy> collection;
+    private HBox mainLine = new HBox();  // Полоска медведей
+    private Titleses titleses = new Titleses();; // Стих после удаления всего
     protected Alert confirmExit; // Сохранять ли файлы при выходе?
     private static String collectionXMLFile = System.getProperty("user.dir") +
                                     File.separator + "things" + File.separator + "BabykAndMotherThings.xml";
     // По-умолчанию - загружаем коллекцию из файла
-    private void initCollection(){
-        Home loader = new Home(); // Возможно, следовало бы добавить нечто вроде util.
-        loader.loadThingsFromFile(collectionXMLFile);
-        collection = loader.getThings();
-    }
+    private ProgressIndicator waitingIndicator;
     public BearsLine(){
-       initCollection();
-        titleses = new Titleses();
-        mainLine = new HBox();
-       mainLine.setSpacing(20);
-       refreshVisible();
+        waitingIndicator = new ProgressIndicator();
+        waitingIndicator.setTooltip(new Tooltip("Ожидание соединения с cервером.."));
 
+        try {
+            collection = Sender.getInstance().getBearsFromServer();
+            refreshVisible();
+        }catch (IOException e){
+            mainLine.getChildren().add(waitingIndicator);
+            waitingIndicator.setTranslateX(257);
+            waitingIndicator.setTranslateY(-50);
+            waitingIndicator.setVisible(true);
+            collection = new LinkedList<>();
+        }
        // Анимация для медведиков
        TranslateTransition translateTransition = new TranslateTransition(Duration.millis(1800));
        translateTransition.setCycleCount(1);
@@ -79,9 +86,9 @@ public class BearsLine extends HBox{
            blur.setRadius(0);
            blur.setAngle(0);
        });
-       this.getChildren().add(mainLine);
-
-   }
+        mainLine.setSpacing(20);
+        this.getChildren().add(mainLine);
+    }
     // Отображение коллекции в видимых медведей
     public void refreshVisible() {
         mainLine.getChildren().clear();
