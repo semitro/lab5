@@ -49,7 +49,6 @@
       <change type="DELETED" beforePath="$PROJECT_DIR$/out/production/labGoodObject/vt/smt/Carlson.class" afterPath="" />
       <change type="DELETED" beforePath="$PROJECT_DIR$/out/production/labGoodObject/vt/smt/Cleanable.class" afterPath="" />
       <change type="DELETED" beforePath="$PROJECT_DIR$/out/production/labGoodObject/vt/smt/Cleaner.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/out/production/labGoodObject/vt/smt/Client/Sender.class" afterPath="" />
       <change type="DELETED" beforePath="$PROJECT_DIR$/out/production/labGoodObject/vt/smt/CollectionHandler.class" afterPath="" />
       <change type="DELETED" beforePath="$PROJECT_DIR$/out/production/labGoodObject/vt/smt/DBInter/Sender.class" afterPath="" />
       <change type="DELETED" beforePath="$PROJECT_DIR$/out/production/labGoodObject/vt/smt/DBInter/TestRunner.class" afterPath="" />
@@ -154,10 +153,9 @@
       <change type="DELETED" beforePath="$PROJECT_DIR$/things/914362164" afterPath="" />
       <change type="DELETED" beforePath="$PROJECT_DIR$/things/temp" afterPath="" />
       <change type="DELETED" beforePath="$PROJECT_DIR$/ЖОПАnano" afterPath="" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/vt/smt/Client/Sender.java" afterPath="$PROJECT_DIR$/src/vt/smt/Client/Sender.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/vt/smt/GUI/BearModifyder.java" afterPath="$PROJECT_DIR$/src/vt/smt/GUI/BearModifyder.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/vt/smt/GUI/BearWindow.java" afterPath="$PROJECT_DIR$/src/vt/smt/GUI/BearWindow.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/vt/smt/Client/InputCommandsHandler.java" afterPath="$PROJECT_DIR$/src/vt/smt/Client/InputCommandsHandler.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/vt/smt/GUI/BearsLine.java" afterPath="$PROJECT_DIR$/src/vt/smt/GUI/BearsLine.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/vt/smt/GUI/FallingList.java" afterPath="$PROJECT_DIR$/src/vt/smt/GUI/FallingList.java" />
     </list>
     <ignored path="labGoodObject.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -201,37 +199,38 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="BearsLine.java" pinned="false" current-in-tab="false">
+      <file leaf-file-name="BearsLine.java" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/vt/smt/GUI/BearsLine.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="252">
-              <caret line="158" column="48" lean-forward="true" selection-start-line="158" selection-start-column="48" selection-end-line="158" selection-end-column="48" />
+            <state relative-caret-position="115">
+              <caret line="137" column="41" lean-forward="true" selection-start-line="137" selection-start-column="41" selection-end-line="139" selection-end-column="0" />
               <folding>
                 <element signature="imports" expanded="true" />
                 <element signature="class#2111:2178" expanded="false" />
                 <element signature="method#insertElemtnt#0;class#BearsLine#0" expanded="false" />
-                <element signature="method#removeElement#1;class#BearsLine#0" expanded="false" />
                 <element signature="method#changeElement#0;class#BearsLine#0" expanded="false" />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="Toolkit.java" pinned="false" current-in-tab="false">
-        <entry file="jar:///usr/lib/jvm/jdk1.8.0_111/javafx-src.zip!/com/sun/javafx/tk/Toolkit.java">
+      <file leaf-file-name="FallingList.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/vt/smt/GUI/FallingList.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="95">
-              <caret line="235" column="0" lean-forward="false" selection-start-line="235" selection-start-column="0" selection-end-line="235" selection-end-column="0" />
-              <folding />
+            <state relative-caret-position="219">
+              <caret line="34" column="89" lean-forward="false" selection-start-line="34" selection-start-column="89" selection-end-line="34" selection-end-column="89" />
+              <folding>
+                <element signature="imports" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="Parent.java" pinned="false" current-in-tab="false">
-        <entry file="jar:///usr/lib/jvm/jdk1.8.0_111/javafx-src.zip!/javafx/scene/Parent.java">
+      <file leaf-file-name="RemoveBear.class" pinned="false" current-in-tab="false">
+        <entry file="jar://$PROJECT_DIR$/share/Commands.jar!/vt/smt/Commands/RemoveBear.class">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="95">
-              <caret line="366" column="0" lean-forward="false" selection-start-line="366" selection-start-column="0" selection-end-line="366" selection-end-column="0" />
+            <state relative-caret-position="108">
+              <caret line="10" column="13" lean-forward="false" selection-start-line="10" selection-start-column="13" selection-end-line="10" selection-end-column="13" />
               <folding />
             </state>
           </provider>
@@ -250,18 +249,30 @@
       <file leaf-file-name="BearGenerator.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/vt/smt/GUI/BearGenerator.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="122">
+            <state relative-caret-position="153">
               <caret line="21" column="81" lean-forward="false" selection-start-line="21" selection-start-column="81" selection-end-line="21" selection-end-column="81" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="InputCommandsHandler.java" pinned="false" current-in-tab="true">
+      <file leaf-file-name="InputCommandsHandler.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/vt/smt/Client/InputCommandsHandler.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="34">
-              <caret line="19" column="31" lean-forward="false" selection-start-line="19" selection-start-column="31" selection-end-line="19" selection-end-column="31" />
+            <state relative-caret-position="133">
+              <caret line="31" column="0" lean-forward="false" selection-start-line="31" selection-start-column="0" selection-end-line="31" selection-end-column="0" />
+              <folding>
+                <element signature="imports" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="TestRunner.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/vt/smt/Client/TestRunner.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="252">
+              <caret line="15" column="32" lean-forward="false" selection-start-line="15" selection-start-column="32" selection-end-line="15" selection-end-column="32" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -304,16 +315,6 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="Bear.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/vt/smt/GUI/Bear.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="180">
-              <caret line="15" column="0" lean-forward="true" selection-start-line="15" selection-start-column="0" selection-end-line="15" selection-end-column="0" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
     </leaf>
   </component>
   <component name="FileTemplateManagerImpl">
@@ -342,8 +343,8 @@
       <find>0.5</find>
       <find>weight</find>
       <find>sout</find>
-      <find>System</find>
       <find>System.out</find>
+      <find>System</find>
     </findStrings>
   </component>
   <component name="Git.Settings">
@@ -392,7 +393,6 @@
         <option value="$PROJECT_DIR$/src/vt/smt/SaveOnServer.java" />
         <option value="$PROJECT_DIR$/src/vt/smt/Client/SaveOnServer.java" />
         <option value="$PROJECT_DIR$/src/vt/smt/Main.java" />
-        <option value="$PROJECT_DIR$/src/vt/smt/GUI/FallingList.java" />
         <option value="$PROJECT_DIR$/src/vt/smt/GUI/Titleses.java" />
         <option value="$PROJECT_DIR$/src/vt/smt/Toy.java" />
         <option value="$PROJECT_DIR$/src/vt/smt/GUI/BearGenerator.java" />
@@ -401,9 +401,10 @@
         <option value="$PROJECT_DIR$/src/vt/smt/GUI/Bear.java" />
         <option value="$PROJECT_DIR$/src/vt/smt/Client/TestRunner.java" />
         <option value="$PROJECT_DIR$/src/vt/smt/GUI/BearModifyder.java" />
-        <option value="$PROJECT_DIR$/src/vt/smt/GUI/BearsLine.java" />
         <option value="$PROJECT_DIR$/src/vt/smt/GUI/BearWindow.java" />
         <option value="$PROJECT_DIR$/src/vt/smt/Client/Sender.java" />
+        <option value="$PROJECT_DIR$/src/vt/smt/GUI/BearsLine.java" />
+        <option value="$PROJECT_DIR$/src/vt/smt/GUI/FallingList.java" />
         <option value="$PROJECT_DIR$/src/vt/smt/Client/InputCommandsHandler.java" />
       </list>
     </option>
@@ -1201,12 +1202,12 @@
       <workItem from="1492942904633" duration="7606000" />
       <workItem from="1492954190483" duration="15000" />
       <workItem from="1492955406524" duration="2893000" />
-      <workItem from="1492963484318" duration="16130000" />
+      <workItem from="1492963484318" duration="17243000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="149898000" />
+    <option name="totallyTimeSpent" value="151011000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -1241,10 +1242,10 @@
       <window_info id="Palette&#9;" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Image Layers" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Capture Analysis" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
-      <window_info id="Run" active="true" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.29411766" sideWeight="0.7643939" order="6" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.29411766" sideWeight="0.7643939" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32972136" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Coverage" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.19393939" sideWeight="0.5068226" order="6" side_tool="true" content_ui="tabs" />
-      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.0" sideWeight="0.88257575" order="5" side_tool="false" content_ui="tabs" />
+      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32972136" sideWeight="0.88257575" order="5" side_tool="false" content_ui="tabs" />
       <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.28484848" sideWeight="0.5" order="5" side_tool="false" content_ui="combo" />
       <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3287037" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Theme Preview" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
@@ -1299,7 +1300,6 @@
     <option name="FILTER_TARGETS" value="false" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/src/vt/smt/Server/Server.java" />
     <entry file="file://$PROJECT_DIR$/src/vt/smt/Server/Commands/ServerCommand.java" />
     <entry file="file://$PROJECT_DIR$/src/vt/smt/Server/Commands/SaveOnServer.java" />
     <entry file="file://$PROJECT_DIR$/src/vt/smt/Server/Main.java" />
@@ -1407,14 +1407,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/vt/smt/GUI/FallingList.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="144">
-          <caret line="9" column="13" lean-forward="false" selection-start-line="9" selection-start-column="13" selection-end-line="9" selection-end-column="13" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/vt/smt/GUI/Titleses.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="180">
@@ -1483,16 +1475,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/vt/smt/Client/TestRunner.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="252">
-          <caret line="15" column="32" lean-forward="false" selection-start-line="15" selection-start-column="32" selection-end-line="15" selection-end-column="32" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/vt/smt/GUI/Bear.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="180">
@@ -1517,34 +1499,12 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/vt/smt/GUI/BearGenerator.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="122">
-          <caret line="21" column="81" lean-forward="false" selection-start-line="21" selection-start-column="81" selection-end-line="21" selection-end-column="81" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/vt/smt/GUI/BearModifyder.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="122">
           <caret line="25" column="22" lean-forward="false" selection-start-line="25" selection-start-column="16" selection-end-line="25" selection-end-column="22" />
           <folding>
             <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/vt/smt/GUI/BearsLine.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="252">
-          <caret line="158" column="48" lean-forward="true" selection-start-line="158" selection-start-column="48" selection-end-line="158" selection-end-column="48" />
-          <folding>
-            <element signature="imports" expanded="true" />
-            <element signature="class#2111:2178" expanded="false" />
-            <element signature="method#insertElemtnt#0;class#BearsLine#0" expanded="false" />
-            <element signature="method#removeElement#1;class#BearsLine#0" expanded="false" />
-            <element signature="method#changeElement#0;class#BearsLine#0" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -1565,6 +1525,24 @@
         </state>
       </provider>
     </entry>
+    <entry file="jar://$PROJECT_DIR$/share/Commands.jar!/vt/smt/Commands/RemoveBear.class">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="108">
+          <caret line="10" column="13" lean-forward="false" selection-start-line="10" selection-start-column="13" selection-end-line="10" selection-end-column="13" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/vt/smt/Client/TestRunner.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="252">
+          <caret line="15" column="32" lean-forward="false" selection-start-line="15" selection-start-column="32" selection-end-line="15" selection-end-column="32" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/src/vt/smt/Client/Sender.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="103">
@@ -1576,12 +1554,43 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/vt/smt/Client/InputCommandsHandler.java">
+    <entry file="file://$PROJECT_DIR$/src/vt/smt/GUI/BearGenerator.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="34">
-          <caret line="19" column="31" lean-forward="false" selection-start-line="19" selection-start-column="31" selection-end-line="19" selection-end-column="31" />
+        <state relative-caret-position="153">
+          <caret line="21" column="81" lean-forward="false" selection-start-line="21" selection-start-column="81" selection-end-line="21" selection-end-column="81" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/vt/smt/GUI/FallingList.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="219">
+          <caret line="34" column="89" lean-forward="false" selection-start-line="34" selection-start-column="89" selection-end-line="34" selection-end-column="89" />
           <folding>
             <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/vt/smt/Client/InputCommandsHandler.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="133">
+          <caret line="31" column="0" lean-forward="false" selection-start-line="31" selection-start-column="0" selection-end-line="31" selection-end-column="0" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/vt/smt/GUI/BearsLine.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="115">
+          <caret line="137" column="41" lean-forward="true" selection-start-line="137" selection-start-column="41" selection-end-line="139" selection-end-column="0" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="class#2111:2178" expanded="false" />
+            <element signature="method#insertElemtnt#0;class#BearsLine#0" expanded="false" />
+            <element signature="method#changeElement#0;class#BearsLine#0" expanded="false" />
           </folding>
         </state>
       </provider>

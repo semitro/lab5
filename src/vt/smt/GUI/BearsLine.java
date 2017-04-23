@@ -137,22 +137,24 @@ public class BearsLine extends HBox{
     }
     public void removeElement(int index){
         collection.remove(index);
-        // Анимация исчезновения медведя
-        FadeTransition fd = new FadeTransition(Duration.millis(200));
-        fd.setNode(mainLine.getChildren().get(index));
-        fd.setFromValue(1);
-        fd.setToValue(0);
-        fd.play();
-        fd.setOnFinished(e->refreshVisible());
-        if(collection.isEmpty()){
-            this.getChildren().add(titleses);
-            titleses.start(300,600); // Дописать
-        }
 
+        // Анимация исчезновения медведя
+        Platform.runLater(()->{
+            FadeTransition fd = new FadeTransition(Duration.millis(200));
+            fd.setNode(mainLine.getChildren().get(index));
+            fd.setFromValue(1);
+            fd.setToValue(0);
+            fd.play();
+            fd.setOnFinished(e->refreshVisible());
+            if(collection.isEmpty()){
+                this.getChildren().add(titleses);
+                titleses.start(300,600); // Дописать
+            }
+        });
     }
     public void changeElement(int index, Toy element){
         collection.set(index,element);
-        System.out.println("Изменено");
+        Platform.runLater(()->refreshVisible());
     }
     public void setCollection(LinkedList<Toy> list){
         collection = list;

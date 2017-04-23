@@ -3,6 +3,10 @@ package vt.smt.GUI;
 
 import javafx.scene.control.ContextMenu;
 import javafx.scene.control.MenuItem;
+import vt.smt.Client.Sender;
+import vt.smt.Commands.RemoveBear;
+
+import java.io.IOException;
 
 /**
  * Created by semitro on 23.03.17.
@@ -24,6 +28,13 @@ public class FallingList extends ContextMenu{
             this.getItems().add(modify);
             MenuItem delete = new MenuItem("Удалить");
             delete.setOnAction(e-> {
+                try {
+                    Sender.getInstance().sendCommand(new RemoveBear(Integer.parseInt(bearCaller.getId())) );
+                }catch (IOException excepiton){
+                    // Можно запилить установление режима ожидания
+                    System.out.println("FallingList: удаление медведя не прошло успешно");
+                    System.out.println(excepiton.getMessage());
+                }
                 bearCaller.getOwner().removeElement(bearCaller.getId());}
             );
             this.getItems().add(delete);

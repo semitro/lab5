@@ -28,6 +28,8 @@ public class InputCommandsHandler {
                             ((ChangeBear) command).getIndex(), ((ChangeBear) command).getBear());
                 if (command instanceof SaveAllBears)
                     executor.setCollection(((SaveAllBears) command).getData());
+                if(command instanceof RemoveBear)
+                    executor.removeElement(((RemoveBear)command).getIndex());
             } catch (IOException e) {
                 System.out.println("Отвалился входной поток (Handler::hanleUnoutStrean)");
                 System.out.println(e.getMessage());
