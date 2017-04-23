@@ -4,6 +4,7 @@ package vt.smt.Client;
 import java.io.IOException;
 import java.io.ObjectInputStream;
 import java.io.ObjectOutputStream;
+import java.net.InetSocketAddress;
 import java.net.Socket;
 import vt.smt.Data.Toy;
 import java.util.LinkedList;
@@ -18,7 +19,8 @@ public class Sender {
     private ObjectInputStream in;
     private static Sender instance;
     private Sender(String host, int port) throws IOException{
-        socket = new Socket(host, port);
+        socket = new Socket();
+        socket.connect(new InetSocketAddress(host,port));
         out = new ObjectOutputStream(socket.getOutputStream());
         in = new ObjectInputStream(socket.getInputStream());
     }
@@ -36,19 +38,20 @@ public class Sender {
         out.writeObject(command);
         out.flush();
     }
-    public LinkedList<Toy> getBearsFromServer(){
-        try {
-            sendCommand(new GetBearsFromServer());
-            return (LinkedList<Toy>)in.readObject();
-        }catch (IOException e){
-            System.out.println("Неудачная попытка получения всех медведей Sender::getBears");
-            System.out.println(e.getMessage());
-        }catch (ClassNotFoundException e){
-            System.out.println("Sender:getBearsFromServer(): сервер прислал не тот тип данных");
-            System.out.println(e.getMessage());
-        }catch (Exception e){
-            e.printStackTrace();
-        }
-        return null;
+    public LinkedList<Toy> getBearsFromServer() throws  IOException,
+            ClassNotFoundException,ClassCastException{
+//        try {
+            sendCommand(new GetAllBears());
+            return ((SaveAllBears)in.readObject()).getData();
+//        }catch (IOException e){
+//            System.out.println("Неудачная попытка получения всех медведей Sender::getBears");
+//            System.out.println(e.getMessage());
+//        }catch (ClassNotFoundException | ClassCastException e){
+//            System.out.println("Sender:getBearsFromServer(): сервер прислал не тот тип данных");
+//            System.out.println(e.getMessage());
+//        }catch (Exception e){
+//            e.printStackTrace();
+//        }
+
     };
 }

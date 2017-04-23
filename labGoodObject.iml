@@ -35,5 +35,6 @@
     </orderEntry>
     <orderEntry type="library" name="ServerAPI " level="project" />
     <orderEntry type="library" name="Data" level="project" />
+    <orderEntry type="library" name="Commands" level="project" />
   </component>
 </module>

@@ -8,6 +8,7 @@ package vt.smt.GUI;
  */
 import javafx.animation.FadeTransition;
 import javafx.animation.TranslateTransition;
+import javafx.application.Platform;
 import javafx.scene.control.Alert;
 import javafx.scene.control.ProgressIndicator;
 import javafx.scene.control.Tooltip;
@@ -18,38 +19,35 @@ import javafx.scene.layout.HBox;
 import javafx.util.Duration;
 import vt.smt.Client.Sender;
 import vt.smt.Data.Toy;
-
 import java.io.File;
 import java.io.IOException;
 import java.util.LinkedList;
 import java.util.List;
-
+import vt.smt.Commands.*;
 
 public class BearsLine extends HBox{
     // Зависим от абстракции collection
     private List<Toy> collection;
     private HBox mainLine = new HBox();  // Полоска медведей
-    private Titleses titleses = new Titleses();; // Стих после удаления всего
+    private Titleses titleses = new Titleses(); // Стих после удаления всего
     protected Alert confirmExit; // Сохранять ли файлы при выходе?
     private static String collectionXMLFile = System.getProperty("user.dir") +
                                     File.separator + "things" + File.separator + "BabykAndMotherThings.xml";
     // По-умолчанию - загружаем коллекцию из файла
     private ProgressIndicator waitingIndicator;
     public BearsLine(){
+        collection = new LinkedList<>();
         waitingIndicator = new ProgressIndicator();
         waitingIndicator.setTooltip(new Tooltip("Ожидание соединения с cервером.."));
-
         try {
-            collection = Sender.getInstance().getBearsFromServer();
-            refreshVisible();
-        }catch (IOException e){
-            mainLine.getChildren().add(waitingIndicator);
-            waitingIndicator.setTranslateX(257);
-            waitingIndicator.setTranslateY(-50);
-            waitingIndicator.setVisible(true);
-            collection = new LinkedList<>();
+            restoreConnection();
+        }catch (Exception e){
+            System.out.println("Всё плохо");
+            System.out.println(e.getMessage());
         }
-       // Анимация для медведиков
+
+
+        // Анимация для медведиков
        TranslateTransition translateTransition = new TranslateTransition(Duration.millis(1800));
        translateTransition.setCycleCount(1);
        translateTransition.setAutoReverse(true);
@@ -82,10 +80,34 @@ public class BearsLine extends HBox{
         mainLine.setSpacing(20);
         this.getChildren().add(mainLine);
     }
+    private void restoreConnection() {
+        mainLine.getChildren().clear();
+        mainLine.getChildren().add(waitingIndicator);
+        waitingIndicator.setTranslateX(257);
+        waitingIndicator.setTranslateY(-50);
+        waitingIndicator.setVisible(true);
+        Thread t = new Thread(new Runnable() {
+            @Override
+            public void run() {
+                while (true)
+                try {
+                    Thread.currentThread().sleep(500);
+                    collection = Sender.getInstance().getBearsFromServer();
+                    Platform.runLater(()->{refreshVisible();});
+                    return;
+                } catch (Exception e) {
+                    System.out.println(e.getMessage());
+                }
+            }
+        });
+        t.setDaemon(true);
+        t.start();
+
+    }
+
     // Отображение коллекции в видимых медведей
     public void refreshVisible() {
         mainLine.getChildren().clear();
-
         for (int i = 0; i < collection.size(); i++) {
             Bear bear = new Bear(); // Спасибо огромное составителям JavaFX за возможность присудить ID!
             bear.setId(Integer.toString(i));
@@ -128,6 +150,14 @@ public class BearsLine extends HBox{
             titleses.start(300,600); // Дописать
         }
 
+    }
+    public void changeElement(int index, Toy element){
+        try {
+            Sender.getInstance().sendCommand(new ChangeBear(element, index));
+            System.out.println("Отправил change");
+        }catch (IOException e){
+            System.out.println("Не удалось изменить медведя на сервере");
+        }
     }
     public Toy getInfoAbout(int index){
         return index < collection.size() ? (Toy)collection.get(index) : null;
