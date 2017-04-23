@@ -4,9 +4,8 @@ package vt.smt.Client;
 import java.io.IOException;
 import java.io.ObjectInputStream;
 import java.io.ObjectOutputStream;
-import java.net.ConnectException;
 import java.net.Socket;
-import vt.smt.Toy;
+import vt.smt.Data.Toy;
 import java.util.LinkedList;
 
 import vt.smt.Commands.*;

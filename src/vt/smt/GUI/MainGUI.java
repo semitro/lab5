@@ -1,16 +1,13 @@
 package vt.smt.GUI;
 
-import javafx.animation.FadeTransition;
 import javafx.application.Application;
 import javafx.scene.Scene;
 import javafx.scene.control.*;
-import javafx.scene.effect.BoxBlur;
 import javafx.scene.image.Image;
 import javafx.scene.layout.*;
-import javafx.scene.paint.Color;
 import javafx.scene.paint.Paint;
 import javafx.stage.Stage;
-import javafx.util.Duration;
+
 
 
 public class MainGUI extends Application {
@@ -39,7 +36,7 @@ public class MainGUI extends Application {
         pane.setCenter(bearsLine);
         primaryStage.setScene(new Scene(pane,600,250));
         primaryStage.getScene().setFill(Paint.valueOf("black"));
-        primaryStage.setTitle("Медведики сущие, себя сквозь Космос несущие");
+        primaryStage.setTitle("Медведики сущие, себя сквозь тьму космоса несущие");
         pane.getCenter().setTranslateY(pane.getHeight()/5);
         primaryStage.setResizable(false);
         primaryStage.show();

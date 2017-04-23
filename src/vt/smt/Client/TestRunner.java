@@ -1,7 +1,7 @@
 package vt.smt.Client;
 
 
-import vt.smt.Toy;
+import vt.smt.Data.Toy;
 
 import java.io.IOException;
 import java.util.LinkedList;

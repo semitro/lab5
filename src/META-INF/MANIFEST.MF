@@ -1,3 +1,5 @@
 Manifest-Version: 1.0
+Class-Path: slf4j-nop.jar Data.jar jackson.jar bridj-0.6.2.jar Webcam.
+ jar ServerAPI.jar
 Main-Class: vt.smt.Main
 

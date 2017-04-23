@@ -5,17 +5,12 @@ import javafx.scene.Scene;
 import javafx.scene.control.*;
 import javafx.scene.image.Image;
 import javafx.scene.image.ImageView;
-import javafx.scene.input.InputMethodRequests;
 import javafx.scene.layout.HBox;
 import javafx.scene.layout.Pane;
 import javafx.scene.layout.VBox;
-import javafx.scene.paint.Paint;
 import javafx.stage.Stage;
-import javafx.util.StringConverter;
 import javafx.util.converter.DoubleStringConverter;
-
 import javax.imageio.ImageIO;
-import javax.xml.soap.Text;
 import java.io.File;
 
 /**
@@ -113,6 +108,7 @@ public abstract class BearWindow {
             if(webcam == null)
                 webcam = Webcam.getDefault();
             webcam.open();
+
             ImageIO.write(webcam.getImage(), "PNG", new File(
                             System.getProperty("user.dir") + File.separator + "things" + File.separator + "temp"
                     )

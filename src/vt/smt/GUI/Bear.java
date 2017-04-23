@@ -1,21 +1,12 @@
 package vt.smt.GUI;
 
-import javafx.animation.FadeTransition;
 import javafx.animation.ScaleTransition;
-import javafx.event.EventHandler;
-import javafx.scene.effect.BlurType;
 import javafx.scene.effect.Reflection;
-import javafx.scene.effect.Shadow;
 import javafx.scene.image.Image;
-import javafx.scene.input.MouseEvent;
-import javafx.scene.layout.HBox;
-import javafx.scene.paint.Color;
 import javafx.util.Duration;
-import vt.smt.Toy;
-
-import java.awt.*;
+import vt.smt.Data.Toy;
 import java.io.File;
-import java.util.Enumeration;
+
 /**
  * Created by semitro on 22.03.17.
  */

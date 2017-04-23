@@ -1,7 +1,7 @@
 <component name="libraryTable">
-  <library name="ServerAPI">
+  <library name="Data">
     <CLASSES>
-      <root url="jar://$PROJECT_DIR$/src/vt/smt/ServerAPI.jar!/" />
+      <root url="jar://$PROJECT_DIR$/share/Data.jar!/" />
     </CLASSES>
     <JAVADOC />
     <SOURCES />

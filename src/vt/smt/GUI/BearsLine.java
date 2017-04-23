@@ -6,28 +6,21 @@ package vt.smt.GUI;
  * В общем, как понятно из контекста, этот класс - прослойска для взаимодействия Графического
  *  отображения (class Bear) и непосредственно управляемой коллекции
  */
-import com.sun.istack.internal.NotNull;
 import javafx.animation.FadeTransition;
 import javafx.animation.TranslateTransition;
-import javafx.scene.Node;
 import javafx.scene.control.Alert;
 import javafx.scene.control.ProgressIndicator;
 import javafx.scene.control.Tooltip;
 import javafx.scene.effect.BlurType;
 import javafx.scene.effect.InnerShadow;
 import javafx.scene.effect.MotionBlur;
-import javafx.scene.effect.Shadow;
 import javafx.scene.layout.HBox;
 import javafx.util.Duration;
 import vt.smt.Client.Sender;
-import vt.smt.Home;
-import vt.smt.PhysicalObject;
-import vt.smt.Toy;
-
+import vt.smt.Data.Toy;
 
 import java.io.File;
 import java.io.IOException;
-import java.net.ConnectException;
 import java.util.LinkedList;
 import java.util.List;
 

@@ -1,22 +1,7 @@
 package vt.smt.GUI;
 
-import com.github.sarxos.webcam.Webcam;
-import javafx.scene.Scene;
-import javafx.scene.control.Button;
-import javafx.scene.control.CheckBox;
-import javafx.scene.control.Label;
-import javafx.scene.control.TextField;
-import javafx.scene.image.Image;
-import javafx.scene.image.ImageView;
-import javafx.scene.layout.*;
-import javafx.stage.Stage;
-import sun.nio.cs.Surrogate;
-import sun.text.normalizer.UTF16;
-import vt.smt.Toy;
 
-import javax.imageio.ImageIO;
-import java.io.File;
-import java.net.URI;
+import vt.smt.Data.Toy;
 
 /**
  * Окно генерации новых медведей

@@ -9,7 +9,7 @@ public class BearModifyder extends  BearWindow{
     protected void initActions(){
         addButton.setOnAction(e->{
             caller.getInfo().setName(nameInput.getText());
-            caller.getInfo().setCleaning(isCleanBox.selectedProperty().getValue());
+            caller.getInfo().setisCleaning(isCleanBox.selectedProperty().getValue());
 
             double weight = 0.5;
             try{weight = Double.parseDouble(weightInput.getText());}catch (Exception bad){}

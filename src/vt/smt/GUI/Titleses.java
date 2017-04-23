@@ -1,22 +1,16 @@
 package vt.smt.GUI;
 
-import javafx.animation.Animation;
-import javafx.animation.AnimationTimer;
+
 import javafx.animation.FadeTransition;
 import javafx.animation.TranslateTransition;
-import javafx.application.Application;
-import javafx.scene.control.Label;
 import javafx.scene.effect.*;
 import javafx.scene.layout.VBox;
 import javafx.scene.paint.Paint;
 import javafx.scene.text.Font;
 import javafx.scene.text.Text;
 import javafx.util.Duration;
-import vt.smt.Main;
-
 import java.io.File;
 import java.io.FileNotFoundException;
-import java.io.FileReader;
 import java.util.*;
 
 /**
@@ -24,8 +18,6 @@ import java.util.*;
  */
 public class Titleses extends VBox {
     Text text;
-    TranslateTransition rideAnim;
-    private int heightStroke = 200;
     private int stroke;
     // Каждые 4 строки записываем в одну строку, чтобы выводить четверостишье
     private LinkedList<String> strings;

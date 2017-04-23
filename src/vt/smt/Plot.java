@@ -7,7 +7,7 @@ package vt.smt;
 import javafx.application.Application;
 import org.codehaus.jackson.map.ObjectMapper;
 import vt.smt.GUI.MainGUI;
-
+import vt.smt.Data.Toy;
 import java.io.File;
 import java.util.Scanner;
 

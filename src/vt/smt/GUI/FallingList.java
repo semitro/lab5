@@ -1,10 +1,8 @@
 package vt.smt.GUI;
 
 
-import javafx.animation.FadeTransition;
 import javafx.scene.control.ContextMenu;
 import javafx.scene.control.MenuItem;
-
 
 /**
  * Created by semitro on 23.03.17.
