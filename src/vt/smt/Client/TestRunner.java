@@ -13,7 +13,7 @@ import vt.smt.Commands.*;
 public class TestRunner {
     public static void main(String argv[]){
         try {
-            System.out.println();
+
         }catch (Exception e){
             e.printStackTrace();
         }

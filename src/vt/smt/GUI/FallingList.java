@@ -35,7 +35,7 @@ public class FallingList extends ContextMenu{
                     System.out.println("FallingList: удаление медведя не прошло успешно");
                     System.out.println(excepiton.getMessage());
                 }
-                bearCaller.getOwner().removeElement(bearCaller.getId());}
+            }
             );
             this.getItems().add(delete);
 

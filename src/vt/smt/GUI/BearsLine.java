@@ -20,7 +20,6 @@ import javafx.util.Duration;
 import vt.smt.Client.Sender;
 import vt.smt.Data.Toy;
 import java.io.File;
-import java.io.IOException;
 import java.util.LinkedList;
 import java.util.List;
 import vt.smt.Commands.*;
@@ -89,10 +88,10 @@ public class BearsLine extends HBox{
             public void run() {
                 while (true)
                 try {
-                    Thread.currentThread().sleep(500);
-                   // collection = Sender.getInstance().getBearsFromServer();
-                    Sender.getInstance().sendCommand(new GetAllBears());
-                    Platform.runLater(()->{refreshVisible();});
+                     Thread.currentThread().sleep(500);
+                     Sender.getInstance().sendCommand(new GetAllBears());
+                     System.out.println("Отправил запрос");
+                   // Platform.runLater(()->{refreshVisible();});
                     return;
                 } catch (Exception e) {
                     System.out.println(e.getMessage());
@@ -106,6 +105,8 @@ public class BearsLine extends HBox{
 
     // Отображение коллекции в видимых медведей
     public void refreshVisible() {
+        System.out.println(collection);
+        System.out.println("Refer visible");
         mainLine.getChildren().clear();
         for (int i = 0; i < collection.size(); i++) {
             Bear bear = new Bear(); // Спасибо огромное составителям JavaFX за возможность присудить ID!
@@ -130,14 +131,14 @@ public class BearsLine extends HBox{
             collection.add(element);
                 else
             collection.add(index, element);
-        refreshVisible();
+        Platform.runLater(()->refreshVisible());
     }
-    public void removeElement(String index){
-        removeElement(Integer.valueOf(index));
-    }
+    private Object monitorChange = new Object();
     public void removeElement(int index){
-        collection.remove(index);
-
+        synchronized (monitorChange) {
+            collection.remove(index);
+        }
+        System.out.println("removeElement in BearsLinke: Element number " + index + " was deleted");
         // Анимация исчезновения медведя
         Platform.runLater(()->{
             FadeTransition fd = new FadeTransition(Duration.millis(200));
@@ -153,11 +154,15 @@ public class BearsLine extends HBox{
         });
     }
     public void changeElement(int index, Toy element){
-        collection.set(index,element);
+        synchronized (monitorChange) {
+            collection.set(index, element);
+        }
         Platform.runLater(()->refreshVisible());
     }
     public void setCollection(LinkedList<Toy> list){
-        collection = list;
+        synchronized (monitorChange) {
+            collection = list;
+        }
         Platform.runLater(()->refreshVisible());
     }
     public Toy getInfoAbout(int index){

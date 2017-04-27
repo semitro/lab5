@@ -21,6 +21,11 @@ public class InputCommandsHandler {
         while (true) {
             try {
                 command = null;
+                try {
+                    Thread.currentThread().sleep(6400);
+                }catch (InterruptedException e){
+
+                }
                 command = Sender.getInstance().nextCommand();
                 System.out.println("Получена команда" + command.toString());
                 if (command instanceof ChangeBear)
@@ -28,11 +33,17 @@ public class InputCommandsHandler {
                             ((ChangeBear) command).getIndex(), ((ChangeBear) command).getBear());
                 if (command instanceof SaveAllBears)
                     executor.setCollection(((SaveAllBears) command).getData());
-                if(command instanceof RemoveBear)
-                    executor.removeElement(((RemoveBear)command).getIndex());
+                if(command instanceof RemoveBear) {
+                    System.out.println("Собираюсь отправить на выполнение удаление элемента № " +((RemoveBear) command).getIndex() );
+                    executor.removeElement(((RemoveBear) command).getIndex());
+                }
+                if(command instanceof InsertBear){
+                    executor.insertElemtnt(((InsertBear)command).getIndex(),
+                                           ((InsertBear)command).getBear());
+                }
             } catch (IOException e) {
-                System.out.println("Отвалился входной поток (Handler::hanleUnoutStrean)");
-                System.out.println(e.getMessage());
+                System.out.println("Отвалился входной поток (Handler::handleInputStream)");
+                e.printStackTrace();
             }
         }
     }

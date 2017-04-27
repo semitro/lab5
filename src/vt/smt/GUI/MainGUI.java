@@ -16,6 +16,7 @@ public class MainGUI extends Application {
     private Stage primaryStage;
     private BorderPane pane;
     protected Alert confirmExit; // Сохранять ли файлы при выходе?
+    private ServerButton serverButton;
     @Override
     public void start(Stage inputStage) {
         primaryStage = inputStage;
@@ -24,7 +25,7 @@ public class MainGUI extends Application {
         ContextMenu cm = new ContextMenu();
         MenuItem mi = new MenuItem("sgs");
         cm.getItems().add(mi);
-
+        serverButton = new ServerButton();
         pane.setBackground(
                 new Background(
                 new BackgroundImage(
@@ -34,14 +35,15 @@ public class MainGUI extends Application {
                         BackgroundPosition.DEFAULT,BackgroundSize.DEFAULT)));
 
         pane.setCenter(bearsLine);
-        primaryStage.setScene(new Scene(pane,600,250));
+        pane.setRight(serverButton);
+        Scene scene = new Scene(pane,600,250);
+        primaryStage.setScene(scene);
         primaryStage.getScene().setFill(Paint.valueOf("black"));
         primaryStage.setTitle("Медведики сущие, себя сквозь тьму космоса несущие");
         pane.getCenter().setTranslateY(pane.getHeight()/5);
+        pane.getRight().setTranslateY(pane.getHeight()-40);
         primaryStage.setResizable(false);
         primaryStage.show();
-
        // primaryStage.setOnHiding(e->confirmExit.show());
-
     }
 }

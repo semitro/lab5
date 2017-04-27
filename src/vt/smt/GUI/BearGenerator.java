@@ -6,6 +6,11 @@ import vt.smt.Data.Toy;
 /**
  * Окно генерации новых медведей
  */
+import vt.smt.Client.Sender;
+import vt.smt.Commands.InsertBear;
+
+import java.io.IOException;
+
 public class BearGenerator extends BearWindow {
 
     @Override
@@ -24,10 +29,12 @@ public class BearGenerator extends BearWindow {
             }catch (Exception bad){
                 newToy = new Toy(nameInput.getText(),0.5,isCleanBox.isSelected());
             }
-            caller.getOwner().insertElemtnt(
-                    Integer.valueOf(caller.getId())+1, // вставляем после
-                    newToy
-            );
+            try {
+                Sender.getInstance().sendCommand(new InsertBear(newToy, Integer.parseInt(caller.getId())));
+            }catch (IOException except){
+                System.out.println("Ошибка при выводе нового медведя на орбиту");
+                System.out.println(except.getMessage());
+            }
             stage.close();
         });
     }
