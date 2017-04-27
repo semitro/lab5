@@ -9,20 +9,31 @@ import vt.smt.Commands.*;
 import java.io.IOException;
 
 public class InputCommandsHandler {
-    private BearsLine executor;
-    public InputCommandsHandler(BearsLine executor){
-        this.executor = executor;
-        Thread t = new Thread(this::handleInputStream);
+    private static Executor executor;
+    private static NoticeSystem noticer;
+    private static boolean isOn = false;
+
+    public static void start(){
+        if(isOn)
+            return;
+        isOn = true;
+        Thread t = new Thread(()->{handleInputStream();});
         t.setDaemon(true);
         t.start();
     }
-    private void handleInputStream() {
+    public static void initExecutor(Executor worker){
+        executor = worker;
+    }
+    public static void initNoticeSystem(NoticeSystem noticeSystem){
+        noticer = noticeSystem;
+    }
+    private static void handleInputStream() {
         ServerAnswer command = null;
         while (true) {
             try {
                 command = null;
                 try {
-                    Thread.currentThread().sleep(6400);
+                    Thread.currentThread().sleep(1000);
                 }catch (InterruptedException e){
 
                 }
@@ -40,6 +51,12 @@ public class InputCommandsHandler {
                 if(command instanceof InsertBear){
                     executor.insertElemtnt(((InsertBear)command).getIndex(),
                                            ((InsertBear)command).getBear());
+                }
+                if(command instanceof  vt.smt.Commands.Message){
+                    if(noticer != null)
+                        noticer.notice(((vt.smt.Commands.Message)command).getMessage());
+                    else
+                        System.out.println( ((vt.smt.Commands.Message)command).getMessage());
                 }
             } catch (IOException e) {
                 System.out.println("Отвалился входной поток (Handler::handleInputStream)");

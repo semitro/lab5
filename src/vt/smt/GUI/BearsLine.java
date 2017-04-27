@@ -24,7 +24,7 @@ import java.util.LinkedList;
 import java.util.List;
 import vt.smt.Commands.*;
 import vt.smt.Client.InputCommandsHandler;
-public class BearsLine extends HBox{
+public class BearsLine extends HBox implements vt.smt.Client.Executor{
     // Зависим от абстракции collection
     private List<Toy> collection = new LinkedList<>();
     private HBox mainLine = new HBox();  // Полоска медведей
@@ -33,7 +33,7 @@ public class BearsLine extends HBox{
     private InputCommandsHandler serverListener;
 
     public BearsLine(){
-        serverListener = new InputCommandsHandler(this);
+        InputCommandsHandler.initExecutor(this);
         waitingIndicator = new ProgressIndicator();
         waitingIndicator.setTooltip(new Tooltip("Ожидание соединения с cервером.."));
         try {
@@ -76,6 +76,7 @@ public class BearsLine extends HBox{
        });
         mainLine.setSpacing(20);
         this.getChildren().add(mainLine);
+        InputCommandsHandler.start();
     }
     private void restoreConnection() {
         mainLine.getChildren().clear();
@@ -165,7 +166,9 @@ public class BearsLine extends HBox{
         }
         Platform.runLater(()->refreshVisible());
     }
+
     public Toy getInfoAbout(int index){
         return index < collection.size() ? (Toy)collection.get(index) : null;
     }
+
 }
