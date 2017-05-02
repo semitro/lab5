@@ -3,7 +3,6 @@ package vt.smt.Client;
 /**
  * Created by semitro on 23.04.17.
  */
-import vt.smt.GUI.BearsLine;
 import vt.smt.Commands.*;
 
 import java.io.IOException;

@@ -39,9 +39,9 @@ public class MainGUI extends Application {
                         BackgroundPosition.DEFAULT,BackgroundSize.DEFAULT)));
 
         pane.setCenter(bearsLine);
+        pane.setRight(serverButton);
         pane.setBottom(noticer);
         pane.getBottom().setTranslateX(40);
-        pane.setRight(serverButton);
         Scene scene = new Scene(pane,600,250);
         primaryStage.setScene(scene);
         primaryStage.getScene().setFill(Paint.valueOf("black"));
@@ -50,6 +50,5 @@ public class MainGUI extends Application {
         pane.getRight().setTranslateY(pane.getHeight()-40);
         primaryStage.setResizable(false);
         primaryStage.show();
-       // primaryStage.setOnHiding(e->confirmExit.show());
     }
 }

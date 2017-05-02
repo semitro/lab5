@@ -165,6 +165,7 @@ public class BearsLine extends HBox implements vt.smt.Client.Executor{
             collection = list;
         }
         Platform.runLater(()->refreshVisible());
+        System.out.println("ПРивет");
     }
 
     public Toy getInfoAbout(int index){

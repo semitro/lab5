@@ -12,6 +12,7 @@
       <element id="library" level="project" name="Webcam" />
       <element id="library" level="project" name="slf4j-api-1.7.2" />
       <element id="library" level="project" name="ServerAPI " />
+      <element id="library" level="project" name="Commands" />
     </root>
   </artifact>
 </component>

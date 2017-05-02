@@ -8,6 +8,7 @@ import java.net.InetSocketAddress;
 import java.net.Socket;
 import vt.smt.Data.Toy;
 
+import java.nio.channels.AlreadyBoundException;
 import java.nio.channels.AlreadyConnectedException;
 import java.util.LinkedList;
 
@@ -20,24 +21,19 @@ public class Sender {
     private ObjectOutputStream out;
     private ObjectInputStream in;
     private static Sender instance;
-    private String host;
-    private int port;
+    private static String host_ = "127.0.0.1";
+    private static int port_ = 2552;
     private Sender(String host, int port) throws IOException {
-        this.host = host;
-        this.port = port;
-        socket = new Socket();
-        socket.connect(new InetSocketAddress(host, port));
-        out = new ObjectOutputStream(socket.getOutputStream());
-        in = new ObjectInputStream(socket.getInputStream());
         Thread t = new Thread(()->{
             while (true) {
                 try {
                     retryConect();
                     System.out.println("Коннект восстановлен.");
+                    sendCommand(new GetAllBears());
                     return;
                 }catch (IOException exc){
                     try {
-                        Thread.currentThread().sleep(120);
+                        Thread.currentThread().sleep(880);
                     }catch (InterruptedException pppp){
 
                     }
@@ -45,19 +41,36 @@ public class Sender {
             }
         });
         t.setDaemon(true);
-        t.start();
+        host_ = host;
+        port_ = port;
+        socket = new Socket();
+        try {
+            socket.connect(new InetSocketAddress(host, port));
+        }catch (IOException e){
+            t.start();
+        }
+        out = new ObjectOutputStream(socket.getOutputStream());
+        in = new ObjectInputStream(socket.getInputStream());
+
+    }
+    public static void initAddr(String host,int port) throws AlreadyConnectedException{
+        if(instance != null)
+            throw new AlreadyBoundException();
+       host_ = host;
+       port_ = port;
     }
     public static Sender getInstance() throws IOException{
         if(instance == null)
-            instance = new Sender("127.0.0.1",2552);
+            instance = new Sender(host_,port_);
         return instance;
     }
     private void retryConect() throws  IOException{
         if(socket.isConnected())
             return;
-        socket = new Socket(host,port);
+        socket = new Socket(host_,port_);
         out = new ObjectOutputStream(socket.getOutputStream());
         in = new ObjectInputStream(socket.getInputStream());
+
     }
     /** Для общения с сервером используется паттерн "Команда" (ну, почти)
      *  Если Вы хотите отправить на сервер данные,
