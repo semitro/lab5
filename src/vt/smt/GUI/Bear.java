@@ -13,7 +13,6 @@ import java.io.File;
 public class Bear extends javafx.scene.image.ImageView {
     private FallingList fallingList;
     private Image img;
-
     //GUI/img/*
     Bear(){
         this("img/defaultBear.png");

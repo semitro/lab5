@@ -26,6 +26,10 @@ public class InputCommandsHandler {
     public static void initNoticeSystem(NoticeSystem noticeSystem){
         noticer = noticeSystem;
     }
+    public static void sendNotice(String message){
+        if(noticer != null)
+            noticer.notice(message);
+    }
     private static void handleInputStream() {
         ServerAnswer command = null;
         while (true) {

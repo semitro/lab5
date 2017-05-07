@@ -30,7 +30,7 @@ public class BearGenerator extends BearWindow {
                 newToy = new Toy(nameInput.getText(),0.5,isCleanBox.isSelected());
             }
             try {
-                Sender.getInstance().sendCommand(new InsertBear(newToy, Integer.parseInt(caller.getId())));
+                Sender.getInstance().sendCommand(new InsertBear(newToy, 1 + Integer.parseInt(caller.getId())));
             }catch (IOException except){
                 System.out.println("Ошибка при выводе нового медведя на орбиту");
                 System.out.println(except.getMessage());

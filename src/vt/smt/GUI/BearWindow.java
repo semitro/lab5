@@ -12,7 +12,7 @@ import javafx.stage.Stage;
 import javafx.util.converter.DoubleStringConverter;
 import javax.imageio.ImageIO;
 import java.io.File;
-
+import vt.smt.Data.Toy;
 /**
  * Абстрактное окно взаимодействия с медведями (в выпадающем списке вызваются реализации)
  */
@@ -30,8 +30,11 @@ public abstract class BearWindow {
     protected Image defaultImage;
     // Нужно знать, какой медведь нас вызвал
     protected Bear caller;
+    // Для синхронизации алгоритмом CAS
+    protected Toy cas_caller;
     BearWindow(Bear caller){
         this.caller = caller;
+        this.cas_caller = new Toy(caller.getInfo());
         camSnapshot = new Thread(new Runnable() {
             @Override
             public void run() {
@@ -67,15 +70,15 @@ public abstract class BearWindow {
 
         pane.getChildren().add(imageAvatar);
         rightBox.getChildren().add(new Label("Я не знал, что здесь написать.."));
-        nameInput = new TextField(caller.getInfo().getName());
+        nameInput = new TextField(); // fixed
         rightBox.getChildren().add(nameInput);
 
         weightInput = new TextField();
         weightInput.setTextFormatter(new TextFormatter<Double>(new DoubleStringConverter()));
-        weightInput.setText(Double.toString(caller.getInfo().getWeight()));
+        //weightInput.setText(Double.toString(caller.getInfo().getWeight()));
         rightBox.getChildren().add(weightInput);
         isCleanBox = new CheckBox("Чистый");
-        isCleanBox.setSelected(caller.getInfo().isClean());
+       // isCleanBox.setSelected(caller.getInfo().isClean());
         rightBox.getChildren().add(isCleanBox);
         addButton = new Button("Сотворить медведя!");
         addButton.setOnAction(e->{stage.close();});
@@ -90,12 +93,37 @@ public abstract class BearWindow {
         stage.setResizable(false);
         stage.setOnHiding(e->{imageView.setImage(defaultImage);});
         initTitles();
+        loadInfo();
         initActions();
+    }
+    protected void loadInfo(){
+        this.cas_caller = new Toy(caller.getInfo());
+        isCleanBox.setSelected(cas_caller.isClean());
+        nameInput.setText(cas_caller.getName());
+        weightInput.setText(Double.toString(cas_caller.getWeight()));
     }
     abstract protected void initActions();
     abstract protected void initTitles();
     public void show(){
+        loadInfo();
         stage.show();
+    }
+
+    // Алгоритм Compare and swap
+    protected boolean CAS(){
+        if(this.caller == null)
+            return false;
+        try {
+            if (this.caller.getInfo().getName().equals(cas_caller.getName()) &&
+                    this.caller.getInfo().getWeight() == cas_caller.getWeight() &&
+                    this.caller.getInfo().isClean() == cas_caller.isClean()
+                    )
+                return true;
+        }
+        catch(NullPointerException np){
+            return false;
+        }
+        return false;
     }
     // Класс, поставляемый библиотекой
     private Webcam webcam;

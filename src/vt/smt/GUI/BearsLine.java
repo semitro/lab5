@@ -20,6 +20,7 @@ import javafx.util.Duration;
 import vt.smt.Client.Sender;
 import vt.smt.Data.Toy;
 import java.io.File;
+import java.io.IOException;
 import java.util.LinkedList;
 import java.util.List;
 import vt.smt.Commands.*;
@@ -30,7 +31,6 @@ public class BearsLine extends HBox implements vt.smt.Client.Executor{
     private HBox mainLine = new HBox();  // Полоска медведей
     private Titleses titleses = new Titleses(); // Стих после удаления всего
     private ProgressIndicator waitingIndicator;
-    private InputCommandsHandler serverListener;
 
     public BearsLine(){
         InputCommandsHandler.initExecutor(this);
@@ -53,6 +53,7 @@ public class BearsLine extends HBox implements vt.smt.Client.Executor{
        // Яков рассказывал, как его друга на экзамене попросили доказать, что замыкание замкнуто
        class MouseDraggedWrapper{
            public double value;
+           public double value_y;
        }
         MotionBlur blur = new MotionBlur();
 
@@ -60,6 +61,7 @@ public class BearsLine extends HBox implements vt.smt.Client.Executor{
        // Ловим жест
        this.setOnMousePressed(start->{
            mouseDragged.value = start.getSceneX();
+           mouseDragged.value_y = start.getSceneY();
            mainLine.setEffect(blur);
            blur.setAngle(45);
            blur.setRadius(3);
@@ -73,6 +75,26 @@ public class BearsLine extends HBox implements vt.smt.Client.Executor{
            });
            blur.setRadius(0);
            blur.setAngle(0);
+           //Удаление при выбрасывании вверх
+           if(mouseDragged.value_y - end.getSceneY() > 50 &&
+                   Math.abs(mouseDragged.value - end.getSceneX()) < 25) {
+               double right = mainLine.getTranslateX();
+             //  System.out.println(end.getSceneX());
+               // Расчёт текущего медведя
+               for (int i = 0; i < mainLine.getChildren().size(); i++) {
+                   right += mainLine.getChildren().get(i).prefWidth(-1);
+                   System.out.println(right);
+                   if ( end.getSceneX() <= right) {
+                      // System.out.println(i);
+                       try {
+                           Sender.getInstance().sendCommand(new vt.smt.Commands.RemoveBear(i));
+                       }catch (IOException ioe){
+
+                       }
+                       break;
+                   }
+               }
+           }
        });
         mainLine.setSpacing(20);
         this.getChildren().add(mainLine);
@@ -109,6 +131,7 @@ public class BearsLine extends HBox implements vt.smt.Client.Executor{
         System.out.println(collection);
         System.out.println("Refer visible");
         mainLine.getChildren().clear();
+        //
         for (int i = 0; i < collection.size(); i++) {
             Bear bear = new Bear(); // Спасибо огромное составителям JavaFX за возможность присудить ID!
             bear.setId(Integer.toString(i));
@@ -127,19 +150,29 @@ public class BearsLine extends HBox implements vt.smt.Client.Executor{
 
         }
     }
+
     public void insertElemtnt(int index, Toy element){
         if(index > collection.size())
             collection.add(element);
                 else
             collection.add(index, element);
-        Platform.runLater(()->refreshVisible());
+
+        Platform.runLater(()->{
+            if(index > collection.size())
+                mainLine.getChildren().add(new Bear());
+            else
+                mainLine.getChildren().add(index,new Bear());
+            for(int i = 0; i< mainLine.getChildren().size(); i++)
+                mainLine.getChildren().get(i).setId(Integer.toString(i));
+            dirtyBear(index);
+        });
     }
     private Object monitorChange = new Object();
     public void removeElement(int index){
         synchronized (monitorChange) {
             collection.remove(index);
         }
-        System.out.println("removeElement in BearsLinke: Element number " + index + " was deleted");
+        System.out.println("removeElement in BearsLine: Element number " + index + " was deleted");
         // Анимация исчезновения медведя
         Platform.runLater(()->{
             FadeTransition fd = new FadeTransition(Duration.millis(200));
@@ -147,7 +180,11 @@ public class BearsLine extends HBox implements vt.smt.Client.Executor{
             fd.setFromValue(1);
             fd.setToValue(0);
             fd.play();
-            fd.setOnFinished(e->refreshVisible());
+            fd.setOnFinished(e-> {
+                mainLine.getChildren().remove(index);
+                for(int i = 0; i< mainLine.getChildren().size(); i++)
+                    mainLine.getChildren().get(i).setId(Integer.toString(i));
+            });
             if(collection.isEmpty()){
                 this.getChildren().add(titleses);
                 titleses.start(300,600); // Дописать
@@ -158,7 +195,22 @@ public class BearsLine extends HBox implements vt.smt.Client.Executor{
         synchronized (monitorChange) {
             collection.set(index, element);
         }
-        Platform.runLater(()->refreshVisible());
+        Platform.runLater(()->{
+            dirtyBear(index);
+        });
+    }
+    // Отобразить грязного ли медведя?
+    private void dirtyBear(int index){
+        if(!collection.get(index).isClean()){
+            InnerShadow sh = new InnerShadow();
+            sh.setRadius(20.0);
+            sh.setChoke(0.3999);
+            sh.setBlurType(BlurType.GAUSSIAN);
+            mainLine.getChildren().get(index).setEffect(sh);
+        }
+        else
+            mainLine.getChildren().get(index).setEffect(null);
+
     }
     public void setCollection(LinkedList<Toy> list){
         synchronized (monitorChange) {
