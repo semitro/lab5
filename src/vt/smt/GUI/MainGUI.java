@@ -1,14 +1,32 @@
 package vt.smt.GUI;
 
+import com.github.sarxos.webcam.Webcam;
+import javafx.animation.TranslateTransition;
 import javafx.application.Application;
 import javafx.scene.Scene;
 import javafx.scene.control.*;
+import javafx.scene.control.Label;
+import javafx.scene.control.MenuItem;
+import javafx.scene.effect.GaussianBlur;
 import javafx.scene.image.Image;
+import javafx.scene.image.ImageView;
 import javafx.scene.layout.*;
+import javafx.scene.media.Media;
+import javafx.scene.media.MediaPlayer;
 import javafx.scene.paint.Paint;
+import javafx.scene.text.Font;
+import javafx.scene.text.Text;
+import javafx.stage.Modality;
+import javafx.stage.Screen;
 import javafx.stage.Stage;
+import javafx.stage.StageStyle;
+import javafx.util.Duration;
 
+import java.awt.*;
+import java.io.FileInputStream;
+import java.io.InputStream;
 import java.io.InputStreamReader;
+import java.util.Scanner;
 
 
 public class MainGUI extends Application {
@@ -26,6 +44,9 @@ public class MainGUI extends Application {
         primaryStage = inputStage;
         bearsLine = new BearsLine();
         pane = new BorderPane();
+        inputStage.setMaxWidth(1280);
+        inputStage.setMaxWidth(Screen.getPrimary().getBounds().getWidth());
+        inputStage.setMaxHeight(Screen.getPrimary().getBounds().getHeight());
         ContextMenu cm = new ContextMenu();
         MenuItem mi = new MenuItem("sgs");
         cm.getItems().add(mi);
@@ -50,5 +71,18 @@ public class MainGUI extends Application {
         pane.getRight().setTranslateY(pane.getHeight()-40);
         primaryStage.setResizable(false);
         primaryStage.show();
+        primaryStage.setOnCloseRequest(e->{
+            System.exit(0); });
+        try {
+            Scanner scanner = new Scanner(getClass().getResourceAsStream("img/star.settings"));
+            if (scanner.hasNext() && scanner.next().equals("on")) {
+                star = new FallingStar();
+            }
+        }catch (Exception e){
+            System.out.println("Не удалось загрузить файл с настройками звёзд!");
+            e.printStackTrace();
+        }
     }
+
+    private FallingStar star;
 }

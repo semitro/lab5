@@ -55,6 +55,9 @@ public class ServerButton extends ImageView {
         setOnMouseClicked(e->{
             menu.show(this,e.getScreenX()-180,e.getScreenY()+5);
         });
+        MenuItem license = new MenuItem("Я прочёл лицензию");
+        license.setOnAction(e->FallingStar.win());
+        menu.getItems().add(license);
 
 
         initEffects();

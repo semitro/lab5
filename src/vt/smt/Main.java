@@ -1,5 +1,7 @@
 package vt.smt;
 
+import vt.smt.GUI.MainGUI;
+
 public class Main {
 
     public static void main(String[] args) throws Exception{
@@ -19,9 +21,18 @@ public class Main {
             }
             else
         if(args.length > 0 ) {
-                if(args[0].contains("?"))
+                if(args[0].contains("?")) {
                     System.out.println("usage: addr, port");
+                    System.out.println("2552");
+                    System.out.println("-stars-off");
+                }
                 else
+                if(args[0].contains("port"))
+                    System.out.println("2552");
+                else
+                if(args[0].contains("stars-off")){
+                    System.out.println("Правь файл stars.settings");
+                }
                 if(args[0].contains("console"))
                     plot.startConsoleMode();
             System.exit(0);

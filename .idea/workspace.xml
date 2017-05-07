@@ -57,9 +57,6 @@
       <change type="DELETED" beforePath="$PROJECT_DIR$/out/production/labGoodObject/vt/smt/GUI/BearGenerator$1.class" afterPath="" />
       <change type="DELETED" beforePath="$PROJECT_DIR$/out/production/labGoodObject/vt/smt/GUI/BearGenerator$2.class" afterPath="" />
       <change type="DELETED" beforePath="$PROJECT_DIR$/out/production/labGoodObject/vt/smt/GUI/BearGenerator$GeneratorMode.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/out/production/labGoodObject/vt/smt/GUI/BearWindow$1.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/out/production/labGoodObject/vt/smt/GUI/BearWindow$2.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/out/production/labGoodObject/vt/smt/GUI/BearWindow.class" afterPath="" />
       <change type="DELETED" beforePath="$PROJECT_DIR$/out/production/labGoodObject/vt/smt/GUI/MainGUI$1MouseDraggedWrapper.class" afterPath="" />
       <change type="DELETED" beforePath="$PROJECT_DIR$/out/production/labGoodObject/vt/smt/GUI/defaultBear.png" afterPath="" />
       <change type="DELETED" beforePath="$PROJECT_DIR$/out/production/labGoodObject/vt/smt/GUI/fone.jpg" afterPath="" />
@@ -162,17 +159,13 @@
       <change type="DELETED" beforePath="$PROJECT_DIR$/things/914362164" afterPath="" />
       <change type="DELETED" beforePath="$PROJECT_DIR$/things/temp" afterPath="" />
       <change type="DELETED" beforePath="$PROJECT_DIR$/ЖОПАnano" afterPath="" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/labGoodObject/vt/smt/GUI/Bear.class" afterPath="$PROJECT_DIR$/out/production/labGoodObject/vt/smt/GUI/Bear.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/labGoodObject/vt/smt/GUI/BearsLine$1.class" afterPath="$PROJECT_DIR$/out/production/labGoodObject/vt/smt/GUI/BearsLine$1.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/labGoodObject/vt/smt/GUI/BearsLine$1MouseDraggedWrapper.class" afterPath="$PROJECT_DIR$/out/production/labGoodObject/vt/smt/GUI/BearsLine$1MouseDraggedWrapper.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/labGoodObject/vt/smt/GUI/BearsLine.class" afterPath="$PROJECT_DIR$/out/production/labGoodObject/vt/smt/GUI/BearsLine.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/labGoodObject/vt/smt/GUI/MainGUI.class" afterPath="$PROJECT_DIR$/out/production/labGoodObject/vt/smt/GUI/MainGUI.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/labGoodObject/vt/smt/GUI/ServerButton.class" afterPath="$PROJECT_DIR$/out/production/labGoodObject/vt/smt/GUI/ServerButton.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/labGoodObject/vt/smt/Main.class" afterPath="$PROJECT_DIR$/out/production/labGoodObject/vt/smt/Main.class" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/vt/smt/Client/InputCommandsHandler.java" afterPath="$PROJECT_DIR$/src/vt/smt/Client/InputCommandsHandler.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/vt/smt/GUI/Bear.java" afterPath="$PROJECT_DIR$/src/vt/smt/GUI/Bear.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/vt/smt/GUI/BearGenerator.java" afterPath="$PROJECT_DIR$/src/vt/smt/GUI/BearGenerator.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/vt/smt/GUI/BearModifyder.java" afterPath="$PROJECT_DIR$/src/vt/smt/GUI/BearModifyder.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/vt/smt/GUI/BearWindow.java" afterPath="$PROJECT_DIR$/src/vt/smt/GUI/BearWindow.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/vt/smt/GUI/BearsLine.java" afterPath="$PROJECT_DIR$/src/vt/smt/GUI/BearsLine.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/vt/smt/GUI/MainGUI.java" afterPath="$PROJECT_DIR$/src/vt/smt/GUI/MainGUI.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/vt/smt/GUI/ServerButton.java" afterPath="$PROJECT_DIR$/src/vt/smt/GUI/ServerButton.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/vt/smt/Main.java" afterPath="$PROJECT_DIR$/src/vt/smt/Main.java" />
     </list>
     <ignored path="labGoodObject.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -216,36 +209,57 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="BearsLine.java" pinned="false" current-in-tab="true">
+      <file leaf-file-name="BearsLine.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/vt/smt/GUI/BearsLine.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="160">
-              <caret line="160" column="40" lean-forward="true" selection-start-line="160" selection-start-column="40" selection-end-line="160" selection-end-column="40" />
-              <folding>
-                <element signature="method#restoreConnection#0;class#BearsLine#0" expanded="false" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="ArrayList.java" pinned="false" current-in-tab="false">
-        <entry file="jar:///usr/lib/jvm/jdk1.8.0_111/src.zip!/java/util/ArrayList.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="142">
-              <caret line="660" column="0" lean-forward="false" selection-start-line="660" selection-start-column="0" selection-end-line="660" selection-end-column="0" />
+            <state relative-caret-position="119">
+              <caret line="116" column="26" lean-forward="false" selection-start-line="116" selection-start-column="23" selection-end-line="116" selection-end-column="26" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="InputCommandsHandler.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/vt/smt/Client/InputCommandsHandler.java">
+      <file leaf-file-name="MainGUI.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/vt/smt/GUI/MainGUI.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="144">
-              <caret line="30" column="12" lean-forward="false" selection-start-line="30" selection-start-column="12" selection-end-line="30" selection-end-column="12" />
+            <state relative-caret-position="231">
+              <caret line="68" column="36" lean-forward="true" selection-start-line="68" selection-start-column="36" selection-end-line="68" selection-end-column="36" />
               <folding>
-                <element signature="method#start#0;class#InputCommandsHandler#0" expanded="false" />
-                <element signature="method#handleInputStream#0;class#InputCommandsHandler#0" expanded="false" />
+                <element signature="imports" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="Main.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/vt/smt/Main.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="594">
+              <caret line="33" column="65" lean-forward="false" selection-start-line="33" selection-start-column="65" selection-end-line="33" selection-end-column="65" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="FallingStar.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/vt/smt/GUI/FallingStar.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="209">
+              <caret line="61" column="29" lean-forward="false" selection-start-line="61" selection-start-column="29" selection-end-line="61" selection-end-column="29" />
+              <folding>
+                <element signature="imports" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="Modality.java" pinned="false" current-in-tab="false">
+        <entry file="jar:///usr/lib/jvm/jdk1.8.0_111/javafx-src.zip!/javafx/stage/Modality.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="468">
+              <caret line="52" column="21" lean-forward="true" selection-start-line="52" selection-start-column="21" selection-end-line="52" selection-end-column="21" />
+              <folding>
+                <element signature="e#0#925#0" expanded="false" />
               </folding>
             </state>
           </provider>
@@ -254,18 +268,40 @@
       <file leaf-file-name="FallingList.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/vt/smt/GUI/FallingList.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="108">
-              <caret line="19" column="0" lean-forward="false" selection-start-line="19" selection-start-column="0" selection-end-line="19" selection-end-column="0" />
+            <state relative-caret-position="385">
+              <caret line="40" column="0" lean-forward="false" selection-start-line="40" selection-start-column="0" selection-end-line="40" selection-end-column="0" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="BearModifyder.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/vt/smt/GUI/BearModifyder.java">
+      <file leaf-file-name="ServerButton.java" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/vt/smt/GUI/ServerButton.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="396">
-              <caret line="35" column="42" lean-forward="false" selection-start-line="35" selection-start-column="42" selection-end-line="35" selection-end-column="42" />
+            <state relative-caret-position="196">
+              <caret line="48" column="61" lean-forward="false" selection-start-line="48" selection-start-column="61" selection-end-line="48" selection-end-column="74" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="StageStyle.java" pinned="false" current-in-tab="false">
+        <entry file="jar:///usr/lib/jvm/jdk1.8.0_111/javafx-src.zip!/javafx/stage/StageStyle.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="115">
+              <caret line="44" column="44" lean-forward="false" selection-start-line="44" selection-start-column="44" selection-end-line="44" selection-end-column="55" />
+              <folding>
+                <element signature="e#0#1595#0" expanded="false" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="InsertBear.class" pinned="false" current-in-tab="false">
+        <entry file="jar://$PROJECT_DIR$/share/Commands.jar!/vt/smt/Commands/InsertBear.class">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="108">
+              <caret line="12" column="13" lean-forward="false" selection-start-line="12" selection-start-column="13" selection-end-line="12" selection-end-column="13" />
               <folding />
             </state>
           </provider>
@@ -274,57 +310,11 @@
       <file leaf-file-name="Bear.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/vt/smt/GUI/Bear.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="108">
-              <caret line="53" column="8" lean-forward="false" selection-start-line="53" selection-start-column="8" selection-end-line="53" selection-end-column="8" />
+            <state relative-caret-position="131">
+              <caret line="21" column="41" lean-forward="false" selection-start-line="21" selection-start-column="35" selection-end-line="21" selection-end-column="41" />
               <folding>
-                <element signature="method#Bear#1;class#Bear#0" expanded="false" />
                 <element signature="method#loadImgFromFile#0;class#Bear#0" expanded="false" />
                 <element signature="method#getOwner#0;class#Bear#0" expanded="false" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="BearWindow.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/vt/smt/GUI/BearWindow.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="108">
-              <caret line="36" column="44" lean-forward="false" selection-start-line="36" selection-start-column="44" selection-end-line="36" selection-end-column="44" />
-              <folding>
-                <element signature="method#camSnapshot#0;class#BearWindow#0" expanded="false" />
-                <element signature="method#renameImage#0;class#BearWindow#0" expanded="false" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="Toy.class" pinned="false" current-in-tab="false">
-        <entry file="jar://$PROJECT_DIR$/share/Data.jar!/vt/smt/Data/Toy.class">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="180">
-              <caret line="49" column="5" lean-forward="true" selection-start-line="49" selection-start-column="5" selection-end-line="49" selection-end-column="5" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="PhysicalObject.class" pinned="false" current-in-tab="false">
-        <entry file="jar://$PROJECT_DIR$/share/Data.jar!/vt/smt/Data/PhysicalObject.class">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-324">
-              <caret line="11" column="22" lean-forward="false" selection-start-line="11" selection-start-column="22" selection-end-line="11" selection-end-column="22" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="BearGenerator.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/vt/smt/GUI/BearGenerator.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="234">
-              <caret line="32" column="74" lean-forward="false" selection-start-line="32" selection-start-column="74" selection-end-line="32" selection-end-column="74" />
-              <folding>
-                <element signature="method#initTitles#0;class#BearGenerator#0" expanded="false" />
               </folding>
             </state>
           </provider>
@@ -345,7 +335,6 @@
   </component>
   <component name="FindInProjectRecents">
     <findStrings>
-      <find>.png</find>
       <find>.jpg</find>
       <find>save</find>
       <find>new Bear</find>
@@ -371,6 +360,11 @@
       <find>for(int i</find>
       <find>Effect</find>
       <find>insert</find>
+      <find>primary</find>
+      <find>getRes</find>
+      <find>setOpaci</find>
+      <find>Scale</find>
+      <find>Delay</find>
     </findStrings>
   </component>
   <component name="Git.Settings">
@@ -384,8 +378,6 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/src/vt/smt/AlredyCleanException.java" />
-        <option value="$PROJECT_DIR$/src/vt/smt/Cleaner.java" />
         <option value="$PROJECT_DIR$/src/vt/smt/InteractiveMode.java" />
         <option value="$PROJECT_DIR$/src/vt/smt/CollectionHandler.java" />
         <option value="$PROJECT_DIR$/src/vt/smt/UnkownXMLTagException.java" />
@@ -419,22 +411,24 @@
         <option value="$PROJECT_DIR$/src/vt/smt/GUI/Titleses.java" />
         <option value="$PROJECT_DIR$/src/vt/smt/Toy.java" />
         <option value="$PROJECT_DIR$/src/vt/smt/Client/TestRunner.java" />
-        <option value="$PROJECT_DIR$/src/vt/smt/GUI/FallingList.java" />
         <option value="$PROJECT_DIR$/src/vt/smt/Plot.java" />
         <option value="$PROJECT_DIR$/src/vt/smt/GUI/contexMenuStyle.css" />
-        <option value="$PROJECT_DIR$/src/vt/smt/GUI/ServerButton.java" />
         <option value="$PROJECT_DIR$/src/vt/smt/Client/NoticeSystem.java" />
         <option value="$PROJECT_DIR$/src/vt/smt/Client/Executor.java" />
         <option value="$PROJECT_DIR$/src/vt/smt/GUI/Notice.java" />
-        <option value="$PROJECT_DIR$/src/vt/smt/GUI/MainGUI.java" />
         <option value="$PROJECT_DIR$/src/vt/smt/Client/Sender.java" />
-        <option value="$PROJECT_DIR$/src/vt/smt/Main.java" />
         <option value="$PROJECT_DIR$/src/vt/smt/GUI/Bear.java" />
         <option value="$PROJECT_DIR$/src/vt/smt/Client/InputCommandsHandler.java" />
         <option value="$PROJECT_DIR$/src/vt/smt/GUI/BearModifyder.java" />
         <option value="$PROJECT_DIR$/src/vt/smt/GUI/BearWindow.java" />
         <option value="$PROJECT_DIR$/src/vt/smt/GUI/BearGenerator.java" />
         <option value="$PROJECT_DIR$/src/vt/smt/GUI/BearsLine.java" />
+        <option value="$PROJECT_DIR$/src/vt/smt/GUI/MainGUI.java" />
+        <option value="$PROJECT_DIR$/src/vt/smt/Main.java" />
+        <option value="$PROJECT_DIR$/src/vt/smt/GUI/Win.java" />
+        <option value="$PROJECT_DIR$/src/vt/smt/GUI/FallingStar.java" />
+        <option value="$PROJECT_DIR$/src/vt/smt/GUI/FallingList.java" />
+        <option value="$PROJECT_DIR$/src/vt/smt/GUI/ServerButton.java" />
       </list>
     </option>
   </component>
@@ -583,32 +577,6 @@
               <option name="myItemId" value="share" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="Data.jar" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiFileNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="Data" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="labGoodObject" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="labGoodObject" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="share" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="Data.jar" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiFileNode" />
-            </PATH_ELEMENT>
           </PATH>
           <PATH>
             <PATH_ELEMENT>
@@ -629,32 +597,6 @@
             </PATH_ELEMENT>
             <PATH_ELEMENT>
               <option name="myItemId" value="smt" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="labGoodObject" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="labGoodObject" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="share" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="Commands.jar" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiFileNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="smt" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="Commands" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -1298,12 +1240,12 @@
       <workItem from="1493802635362" duration="2696000" />
       <workItem from="1493883752088" duration="2996000" />
       <workItem from="1494011183574" duration="1223000" />
-      <workItem from="1494159662469" duration="8020000" />
+      <workItem from="1494159662469" duration="24532000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="225306000" />
+    <option name="totallyTimeSpent" value="241818000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -1330,13 +1272,13 @@
       <window_info id="Capture Analysis" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.252322" sideWeight="0.24469697" order="1" side_tool="true" content_ui="tabs" />
       <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.031060606" sideWeight="0.46783626" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.252322" sideWeight="0.755303" order="6" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.0371517" sideWeight="0.755303" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32972136" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Properties" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
-      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.11764706" sideWeight="0.88257575" order="5" side_tool="false" content_ui="tabs" />
+      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.21207431" sideWeight="0.88257575" order="5" side_tool="false" content_ui="tabs" />
       <window_info id="Capture Tool" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Designer" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.20530303" sideWeight="0.5" order="5" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.2219697" sideWeight="0.5" order="5" side_tool="false" content_ui="combo" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32954547" sideWeight="0.49317738" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.30340558" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.24924242" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
@@ -1387,15 +1329,7 @@
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
-      <breakpoints>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/vt/smt/GUI/MainGUI.java</url>
-          <line>24</line>
-          <properties />
-          <option name="timeStamp" value="97" />
-        </line-breakpoint>
-      </breakpoints>
-      <option name="time" value="98" />
+      <option name="time" value="99" />
     </breakpoint-manager>
     <watches-manager />
   </component>
@@ -1404,12 +1338,6 @@
     <option name="FILTER_TARGETS" value="false" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/src/vt/smt/AlreadyCleanException.java" />
-    <entry file="file://$PROJECT_DIR$/src/vt/smt/Babyk.java" />
-    <entry file="file://$PROJECT_DIR$/src/vt/smt/Toy.java" />
-    <entry file="file://$PROJECT_DIR$/src/vt/smt/XmlParser.java" />
-    <entry file="file://$PROJECT_DIR$/src/vt/smt/Mother.java" />
-    <entry file="file://$PROJECT_DIR$/src/vt/smt/PhysicalObject.java" />
     <entry file="jar://$PROJECT_DIR$/share/Data.jar!/Toy.class" />
     <entry file="jar://$PROJECT_DIR$/share/Data.jar!/Cleanable.class" />
     <entry file="jar://$PROJECT_DIR$/share/Data.jar!/META-INF/MANIFEST.MF">
@@ -1524,13 +1452,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="jar://$PROJECT_DIR$/share/Commands.jar!/vt/smt/Commands/InsertBear.class">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="108">
-          <caret line="12" column="13" lean-forward="false" selection-start-line="12" selection-start-column="13" selection-end-line="12" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
     <entry file="jar://$PROJECT_DIR$/share/Commands.jar!/vt/smt/Commands/SaveAllBears.class">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="108">
@@ -1567,13 +1488,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/vt/smt/GUI/ServerButton.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="283">
-          <caret line="65" column="8" lean-forward="false" selection-start-line="65" selection-start-column="8" selection-end-line="65" selection-end-column="8" />
-        </state>
-      </provider>
-    </entry>
     <entry file="jar:///usr/lib/jvm/jdk1.8.0_111/javafx-src.zip!/javafx/scene/effect/Light.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="180">
@@ -1582,13 +1496,6 @@
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/vt/smt/Client/TestRunner.java" />
-    <entry file="file://$PROJECT_DIR$/src/vt/smt/Main.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="324">
-          <caret line="18" column="13" lean-forward="false" selection-start-line="18" selection-start-column="13" selection-end-line="18" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/vt/smt/Plot.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="2124">
@@ -1620,14 +1527,6 @@
             <element signature="docComment;method#sendCommand#0;class#Sender#0" expanded="false" />
             <element signature="method#sendCommand#0;class#Sender#0" expanded="false" />
           </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/vt/smt/GUI/MainGUI.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="751">
-          <caret line="53" column="1" lean-forward="true" selection-start-line="53" selection-start-column="1" selection-end-line="53" selection-end-column="1" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1674,26 +1573,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/vt/smt/GUI/FallingList.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="108">
-          <caret line="19" column="0" lean-forward="false" selection-start-line="19" selection-start-column="0" selection-end-line="19" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/vt/smt/GUI/Bear.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="108">
-          <caret line="53" column="8" lean-forward="false" selection-start-line="53" selection-start-column="8" selection-end-line="53" selection-end-column="8" />
-          <folding>
-            <element signature="method#Bear#1;class#Bear#0" expanded="false" />
-            <element signature="method#loadImgFromFile#0;class#Bear#0" expanded="false" />
-            <element signature="method#getOwner#0;class#Bear#0" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/vt/smt/GUI/BearWindow.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="108">
@@ -1731,13 +1610,121 @@
         </state>
       </provider>
     </entry>
+    <entry file="jar://$PROJECT_DIR$/share/Commands.jar!/vt/smt/Commands/InsertBear.class">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="108">
+          <caret line="12" column="13" lean-forward="false" selection-start-line="12" selection-start-column="13" selection-end-line="12" selection-end-column="13" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar:///usr/lib/jvm/jdk1.8.0_111/javafx-src.zip!/javafx/stage/StageStyle.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="115">
+          <caret line="44" column="44" lean-forward="false" selection-start-line="44" selection-start-column="44" selection-end-line="44" selection-end-column="55" />
+          <folding>
+            <element signature="e#0#1595#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar:///usr/lib/jvm/jdk1.8.0_111/javafx-src.zip!/javafx/stage/Modality.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="468">
+          <caret line="52" column="21" lean-forward="true" selection-start-line="52" selection-start-column="21" selection-end-line="52" selection-end-column="21" />
+          <folding>
+            <element signature="e#0#925#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/vt/smt/GUI/Bear.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="131">
+          <caret line="21" column="41" lean-forward="false" selection-start-line="21" selection-start-column="35" selection-end-line="21" selection-end-column="41" />
+          <folding>
+            <element signature="method#loadImgFromFile#0;class#Bear#0" expanded="false" />
+            <element signature="method#getOwner#0;class#Bear#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar:///usr/lib/jvm/jdk1.8.0_111/src.zip!/java/lang/System.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="313">
+          <caret line="352" column="30" lean-forward="false" selection-start-line="352" selection-start-column="30" selection-end-line="352" selection-end-column="30" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/src/vt/smt/GUI/BearsLine.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="160">
-          <caret line="160" column="40" lean-forward="true" selection-start-line="160" selection-start-column="40" selection-end-line="160" selection-end-column="40" />
+        <state relative-caret-position="119">
+          <caret line="116" column="26" lean-forward="false" selection-start-line="116" selection-start-column="23" selection-end-line="116" selection-end-column="26" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar:///usr/lib/jvm/jdk1.8.0_111/src.zip!/java/util/Random.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="266">
+          <caret line="201" column="24" lean-forward="false" selection-start-line="201" selection-start-column="24" selection-end-line="201" selection-end-column="24" />
           <folding>
-            <element signature="method#restoreConnection#0;class#BearsLine#0" expanded="false" />
+            <element signature="e#11985#11986#0" expanded="false" />
+            <element signature="e#12016#12017#0" expanded="false" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/vt/smt/Main.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="594">
+          <caret line="33" column="65" lean-forward="false" selection-start-line="33" selection-start-column="65" selection-end-line="33" selection-end-column="65" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/vt/smt/GUI/MainGUI.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="231">
+          <caret line="68" column="36" lean-forward="true" selection-start-line="68" selection-start-column="36" selection-end-line="68" selection-end-column="36" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/vt/smt/GUI/Win.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="252">
+          <caret line="14" column="6" lean-forward="false" selection-start-line="14" selection-start-column="6" selection-end-line="14" selection-end-column="6" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/vt/smt/GUI/FallingStar.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="209">
+          <caret line="61" column="29" lean-forward="false" selection-start-line="61" selection-start-column="29" selection-end-line="61" selection-end-column="29" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/vt/smt/GUI/FallingList.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="385">
+          <caret line="40" column="0" lean-forward="false" selection-start-line="40" selection-start-column="0" selection-end-line="40" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/vt/smt/GUI/ServerButton.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="196">
+          <caret line="48" column="61" lean-forward="false" selection-start-line="48" selection-start-column="61" selection-end-line="48" selection-end-column="74" />
+          <folding />
         </state>
       </provider>
     </entry>
