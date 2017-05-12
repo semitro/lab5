@@ -39,7 +39,7 @@ public class LanguagesButton extends ImageView {
         contextMenu.getItems().addAll(item_en_CA,item_mk,item_pl,item_rus);
         initEffects();
         this.setOnMouseClicked((e)->
-                contextMenu.show(this,e.getScreenX()-180,e.getScreenY()+5) );
+                contextMenu.show(this,e.getScreenX(),e.getScreenY()) );
 
     }
     private void initEffects(){

@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ResourceBundleManager">
+    <file url="file://$PROJECT_DIR$/src/vt/smt/GUI/languages_en_CA.properties" />
+    <file url="file://$PROJECT_DIR$/src/vt/smt/GUI/languages_mk.properties" />
+    <file url="file://$PROJECT_DIR$/src/vt/smt/GUI/languages_pl.properties" />
+    <file url="file://$PROJECT_DIR$/src/vt/smt/GUI/languages_ru.properties" />
+    <custom-resource-bundle>
+      <file value="file://$PROJECT_DIR$/src/vt/smt/GUI/languages_en_CA.properties" />
+      <file value="file://$PROJECT_DIR$/src/vt/smt/GUI/languages_mk.properties" />
+      <file value="file://$PROJECT_DIR$/src/vt/smt/GUI/languages_pl.properties" />
+      <file value="file://$PROJECT_DIR$/src/vt/smt/GUI/languages_ru.properties" />
+      <base-name>languages</base-name>
+    </custom-resource-bundle>
+  </component>
+</project>

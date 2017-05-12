@@ -15,6 +15,11 @@
       <change type="DELETED" beforePath="$PROJECT_DIR$/.~lock.lab5Отчёт.odt#" afterPath="" />
       <change type="DELETED" beforePath="$PROJECT_DIR$/ServerAPI.jar" afterPath="" />
       <change type="DELETED" beforePath="$PROJECT_DIR$/Uml2.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/lab5Отчёт.odt" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/lab5Отчёт.pdf" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/lab6Отчёт.odt" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/lab6ОтчётКопия.odt" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/labXML.uxf" afterPath="" />
       <change type="DELETED" beforePath="$PROJECT_DIR$/nullTEST" afterPath="" />
       <change type="DELETED" beforePath="$PROJECT_DIR$/out/artifacts/labGoodObject_jar/ServerAPI.jar" afterPath="" />
       <change type="DELETED" beforePath="$PROJECT_DIR$/out/artifacts/labGoodObject_jar/things/1076903159" afterPath="" />
@@ -158,14 +163,30 @@
       <change type="DELETED" beforePath="$PROJECT_DIR$/things/566807075" afterPath="" />
       <change type="DELETED" beforePath="$PROJECT_DIR$/things/914362164" afterPath="" />
       <change type="DELETED" beforePath="$PROJECT_DIR$/things/temp" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Безымянный uml.uxf" afterPath="" />
       <change type="DELETED" beforePath="$PROJECT_DIR$/ЖОПАnano" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Отчёт.pdf" afterPath="" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/artifacts/labGoodObject_jar/labGoodObject.jar" afterPath="$PROJECT_DIR$/out/artifacts/labGoodObject_jar/labGoodObject.jar" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/labGoodObject/vt/smt/GUI/FallingStar.class" afterPath="$PROJECT_DIR$/out/production/labGoodObject/vt/smt/GUI/FallingStar.class" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/labGoodObject/vt/smt/GUI/MainGUI.class" afterPath="$PROJECT_DIR$/out/production/labGoodObject/vt/smt/GUI/MainGUI.class" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/labGoodObject/vt/smt/GUI/ServerButton.class" afterPath="$PROJECT_DIR$/out/production/labGoodObject/vt/smt/GUI/ServerButton.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/labGoodObject/vt/smt/Main.class" afterPath="$PROJECT_DIR$/out/production/labGoodObject/vt/smt/Main.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/encodings.xml" afterPath="$PROJECT_DIR$/.idea/encodings.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/license.txt" afterPath="$PROJECT_DIR$/license.txt" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/labGoodObject/vt/smt/GUI/img/star.settings" afterPath="$PROJECT_DIR$/out/production/labGoodObject/vt/smt/GUI/img/star.settings" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/vt/smt/GUI/BearGenerator.java" afterPath="$PROJECT_DIR$/src/vt/smt/GUI/BearGenerator.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/vt/smt/GUI/BearModifyder.java" afterPath="$PROJECT_DIR$/src/vt/smt/GUI/BearModifyder.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/vt/smt/GUI/BearWindow.java" afterPath="$PROJECT_DIR$/src/vt/smt/GUI/BearWindow.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/vt/smt/GUI/FallingList.java" afterPath="$PROJECT_DIR$/src/vt/smt/GUI/FallingList.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/vt/smt/GUI/FallingStar.java" afterPath="$PROJECT_DIR$/src/vt/smt/GUI/FallingStar.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/vt/smt/GUI/Language.java" afterPath="$PROJECT_DIR$/src/vt/smt/GUI/Language.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/vt/smt/GUI/LanguagesButton.java" afterPath="$PROJECT_DIR$/src/vt/smt/GUI/LanguagesButton.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/vt/smt/GUI/MainGUI.java" afterPath="$PROJECT_DIR$/src/vt/smt/GUI/MainGUI.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/vt/smt/GUI/ServerButton.java" afterPath="$PROJECT_DIR$/src/vt/smt/GUI/ServerButton.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/vt/smt/Main.java" afterPath="$PROJECT_DIR$/src/vt/smt/Main.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/vt/smt/GUI/languages_en_CA.properties" afterPath="$PROJECT_DIR$/src/vt/smt/GUI/languages_en_CA.properties" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/vt/smt/GUI/languages_mk.properties" afterPath="$PROJECT_DIR$/src/vt/smt/GUI/languages_mk.properties" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/vt/smt/GUI/languages_pl.properties" afterPath="$PROJECT_DIR$/src/vt/smt/GUI/languages_pl.properties" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/vt/smt/GUI/languages_ru.properties" afterPath="$PROJECT_DIR$/src/vt/smt/GUI/languages_ru.properties" />
     </list>
     <ignored path="labGoodObject.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -209,21 +230,24 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="BearsLine.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/vt/smt/GUI/BearsLine.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="119">
-              <caret line="116" column="26" lean-forward="false" selection-start-line="116" selection-start-column="23" selection-end-line="116" selection-end-column="26" />
+      <file leaf-file-name="languages_en_CA.properties" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/vt/smt/GUI/languages_en_CA.properties">
+          <provider editor-type-id="text-editor">
+            <state relative-caret-position="108">
+              <caret line="11" column="10" lean-forward="false" selection-start-line="11" selection-start-column="10" selection-end-line="11" selection-end-column="10" />
               <folding />
             </state>
+          </provider>
+          <provider selected="true" editor-type-id="ResourceBundle">
+            <state />
           </provider>
         </entry>
       </file>
       <file leaf-file-name="MainGUI.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/vt/smt/GUI/MainGUI.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="231">
-              <caret line="68" column="36" lean-forward="true" selection-start-line="68" selection-start-column="36" selection-end-line="68" selection-end-column="36" />
+            <state relative-caret-position="197">
+              <caret line="77" column="64" lean-forward="false" selection-start-line="77" selection-start-column="64" selection-end-line="77" selection-end-column="64" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -231,12 +255,81 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="Main.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/vt/smt/Main.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="594">
-              <caret line="33" column="65" lean-forward="false" selection-start-line="33" selection-start-column="65" selection-end-line="33" selection-end-column="65" />
+      <file leaf-file-name="languages_ru.properties" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/vt/smt/GUI/languages_ru.properties">
+          <provider editor-type-id="text-editor">
+            <state relative-caret-position="126">
+              <caret line="11" column="60" lean-forward="false" selection-start-line="11" selection-start-column="60" selection-end-line="11" selection-end-column="60" />
               <folding />
+            </state>
+          </provider>
+          <provider selected="true" editor-type-id="ResourceBundle">
+            <state />
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="BearWindow.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/vt/smt/GUI/BearWindow.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="234">
+              <caret line="73" column="56" lean-forward="false" selection-start-line="73" selection-start-column="56" selection-end-line="73" selection-end-column="56" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="Language.java" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/vt/smt/GUI/Language.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="-124">
+              <caret line="41" column="79" lean-forward="false" selection-start-line="41" selection-start-column="79" selection-end-line="41" selection-end-column="79" />
+              <folding>
+                <element signature="imports" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="BearGenerator.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/vt/smt/GUI/BearGenerator.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="89">
+              <caret line="18" column="58" lean-forward="false" selection-start-line="18" selection-start-column="58" selection-end-line="18" selection-end-column="77" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="ServerButton.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/vt/smt/GUI/ServerButton.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="121">
+              <caret line="25" column="60" lean-forward="false" selection-start-line="25" selection-start-column="60" selection-end-line="25" selection-end-column="72" />
+              <folding>
+                <element signature="imports" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="BearModifyder.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/vt/smt/GUI/BearModifyder.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="470">
+              <caret line="45" column="58" lean-forward="false" selection-start-line="45" selection-start-column="58" selection-end-line="45" selection-end-column="86" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="LanguagesButton.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/vt/smt/GUI/LanguagesButton.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="178">
+              <caret line="41" column="52" lean-forward="false" selection-start-line="41" selection-start-column="52" selection-end-line="41" selection-end-column="52" />
+              <folding>
+                <element signature="imports" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -244,77 +337,11 @@
       <file leaf-file-name="FallingStar.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/vt/smt/GUI/FallingStar.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="209">
-              <caret line="61" column="29" lean-forward="false" selection-start-line="61" selection-start-column="29" selection-end-line="61" selection-end-column="29" />
+            <state relative-caret-position="143">
+              <caret line="66" column="53" lean-forward="true" selection-start-line="66" selection-start-column="53" selection-end-line="66" selection-end-column="60" />
               <folding>
                 <element signature="imports" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="Modality.java" pinned="false" current-in-tab="false">
-        <entry file="jar:///usr/lib/jvm/jdk1.8.0_111/javafx-src.zip!/javafx/stage/Modality.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="468">
-              <caret line="52" column="21" lean-forward="true" selection-start-line="52" selection-start-column="21" selection-end-line="52" selection-end-column="21" />
-              <folding>
-                <element signature="e#0#925#0" expanded="false" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="FallingList.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/vt/smt/GUI/FallingList.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="385">
-              <caret line="40" column="0" lean-forward="false" selection-start-line="40" selection-start-column="0" selection-end-line="40" selection-end-column="0" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="ServerButton.java" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/src/vt/smt/GUI/ServerButton.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="196">
-              <caret line="48" column="61" lean-forward="false" selection-start-line="48" selection-start-column="61" selection-end-line="48" selection-end-column="74" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="StageStyle.java" pinned="false" current-in-tab="false">
-        <entry file="jar:///usr/lib/jvm/jdk1.8.0_111/javafx-src.zip!/javafx/stage/StageStyle.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="115">
-              <caret line="44" column="44" lean-forward="false" selection-start-line="44" selection-start-column="44" selection-end-line="44" selection-end-column="55" />
-              <folding>
-                <element signature="e#0#1595#0" expanded="false" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="InsertBear.class" pinned="false" current-in-tab="false">
-        <entry file="jar://$PROJECT_DIR$/share/Commands.jar!/vt/smt/Commands/InsertBear.class">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="108">
-              <caret line="12" column="13" lean-forward="false" selection-start-line="12" selection-start-column="13" selection-end-line="12" selection-end-column="13" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="Bear.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/vt/smt/GUI/Bear.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="131">
-              <caret line="21" column="41" lean-forward="false" selection-start-line="21" selection-start-column="35" selection-end-line="21" selection-end-column="41" />
-              <folding>
-                <element signature="method#loadImgFromFile#0;class#Bear#0" expanded="false" />
-                <element signature="method#getOwner#0;class#Bear#0" expanded="false" />
+                <element signature="method#automaticFall#0;class#FallingStar#0" expanded="false" />
               </folding>
             </state>
           </provider>
@@ -335,10 +362,6 @@
   </component>
   <component name="FindInProjectRecents">
     <findStrings>
-      <find>.jpg</find>
-      <find>save</find>
-      <find>new Bear</find>
-      <find>init</find>
       <find>this</find>
       <find>bearGenera</find>
       <find>pane</find>
@@ -350,7 +373,6 @@
       <find>sout</find>
       <find>System.out</find>
       <find>System</find>
-      <find>add</find>
       <find>insertBe</find>
       <find>set</find>
       <find>setId</find>
@@ -359,12 +381,17 @@
       <find>for</find>
       <find>for(int i</find>
       <find>Effect</find>
-      <find>insert</find>
       <find>primary</find>
       <find>getRes</find>
       <find>setOpaci</find>
       <find>Scale</find>
       <find>Delay</find>
+      <find>add</find>
+      <find>insert</find>
+      <find>addLast</find>
+      <find>stage</find>
+      <find>setText</find>
+      <find>setTex</find>
     </findStrings>
   </component>
   <component name="Git.Settings">
@@ -378,14 +405,6 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/src/vt/smt/InteractiveMode.java" />
-        <option value="$PROJECT_DIR$/src/vt/smt/CollectionHandler.java" />
-        <option value="$PROJECT_DIR$/src/vt/smt/UnkownXMLTagException.java" />
-        <option value="$PROJECT_DIR$/src/vt/smt/XMLSaver.java" />
-        <option value="$PROJECT_DIR$/src/vt/smt/Cleanable.java" />
-        <option value="$PROJECT_DIR$/src/vt/smt/Carlson.java" />
-        <option value="$PROJECT_DIR$/src/vt/smt/Mother.java" />
-        <option value="$PROJECT_DIR$/src/vt/smt/XmlParser.java" />
         <option value="$PROJECT_DIR$/src/vt/smt/Human.java" />
         <option value="$PROJECT_DIR$/src/vt/smt/Main1.java" />
         <option value="$PROJECT_DIR$/src/vt/smt/Home.java" />
@@ -413,22 +432,30 @@
         <option value="$PROJECT_DIR$/src/vt/smt/Client/TestRunner.java" />
         <option value="$PROJECT_DIR$/src/vt/smt/Plot.java" />
         <option value="$PROJECT_DIR$/src/vt/smt/GUI/contexMenuStyle.css" />
-        <option value="$PROJECT_DIR$/src/vt/smt/Client/NoticeSystem.java" />
-        <option value="$PROJECT_DIR$/src/vt/smt/Client/Executor.java" />
         <option value="$PROJECT_DIR$/src/vt/smt/GUI/Notice.java" />
         <option value="$PROJECT_DIR$/src/vt/smt/Client/Sender.java" />
         <option value="$PROJECT_DIR$/src/vt/smt/GUI/Bear.java" />
         <option value="$PROJECT_DIR$/src/vt/smt/Client/InputCommandsHandler.java" />
-        <option value="$PROJECT_DIR$/src/vt/smt/GUI/BearModifyder.java" />
-        <option value="$PROJECT_DIR$/src/vt/smt/GUI/BearWindow.java" />
-        <option value="$PROJECT_DIR$/src/vt/smt/GUI/BearGenerator.java" />
         <option value="$PROJECT_DIR$/src/vt/smt/GUI/BearsLine.java" />
-        <option value="$PROJECT_DIR$/src/vt/smt/GUI/MainGUI.java" />
         <option value="$PROJECT_DIR$/src/vt/smt/Main.java" />
         <option value="$PROJECT_DIR$/src/vt/smt/GUI/Win.java" />
-        <option value="$PROJECT_DIR$/src/vt/smt/GUI/FallingStar.java" />
-        <option value="$PROJECT_DIR$/src/vt/smt/GUI/FallingList.java" />
+        <option value="$PROJECT_DIR$/src/vt/smt/GUI/languages.properties" />
+        <option value="$PROJECT_DIR$/src/vt/smt/Client/NoticeSystem.java" />
+        <option value="$PROJECT_DIR$/src/vt/smt/Client/Executor.java" />
+        <option value="$PROJECT_DIR$/src/vt/smt/GUI/languages_kn_ENG.properties" />
+        <option value="$PROJECT_DIR$/src/vt/smt/GUI/MainGUI.java" />
+        <option value="$PROJECT_DIR$/src/vt/smt/GUI/languages_mk.properties" />
         <option value="$PROJECT_DIR$/src/vt/smt/GUI/ServerButton.java" />
+        <option value="$PROJECT_DIR$/src/vt/smt/GUI/LanguagesButton.java" />
+        <option value="$PROJECT_DIR$/src/vt/smt/GUI/FallingList.java" />
+        <option value="$PROJECT_DIR$/src/vt/smt/GUI/languages_pl.properties" />
+        <option value="$PROJECT_DIR$/src/vt/smt/GUI/BearModifyder.java" />
+        <option value="$PROJECT_DIR$/src/vt/smt/GUI/BearGenerator.java" />
+        <option value="$PROJECT_DIR$/src/vt/smt/GUI/BearWindow.java" />
+        <option value="$PROJECT_DIR$/src/vt/smt/GUI/languages_ru.properties" />
+        <option value="$PROJECT_DIR$/src/vt/smt/GUI/FallingStar.java" />
+        <option value="$PROJECT_DIR$/src/vt/smt/GUI/languages_en_CA.properties" />
+        <option value="$PROJECT_DIR$/src/vt/smt/GUI/Language.java" />
       </list>
     </option>
   </component>
@@ -446,6 +473,22 @@
     <option name="width" value="1366" />
     <option name="height" value="744" />
   </component>
+  <component name="ProjectInspectionProfilesVisibleTreeState">
+    <entry key="Project Default">
+      <profile-state>
+        <expanded-state>
+          <State>
+            <id />
+          </State>
+        </expanded-state>
+        <selected-state>
+          <State>
+            <id>Android</id>
+          </State>
+        </selected-state>
+      </profile-state>
+    </entry>
+  </component>
   <component name="ProjectView">
     <navigator currentView="ProjectPane" proportions="" version="1">
       <flattenPackages />
@@ -461,7 +504,6 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="PackagesPane" />
       <pane id="ProjectPane">
         <subPane>
           <PATH>
@@ -546,6 +588,58 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
+              <option name="myItemId" value="GUI" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Resource Bundle 'languages'" />
+              <option name="myItemType" value="com.intellij.lang.properties.projectView.ResourceBundleNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="labGoodObject" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="labGoodObject" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="src" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="smt" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="GUI" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Language.java" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.ClassesTreeStructureProvider$PsiClassOwnerTreeNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="labGoodObject" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="labGoodObject" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="src" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="smt" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
               <option name="myItemId" value="Client" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
@@ -564,70 +658,17 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="labGoodObject" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="labGoodObject" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="share" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="labGoodObject" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="labGoodObject" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="share" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="Commands.jar" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiFileNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="smt" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="labGoodObject" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="labGoodObject" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="share" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="Commands.jar" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiFileNode" />
-            </PATH_ELEMENT>
-          </PATH>
         </subPane>
       </pane>
       <pane id="Scope" />
       <pane id="Scratches" />
+      <pane id="PackagesPane" />
     </panes>
   </component>
   <component name="PropertiesComponent">
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/src/META-INF" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/../LabGoodObjectServer" />
     <property name="SearchEverywhereHistoryKey" value="&#9;FILE&#9;file:///home/semitro/itmo/Программирование/labGoodObject/src/vt/smt/GUI/MainGUI.java&#10;List&#9;PSI&#9;JAVA://java.util.List" />
-    <property name="settings.editor.selected.configurable" value="configurable.group.language" />
+    <property name="settings.editor.selected.configurable" value="File.Encoding" />
     <property name="project.structure.last.edited" value="Artifacts" />
     <property name="project.structure.proportion" value="0.15812592" />
     <property name="project.structure.side.proportion" value="0.2" />
@@ -643,9 +684,6 @@
     <property name="list.type.of.created.stylesheet" value="CSS" />
   </component>
   <component name="RecentsManager">
-    <key name="MoveFile.RECENT_KEYS">
-      <recent name="$PROJECT_DIR$/src/vt/smt/GUI/styles" />
-    </key>
     <key name="MoveClassesOrPackagesDialog.RECENTS_KEY">
       <recent name="vt.smt.Server.Commands" />
       <recent name="vt.smt" />
@@ -653,6 +691,10 @@
     <key name="CopyFile.RECENT_KEYS">
       <recent name="$PROJECT_DIR$" />
       <recent name="$PROJECT_DIR$/src/vt/smt" />
+    </key>
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/src/vt/smt/GUI" />
+      <recent name="$PROJECT_DIR$/src/vt/smt/GUI/styles" />
     </key>
   </component>
   <component name="RunManager" selected="Application.Main (1)">
@@ -1240,12 +1282,18 @@
       <workItem from="1493802635362" duration="2696000" />
       <workItem from="1493883752088" duration="2996000" />
       <workItem from="1494011183574" duration="1223000" />
-      <workItem from="1494159662469" duration="24532000" />
+      <workItem from="1494159662469" duration="25209000" />
+      <workItem from="1494240103503" duration="1156000" />
+      <workItem from="1494241724651" duration="369000" />
+      <workItem from="1494408806799" duration="2912000" />
+      <workItem from="1494419912840" duration="42000" />
+      <workItem from="1494420074566" duration="963000" />
+      <workItem from="1494606546006" duration="17901000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="241818000" />
+    <option name="totallyTimeSpent" value="265838000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -1272,17 +1320,17 @@
       <window_info id="Capture Analysis" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.252322" sideWeight="0.24469697" order="1" side_tool="true" content_ui="tabs" />
       <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.031060606" sideWeight="0.46783626" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.0371517" sideWeight="0.755303" order="6" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="true" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.14241487" sideWeight="0.755303" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32972136" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Properties" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
-      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.21207431" sideWeight="0.88257575" order="5" side_tool="false" content_ui="tabs" />
+      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.250774" sideWeight="0.88257575" order="5" side_tool="false" content_ui="tabs" />
       <window_info id="Capture Tool" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Designer" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.2219697" sideWeight="0.5" order="5" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.24621212" sideWeight="0.5" order="5" side_tool="false" content_ui="combo" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32954547" sideWeight="0.49317738" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.30340558" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.24924242" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.49317738" order="9" side_tool="false" content_ui="tabs" />
+      <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.49317738" order="10" side_tool="false" content_ui="tabs" />
       <window_info id="UI Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Theme Preview" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3993808" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
@@ -1290,7 +1338,7 @@
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
-      <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="10" side_tool="false" content_ui="combo" />
+      <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="9" side_tool="false" content_ui="combo" />
       <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
       <window_info id="Coverage" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.19393939" sideWeight="0.5068226" order="6" side_tool="true" content_ui="tabs" />
     </layout>
@@ -1329,7 +1377,7 @@
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
-      <option name="time" value="99" />
+      <option name="time" value="100" />
     </breakpoint-manager>
     <watches-manager />
   </component>
@@ -1338,300 +1386,17 @@
     <option name="FILTER_TARGETS" value="false" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="jar://$PROJECT_DIR$/share/Data.jar!/Toy.class" />
-    <entry file="jar://$PROJECT_DIR$/share/Data.jar!/Cleanable.class" />
-    <entry file="jar://$PROJECT_DIR$/share/Data.jar!/META-INF/MANIFEST.MF">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://$PROJECT_DIR$/share/Commands.jar!/vt/smt/Commands/ServerAnswer.class">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="108">
-          <caret line="9" column="17" lean-forward="false" selection-start-line="9" selection-start-column="17" selection-end-line="9" selection-end-column="17" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://$PROJECT_DIR$/share/Commands.jar!/vt/smt/Commands/ServerCommand.class">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="108">
-          <caret line="9" column="17" lean-forward="false" selection-start-line="9" selection-start-column="17" selection-end-line="9" selection-end-column="17" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://$PROJECT_DIR$/share/Commands.jar!/vt/smt/Commands/SortBears.class">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="108">
-          <caret line="12" column="13" lean-forward="false" selection-start-line="12" selection-start-column="13" selection-end-line="12" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar:///usr/lib/jvm/jdk1.8.0_111/javafx-src.zip!/com/sun/javafx/application/LauncherImpl.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="15588">
-          <caret line="916" column="0" lean-forward="false" selection-start-line="916" selection-start-column="0" selection-end-line="916" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar:///usr/lib/jvm/jdk1.8.0_111/src.zip!/java/lang/Thread.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="130">
-          <caret line="744" column="0" lean-forward="false" selection-start-line="744" selection-start-column="0" selection-end-line="744" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar:///usr/lib/jvm/jdk1.8.0_111/javafx-src.zip!/javafx/scene/layout/Region.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="128">
-          <caret line="458" column="0" lean-forward="false" selection-start-line="458" selection-start-column="0" selection-end-line="458" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar:///usr/lib/jvm/jdk1.8.0_111/javafx-src.zip!/javafx/scene/layout/Pane.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="137">
-          <caret line="124" column="0" lean-forward="false" selection-start-line="124" selection-start-column="0" selection-end-line="124" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar:///usr/lib/jvm/jdk1.8.0_111/javafx-src.zip!/javafx/scene/layout/HBox.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="110">
-          <caret line="229" column="0" lean-forward="false" selection-start-line="229" selection-start-column="0" selection-end-line="229" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar:///usr/lib/jvm/jdk1.8.0_111/javafx-src.zip!/com/sun/javafx/tk/Toolkit.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="95">
-          <caret line="235" column="0" lean-forward="false" selection-start-line="235" selection-start-column="0" selection-end-line="235" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar:///usr/lib/jvm/jdk1.8.0_111/javafx-src.zip!/javafx/scene/Parent.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="95">
-          <caret line="366" column="0" lean-forward="false" selection-start-line="366" selection-start-column="0" selection-end-line="366" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://$PROJECT_DIR$/share/Commands.jar!/vt/smt/Commands/ChangeBear.class">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="108">
-          <caret line="12" column="13" lean-forward="false" selection-start-line="12" selection-start-column="13" selection-end-line="12" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://$PROJECT_DIR$/share/Commands.jar!/vt/smt/Commands/RemoveBear.class">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="108">
-          <caret line="10" column="13" lean-forward="false" selection-start-line="10" selection-start-column="13" selection-end-line="10" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar:///usr/lib/jvm/jdk1.8.0_111/src.zip!/java/util/LinkedList.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="133">
-          <caret line="554" column="0" lean-forward="false" selection-start-line="554" selection-start-column="0" selection-end-line="554" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar:///usr/lib/jvm/jdk1.8.0_111/src.zip!/java/net/Socket.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="10026">
-          <caret line="588" column="0" lean-forward="false" selection-start-line="588" selection-start-column="0" selection-end-line="588" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar:///usr/lib/jvm/jdk1.8.0_111/src.zip!/java/io/ObjectInputStream.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="46332">
-          <caret line="2625" column="0" lean-forward="false" selection-start-line="2625" selection-start-column="0" selection-end-line="2625" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://$PROJECT_DIR$/share/Commands.jar!/vt/smt/Commands/SaveAllBears.class">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="108">
-          <caret line="14" column="13" lean-forward="false" selection-start-line="14" selection-start-column="13" selection-end-line="14" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/vt/smt/GUI/Titleses.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="180">
-          <caret line="20" column="0" lean-forward="false" selection-start-line="20" selection-start-column="0" selection-end-line="20" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar:///usr/lib/jvm/jdk1.8.0_111/javafx-src.zip!/javafx/scene/input/MouseEvent.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="8910">
-          <caret line="539" column="24" lean-forward="false" selection-start-line="539" selection-start-column="24" selection-end-line="539" selection-end-column="24" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar:///usr/lib/jvm/jdk1.8.0_111/src.zip!/java/lang/Class.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="30636">
-          <caret line="1785" column="0" lean-forward="false" selection-start-line="1785" selection-start-column="0" selection-end-line="1785" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/vt/smt/GUI/styles/contexMenuStyle.css" />
-    <entry file="jar:///usr/lib/jvm/jdk1.8.0_111/javafx-src.zip!/javafx/animation/Animation.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-2873">
-          <caret line="91" column="22" lean-forward="false" selection-start-line="91" selection-start-column="22" selection-end-line="91" selection-end-column="22" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar:///usr/lib/jvm/jdk1.8.0_111/javafx-src.zip!/javafx/scene/effect/Light.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="180">
-          <caret line="42" column="22" lean-forward="false" selection-start-line="42" selection-start-column="22" selection-end-line="42" selection-end-column="22" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/vt/smt/Client/TestRunner.java" />
-    <entry file="file://$PROJECT_DIR$/src/vt/smt/Plot.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="2124">
-          <caret line="125" column="0" lean-forward="false" selection-start-line="125" selection-start-column="0" selection-end-line="125" selection-end-column="0" />
-          <folding>
-            <element signature="imports" expanded="false" />
-            <element signature="e#4556#4557#0" expanded="false" />
-            <element signature="e#4610#4611#0" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/vt/smt/GUI/Notice.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="288">
-          <caret line="21" column="12" lean-forward="false" selection-start-line="21" selection-start-column="12" selection-end-line="21" selection-end-column="12" />
-          <folding>
-            <element signature="method#Notice#0;class#Notice#0" expanded="false" />
-            <element signature="method#notice#0;class#Notice#0" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/vt/smt/Client/Sender.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="553">
-          <caret line="63" column="38" lean-forward="false" selection-start-line="63" selection-start-column="38" selection-end-line="63" selection-end-column="38" />
-          <folding>
-            <element signature="docComment;method#sendCommand#0;class#Sender#0" expanded="false" />
-            <element signature="method#sendCommand#0;class#Sender#0" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/vt/smt/Client/NoticeSystem.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="108">
-          <caret line="6" column="30" lean-forward="false" selection-start-line="6" selection-start-column="30" selection-end-line="6" selection-end-column="30" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/vt/smt/Client/Executor.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="144">
-          <caret line="13" column="4" lean-forward="false" selection-start-line="13" selection-start-column="4" selection-end-line="13" selection-end-column="4" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://$PROJECT_DIR$/share/Data.jar!/vt/smt/Data/PhysicalObject.class">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-324">
-          <caret line="11" column="22" lean-forward="false" selection-start-line="11" selection-start-column="22" selection-end-line="11" selection-end-column="22" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://$PROJECT_DIR$/share/Data.jar!/vt/smt/Data/Toy.class">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="180">
-          <caret line="49" column="5" lean-forward="true" selection-start-line="49" selection-start-column="5" selection-end-line="49" selection-end-column="5" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/vt/smt/Client/InputCommandsHandler.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="144">
-          <caret line="30" column="12" lean-forward="false" selection-start-line="30" selection-start-column="12" selection-end-line="30" selection-end-column="12" />
-          <folding>
-            <element signature="method#start#0;class#InputCommandsHandler#0" expanded="false" />
-            <element signature="method#handleInputStream#0;class#InputCommandsHandler#0" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/vt/smt/GUI/BearWindow.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="108">
-          <caret line="36" column="44" lean-forward="false" selection-start-line="36" selection-start-column="44" selection-end-line="36" selection-end-column="44" />
-          <folding>
-            <element signature="method#camSnapshot#0;class#BearWindow#0" expanded="false" />
-            <element signature="method#renameImage#0;class#BearWindow#0" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/vt/smt/GUI/BearModifyder.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="396">
-          <caret line="35" column="42" lean-forward="false" selection-start-line="35" selection-start-column="42" selection-end-line="35" selection-end-column="42" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/vt/smt/GUI/BearGenerator.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="234">
-          <caret line="32" column="74" lean-forward="false" selection-start-line="32" selection-start-column="74" selection-end-line="32" selection-end-column="74" />
-          <folding>
-            <element signature="method#initTitles#0;class#BearGenerator#0" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar:///usr/lib/jvm/jdk1.8.0_111/src.zip!/java/util/ArrayList.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="142">
-          <caret line="660" column="0" lean-forward="false" selection-start-line="660" selection-start-column="0" selection-end-line="660" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://$PROJECT_DIR$/share/Commands.jar!/vt/smt/Commands/InsertBear.class">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="108">
-          <caret line="12" column="13" lean-forward="false" selection-start-line="12" selection-start-column="13" selection-end-line="12" selection-end-column="13" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="jar:///usr/lib/jvm/jdk1.8.0_111/javafx-src.zip!/javafx/stage/StageStyle.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="115">
+        <state relative-caret-position="378">
           <caret line="44" column="44" lean-forward="false" selection-start-line="44" selection-start-column="44" selection-end-line="44" selection-end-column="55" />
-          <folding>
-            <element signature="e#0#1595#0" expanded="false" />
-          </folding>
         </state>
       </provider>
     </entry>
     <entry file="jar:///usr/lib/jvm/jdk1.8.0_111/javafx-src.zip!/javafx/stage/Modality.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="468">
-          <caret line="52" column="21" lean-forward="true" selection-start-line="52" selection-start-column="21" selection-end-line="52" selection-end-column="21" />
+        <state relative-caret-position="522">
+          <caret line="52" column="21" lean-forward="false" selection-start-line="52" selection-start-column="21" selection-end-line="52" selection-end-column="21" />
           <folding>
             <element signature="e#0#925#0" expanded="false" />
           </folding>
@@ -1640,12 +1405,9 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/vt/smt/GUI/Bear.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="131">
-          <caret line="21" column="41" lean-forward="false" selection-start-line="21" selection-start-column="35" selection-end-line="21" selection-end-column="41" />
-          <folding>
-            <element signature="method#loadImgFromFile#0;class#Bear#0" expanded="false" />
-            <element signature="method#getOwner#0;class#Bear#0" expanded="false" />
-          </folding>
+        <state relative-caret-position="234">
+          <caret line="20" column="16" lean-forward="false" selection-start-line="20" selection-start-column="16" selection-end-line="20" selection-end-column="16" />
+          <folding />
         </state>
       </provider>
     </entry>
@@ -1653,15 +1415,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="313">
           <caret line="352" column="30" lean-forward="false" selection-start-line="352" selection-start-column="30" selection-end-line="352" selection-end-column="30" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/vt/smt/GUI/BearsLine.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="119">
-          <caret line="116" column="26" lean-forward="false" selection-start-line="116" selection-start-column="23" selection-end-line="116" selection-end-column="26" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1669,62 +1422,412 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="266">
           <caret line="201" column="24" lean-forward="false" selection-start-line="201" selection-start-column="24" selection-end-line="201" selection-end-column="24" />
-          <folding>
-            <element signature="e#11985#11986#0" expanded="false" />
-            <element signature="e#12016#12017#0" expanded="false" />
-          </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/vt/smt/Main.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="594">
-          <caret line="33" column="65" lean-forward="false" selection-start-line="33" selection-start-column="65" selection-end-line="33" selection-end-column="65" />
+        <state relative-caret-position="774">
+          <caret line="43" column="0" lean-forward="false" selection-start-line="43" selection-start-column="0" selection-end-line="43" selection-end-column="0" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/vt/smt/GUI/MainGUI.java">
+    <entry file="file://$PROJECT_DIR$/src/vt/smt/GUI/Win.java" />
+    <entry file="jar:///usr/lib/jvm/jdk1.8.0_111/src.zip!/java/util/LinkedList.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="231">
-          <caret line="68" column="36" lean-forward="true" selection-start-line="68" selection-start-column="36" selection-end-line="68" selection-end-column="36" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
+        <state relative-caret-position="-1892">
+          <caret line="141" column="55" lean-forward="true" selection-start-line="141" selection-start-column="55" selection-end-line="141" selection-end-column="55" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/vt/smt/GUI/Win.java">
+    <entry file="jar:///usr/lib/jvm/jdk1.8.0_111/src.zip!/java/io/Closeable.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="252">
-          <caret line="14" column="6" lean-forward="false" selection-start-line="14" selection-start-column="6" selection-end-line="14" selection-end-column="6" />
+        <state relative-caret-position="197">
+          <caret line="36" column="17" lean-forward="false" selection-start-line="36" selection-start-column="17" selection-end-line="36" selection-end-column="17" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/vt/smt/GUI/languages.properties">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+      <provider editor-type-id="ResourceBundle">
+        <state />
+      </provider>
+    </entry>
+    <entry file="jar:///usr/lib/jvm/jdk1.8.0_111/src.zip!/java/net/Socket.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="283">
+          <caret line="1730" column="0" lean-forward="false" selection-start-line="1730" selection-start-column="0" selection-end-line="1730" selection-end-column="0" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/vt/smt/GUI/FallingStar.java">
+    <entry file="jar:///usr/lib/jvm/jdk1.8.0_111/javafx-src.zip!/com/sun/javafx/application/LauncherImpl.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="209">
-          <caret line="61" column="29" lean-forward="false" selection-start-line="61" selection-start-column="29" selection-end-line="61" selection-end-column="29" />
+        <state relative-caret-position="135">
+          <caret line="181" column="0" lean-forward="false" selection-start-line="181" selection-start-column="0" selection-end-line="181" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar:///usr/lib/jvm/jdk1.8.0_111/src.zip!/java/lang/Thread.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="144">
+          <caret line="744" column="0" lean-forward="false" selection-start-line="744" selection-start-column="0" selection-end-line="744" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/vt/smt/Client/NoticeSystem.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="22" lean-forward="false" selection-start-line="0" selection-start-column="22" selection-end-line="0" selection-end-column="22" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/vt/smt/Client/Executor.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="90">
+          <caret line="10" column="34" lean-forward="true" selection-start-line="10" selection-start-column="34" selection-end-line="10" selection-end-column="34" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/vt/smt/GUI/languages_kn_ENG.properties">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="71" lean-forward="false" selection-start-line="0" selection-start-column="71" selection-end-line="0" selection-end-column="71" />
+          <folding />
+        </state>
+      </provider>
+      <provider editor-type-id="ResourceBundle">
+        <state />
+      </provider>
+    </entry>
+    <entry file="jar:///usr/lib/jvm/jdk1.8.0_111/src.zip!/java/util/Locale.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="432">
+          <caret line="62" column="44" lean-forward="true" selection-start-line="62" selection-start-column="44" selection-end-line="62" selection-end-column="44" />
           <folding>
-            <element signature="imports" expanded="true" />
+            <element signature="e#28232#28233#0" expanded="false" />
+            <element signature="e#28275#28276#0" expanded="false" />
           </folding>
         </state>
+      </provider>
+    </entry>
+    <entry file="jar:///usr/lib/jvm/jdk1.8.0_111/jre/lib/rt.jar!/sun/util/locale/provider/LocaleResources.class">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="126">
+          <caret line="149" column="37" lean-forward="true" selection-start-line="149" selection-start-column="37" selection-end-line="149" selection-end-column="37" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/vt/smt/GUI/BearsLine.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="36">
+          <caret line="34" column="22" lean-forward="false" selection-start-line="34" selection-start-column="22" selection-end-line="34" selection-end-column="22" />
+          <folding>
+            <element signature="method#BearsLine#0;class#BearsLine#0" expanded="false" />
+            <element signature="class#2088:2189" expanded="false" />
+            <element signature="method#restoreConnection#0;class#BearsLine#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar:///usr/lib/jvm/jdk1.8.0_111/javafx-src.zip!/javafx/beans/value/WritableObjectValue.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="259">
+          <caret line="48" column="6" lean-forward="false" selection-start-line="48" selection-start-column="6" selection-end-line="48" selection-end-column="6" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar:///usr/lib/jvm/jdk1.8.0_111/javafx-src.zip!/javafx/scene/layout/BorderPane.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="718">
+          <caret line="278" column="67" lean-forward="false" selection-start-line="278" selection-start-column="67" selection-end-line="278" selection-end-column="67" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar:///usr/lib/jvm/jdk1.8.0_111/javafx-src.zip!/javafx/beans/Observable.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="427">
+          <caret line="93" column="32" lean-forward="true" selection-start-line="93" selection-start-column="32" selection-end-line="93" selection-end-column="32" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar:///usr/lib/jvm/jdk1.8.0_111/javafx-src.zip!/javafx/beans/InvalidationListener.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="238">
+          <caret line="48" column="17" lean-forward="false" selection-start-line="48" selection-start-column="17" selection-end-line="48" selection-end-column="17" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar:///usr/lib/jvm/jdk1.8.0_111/src.zip!/java/util/Observable.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-1967">
+          <caret line="61" column="13" lean-forward="false" selection-start-line="61" selection-start-column="13" selection-end-line="61" selection-end-column="13" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar:///usr/lib/jvm/jdk1.8.0_111/javafx-src.zip!/javafx/scene/control/Button.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="205">
+          <caret line="59" column="33" lean-forward="true" selection-start-line="59" selection-start-column="33" selection-end-line="59" selection-end-column="33" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar:///usr/lib/jvm/jdk1.8.0_111/javafx-src.zip!/javafx/scene/control/ButtonBase.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="205">
+          <caret line="49" column="45" lean-forward="false" selection-start-line="49" selection-start-column="45" selection-end-line="49" selection-end-column="45" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar:///usr/lib/jvm/jdk1.8.0_111/javafx-src.zip!/javafx/scene/control/Control.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="217">
+          <caret line="365" column="26" lean-forward="false" selection-start-line="365" selection-start-column="26" selection-end-line="365" selection-end-column="26" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/vt/smt/GUI/Notice.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="288">
+          <caret line="21" column="12" lean-forward="false" selection-start-line="21" selection-start-column="12" selection-end-line="21" selection-end-column="12" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar:///usr/lib/jvm/jdk1.8.0_111/javafx-src.zip!/javafx/scene/text/Text.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="158">
+          <caret line="94" column="29" lean-forward="false" selection-start-line="94" selection-start-column="29" selection-end-line="94" selection-end-column="29" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar:///usr/lib/jvm/jdk1.8.0_111/javafx-src.zip!/com/sun/javafx/scene/control/skin/LabeledText.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-229">
+          <caret line="54" column="13" lean-forward="false" selection-start-line="54" selection-start-column="13" selection-end-line="54" selection-end-column="13" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar:///usr/lib/jvm/jdk1.8.0_111/javafx-src.zip!/javafx/stage/Stage.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-1354">
+          <caret line="169" column="13" lean-forward="false" selection-start-line="169" selection-start-column="13" selection-end-line="169" selection-end-column="13" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar:///usr/lib/jvm/jdk1.8.0_111/javafx-src.zip!/javafx/scene/shape/Shape.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="158">
+          <caret line="117" column="36" lean-forward="false" selection-start-line="117" selection-start-column="36" selection-end-line="117" selection-end-column="36" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar:///usr/lib/jvm/jdk1.8.0_111/javafx-src.zip!/javafx/scene/control/Labeled.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="138">
+          <caret line="144" column="29" lean-forward="false" selection-start-line="144" selection-start-column="22" selection-end-line="144" selection-end-column="29" />
+          <folding>
+            <element signature="e#3369#3370#0" expanded="false" />
+            <element signature="e#3398#3399#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar:///usr/lib/jvm/jdk1.8.0_111/javafx-src.zip!/javafx/event/EventTarget.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="51">
+          <caret line="29" column="5" lean-forward="false" selection-start-line="29" selection-start-column="5" selection-end-line="29" selection-end-column="5" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar:///usr/lib/jvm/jdk1.8.0_111/javafx-src.zip!/javafx/css/Styleable.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-723">
+          <caret line="37" column="17" lean-forward="false" selection-start-line="37" selection-start-column="17" selection-end-line="37" selection-end-column="17" />
+          <folding>
+            <element signature="e#0#2785#0" expanded="false" />
+            <element signature="imports" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar:///usr/lib/jvm/jdk1.8.0_111/javafx-src.zip!/javafx/scene/control/MenuItem.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="72">
+          <caret line="102" column="53" lean-forward="false" selection-start-line="102" selection-start-column="53" selection-end-line="102" selection-end-column="53" />
+          <folding>
+            <element signature="e#3825#3826#0" expanded="false" />
+            <element signature="e#3856#3857#0" expanded="false" />
+            <element signature="e#8651#8652#0" expanded="false" />
+            <element signature="e#8692#8693#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar:///usr/lib/jvm/jdk1.8.0_111/javafx-src.zip!/javafx/scene/Node.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="169">
+          <caret line="3064" column="31" lean-forward="false" selection-start-line="3064" selection-start-column="31" selection-end-line="3064" selection-end-column="31" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/vt/smt/GUI/languages_mk.properties">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="6" column="46" lean-forward="false" selection-start-line="6" selection-start-column="46" selection-end-line="6" selection-end-column="46" />
+          <folding />
+        </state>
+      </provider>
+      <provider editor-type-id="ResourceBundle">
+        <state />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/vt/smt/GUI/languages_pl.properties">
+      <provider editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="7" column="60" lean-forward="false" selection-start-line="7" selection-start-column="60" selection-end-line="7" selection-end-column="60" />
+          <folding />
+        </state>
+      </provider>
+      <provider selected="true" editor-type-id="ResourceBundle">
+        <state />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/vt/smt/GUI/FallingList.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="385">
-          <caret line="40" column="0" lean-forward="false" selection-start-line="40" selection-start-column="0" selection-end-line="40" selection-end-column="0" />
+        <state relative-caret-position="260">
+          <caret line="32" column="61" lean-forward="true" selection-start-line="32" selection-start-column="61" selection-end-line="32" selection-end-column="79" />
           <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/vt/smt/GUI/Titleses.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="180">
+          <caret line="20" column="0" lean-forward="false" selection-start-line="20" selection-start-column="0" selection-end-line="20" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/vt/smt/GUI/BearModifyder.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="470">
+          <caret line="45" column="58" lean-forward="false" selection-start-line="45" selection-start-column="58" selection-end-line="45" selection-end-column="86" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/vt/smt/GUI/BearGenerator.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="89">
+          <caret line="18" column="58" lean-forward="false" selection-start-line="18" selection-start-column="58" selection-end-line="18" selection-end-column="77" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/vt/smt/GUI/BearWindow.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="234">
+          <caret line="73" column="56" lean-forward="false" selection-start-line="73" selection-start-column="56" selection-end-line="73" selection-end-column="56" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/vt/smt/GUI/languages_ru.properties">
+      <provider editor-type-id="text-editor">
+        <state relative-caret-position="126">
+          <caret line="11" column="60" lean-forward="false" selection-start-line="11" selection-start-column="60" selection-end-line="11" selection-end-column="60" />
+          <folding />
+        </state>
+      </provider>
+      <provider selected="true" editor-type-id="ResourceBundle">
+        <state />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/vt/smt/GUI/FallingStar.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="143">
+          <caret line="66" column="53" lean-forward="true" selection-start-line="66" selection-start-column="53" selection-end-line="66" selection-end-column="60" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="method#automaticFall#0;class#FallingStar#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/vt/smt/GUI/languages_en_CA.properties">
+      <provider editor-type-id="text-editor">
+        <state relative-caret-position="108">
+          <caret line="11" column="10" lean-forward="false" selection-start-line="11" selection-start-column="10" selection-end-line="11" selection-end-column="10" />
+          <folding />
+        </state>
+      </provider>
+      <provider selected="true" editor-type-id="ResourceBundle">
+        <state />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/vt/smt/GUI/MainGUI.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="197">
+          <caret line="77" column="64" lean-forward="false" selection-start-line="77" selection-start-column="64" selection-end-line="77" selection-end-column="64" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/vt/smt/GUI/LanguagesButton.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="178">
+          <caret line="41" column="52" lean-forward="false" selection-start-line="41" selection-start-column="52" selection-end-line="41" selection-end-column="52" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/vt/smt/GUI/ServerButton.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="196">
-          <caret line="48" column="61" lean-forward="false" selection-start-line="48" selection-start-column="61" selection-end-line="48" selection-end-column="74" />
-          <folding />
+        <state relative-caret-position="121">
+          <caret line="25" column="60" lean-forward="false" selection-start-line="25" selection-start-column="60" selection-end-line="25" selection-end-column="72" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/vt/smt/GUI/Language.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-124">
+          <caret line="41" column="79" lean-forward="false" selection-start-line="41" selection-start-column="79" selection-end-line="41" selection-end-column="79" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
@@ -1783,7 +1886,7 @@
       </state>
       <state key="ModuleStructureConfigurable.UI">
         <settings>
-          <last-edited>Android-APK|labGoodObject</last-edited>
+          <last-edited>labGoodObject</last-edited>
           <splitter-proportions>
             <option name="proportions">
               <list>

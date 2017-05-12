@@ -69,16 +69,19 @@ public abstract class BearWindow {
         );
 
         pane.getChildren().add(imageAvatar);
-        rightBox.getChildren().add(new Label("Я не знал, что здесь написать.."));
-        nameInput = new TextField(); // fixed
+        Label topLabel = new Label("Я не знал, что здесь написать..");
+        rightBox.getChildren().add(topLabel);
+        Language.addListener(new LabelAdapter(topLabel,"BearsWindow.IDidntKnowWhatToWrite"));
+
+        nameInput = new TextField();
         rightBox.getChildren().add(nameInput);
 
         weightInput = new TextField();
         weightInput.setTextFormatter(new TextFormatter<Double>(new DoubleStringConverter()));
-        //weightInput.setText(Double.toString(caller.getInfo().getWeight()));
         rightBox.getChildren().add(weightInput);
         isCleanBox = new CheckBox("Чистый");
-       // isCleanBox.setSelected(caller.getInfo().isClean());
+        Language.addListener(new CheckBoxAdapter(isCleanBox,"BearsWindow.isClean"));
+
         rightBox.getChildren().add(isCleanBox);
         addButton = new Button("Сотворить медведя!");
         addButton.setOnAction(e->{stage.close();});

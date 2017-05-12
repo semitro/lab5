@@ -20,13 +20,17 @@ public class FallingList extends ContextMenu{
             bearGenerator = new BearGenerator(bearCaller);
             bearModifyder = new BearModifyder(bearCaller);
             MenuItem add = new MenuItem("Добавить");
+            Language.addListener(new MenuItemAdapter(add,"FallingList.add"));
             add.setOnAction(e->bearGenerator.show());
             this.getItems().add(add);
 
             MenuItem modify = new MenuItem("Изменить");
+            Language.addListener(new MenuItemAdapter(modify,"FallingList.change"));
             modify.setOnAction(e->bearModifyder.show());
             this.getItems().add(modify);
+
             MenuItem delete = new MenuItem("Удалить");
+            Language.addListener(new MenuItemAdapter(delete,"FallingList.remove"));
             delete.setOnAction(e-> {
                 try {
                     Sender.getInstance().sendCommand(new RemoveBear(Integer.parseInt(bearCaller.getId())) );

@@ -15,7 +15,8 @@ public class BearGenerator extends BearWindow {
 
     @Override
     protected void initTitles(){
-
+        Language.addListener(new StageAdapter(stage,"BearsWindow.BearsGenerator"));
+        Language.addListener(new ButtonAdapter(addButton,"BearsWindow.AddBear"));
     }
     BearGenerator(Bear caller){super(caller);}
     @Override

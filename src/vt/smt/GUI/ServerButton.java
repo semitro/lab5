@@ -23,6 +23,7 @@ public class ServerButton extends ImageView {
         this.setImage(img);
 
         MenuItem sortBears = new MenuItem("Отсортировать медведей");
+        Language.addListener(new MenuItemAdapter(sortBears,"SortTheBears"));
         sortBears.setOnAction(e->{
             try {
                 Sender.getInstance().sendCommand(new SortBears(null));
@@ -33,7 +34,9 @@ public class ServerButton extends ImageView {
         });
 
         menu.getItems().add(sortBears);
+
         MenuItem commitChanges = new MenuItem("Зафиксировать изменения в базе данных");
+        Language.addListener(new MenuItemAdapter(commitChanges,"CommitChangesInDB"));
         String style = //"-fx-background-color: light-blue;" +
                 "-fx-font-size: 10pt;" +
                 "" +
@@ -51,7 +54,8 @@ public class ServerButton extends ImageView {
         setOnMouseClicked(e->{
             menu.show(this,e.getScreenX()-180,e.getScreenY()+5);
         });
-        MenuItem license = new MenuItem("Я прочёл лицензию");
+        MenuItem license = new MenuItem();
+        Language.addListener(new MenuItemAdapter(license,"IReadLicense"));
         license.setOnAction(e->FallingStar.win());
         menu.getItems().add(license);
 

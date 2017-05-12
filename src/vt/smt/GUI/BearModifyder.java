@@ -43,6 +43,7 @@ public class BearModifyder extends  BearWindow{
     }
     protected void initTitles(){
         addButton.setText("Преобразовать медедя!");
-        stage.setTitle("Медведопреобразоватор три тысячи");
+        Language.addListener(new ButtonAdapter(addButton,"BearsWindow.TransformTheBear"));
+        Language.addListener(new StageAdapter(stage,"BearsWindow.BearsTransformer3000"));
     }
 }

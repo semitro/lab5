@@ -64,6 +64,7 @@ public class FallingStar {
         box.setStyle("-fx-background-color: linear-gradient(rgba(53,210,222,0.81),rgba(42,222,156,0.81));");
         Label label = new Label("ЭТО ПОБЕДА!\n" +
                 "Вы заторчали пышку разработчику\n (см. license.txt)");
+        Language.addListener(new LabelAdapter(label,"Victory"));
         label.setStyle("-fx-text-fill: rgba(15,39,222,0.81);" +
                 "-fx-font-size: 24pt");
         box.setCenter(label);

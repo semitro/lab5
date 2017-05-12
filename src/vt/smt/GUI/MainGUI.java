@@ -42,13 +42,10 @@ public class MainGUI extends Application {
     // Кнопка для команд серверу
     private ServerButton serverButton;
     private LanguagesButton langButton;
-    private ResourceBundle langBundle;
     // Ответы, приходящие с сервера
     private Notice noticer = new Notice();
     @Override
     public void start(Stage inputStage) {
-        langBundle =  ResourceBundle.getBundle("vt/smt/GUI/languages", new Locale("en","CA"));
-        System.out.println(langBundle.getString("MainTitle"));
         vt.smt.Client.InputCommandsHandler.initNoticeSystem(noticer);
         primaryStage = inputStage;
         bearsLine = new BearsLine();
@@ -79,7 +76,7 @@ public class MainGUI extends Application {
         Scene scene = new Scene(pane,600,250);
         primaryStage.setScene(scene);
         primaryStage.getScene().setFill(Paint.valueOf("black"));
-        primaryStage.setTitle(langBundle.getString("MainTitle"));
+        Language.addListener(new StageAdapter(primaryStage,"MainTitle"));
         pane.getCenter().setTranslateY(pane.getHeight()/4);
         pane.getRight().setTranslateY(pane.getHeight()-40);
         primaryStage.setResizable(false);
