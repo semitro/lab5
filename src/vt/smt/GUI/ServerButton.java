@@ -1,19 +1,16 @@
 package vt.smt.GUI;
 
 
-import javafx.animation.Animation;
 import javafx.animation.ScaleTransition;
 import javafx.scene.control.ContextMenu;
 import javafx.scene.control.MenuItem;
-import javafx.scene.effect.Light;
-import javafx.scene.effect.Lighting;
 import javafx.scene.image.Image;
 import javafx.scene.image.ImageView;
-import javafx.scene.paint.Color;
 import javafx.util.Duration;
 import vt.smt.Client.Sender;
-import vt.smt.Commands.SortBears;
 import vt.smt.Commands.CommitChanges;
+import vt.smt.Commands.SortBears;
+
 import java.io.IOException;
 
 public class ServerButton extends ImageView {
@@ -24,7 +21,6 @@ public class ServerButton extends ImageView {
         super();
         img = new Image(getClass().getResourceAsStream("img/serverButtonSmall.png"));
         this.setImage(img);
-
 
         MenuItem sortBears = new MenuItem("Отсортировать медведей");
         sortBears.setOnAction(e->{
@@ -59,14 +55,10 @@ public class ServerButton extends ImageView {
         license.setOnAction(e->FallingStar.win());
         menu.getItems().add(license);
 
-
         initEffects();
     }
 
     private void initEffects(){
-        Lighting light = new Lighting();
-        light.setLight(new Light.Distant(100,100, Color.BLUE));
-      //  this.setEffect(light);
         ScaleTransition scale = new ScaleTransition(Duration.valueOf("0.25s"),this);
         scale.setToX(1.3); scale.setToY(1.3);
         scale.setAutoReverse(true);

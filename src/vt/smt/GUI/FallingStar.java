@@ -39,7 +39,7 @@ public class FallingStar {
         //scene.setFill(n ull);
         pane.setStyle("-fx-background-color: null;");
         stage.setScene(scene);
-        stage.toFront();
+
         image = new ImageView(new Image(getClass().getResourceAsStream("img/smallStar.png")));
         GaussianBlur blur = new GaussianBlur(0.4);
         image.setOpacity(0.8);
@@ -81,7 +81,7 @@ public class FallingStar {
         Thread t = new Thread(()->{
             while (true){
                 try {
-                    Thread.sleep(rand.nextInt()%10000 + 4000);
+                    Thread.sleep(rand.nextInt()%15000 + 8000);
                 }catch (Exception ex){
                     System.out.println("Не спится звёздам");
                 }
@@ -95,7 +95,7 @@ public class FallingStar {
     private void fall(){
         Random rand = new Random(System.currentTimeMillis());
         stage.show();
-        stage.toFront();
+
         Thread t = new Thread(()->{
             float u = 1.20f;
             double a = 0.00000028;
@@ -129,7 +129,7 @@ public class FallingStar {
             }
 
         });
-        t.setPriority(5);
+        t.setPriority(4);
         t.setDaemon(true);
         t.start();
     }
