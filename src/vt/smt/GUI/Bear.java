@@ -1,28 +1,32 @@
 package vt.smt.GUI;
 
 import javafx.animation.ScaleTransition;
-import javafx.scene.effect.Reflection;
 import javafx.scene.image.Image;
 import javafx.util.Duration;
 import vt.smt.Data.Toy;
+
 import java.io.File;
 
 /**
- * Created by semitro on 22.03.17.
+ * Отображение элемента коллекции в видимого медведя
  */
+
 public class Bear extends javafx.scene.image.ImageView {
+    // Меню, выпадающее on contextMenuRequest
     private FallingList fallingList;
     private Image img;
     //GUI/img/*
     Bear(){
         this("img/defaultBear.png");
     }
+
     Bear(String imgPath){
         super();
         img = new Image(getClass().getResourceAsStream("img/defaultBear.png"));
         this.setImage(img);
         initAnim();
     }
+
     void initAnim(){
         // Scaling grow
         ScaleTransition scaling = new ScaleTransition();
@@ -39,24 +43,23 @@ public class Bear extends javafx.scene.image.ImageView {
         reScaling.setDuration(Duration.valueOf("0.25s"));
         reScaling.setNode(this);
         setOnMouseExited(e->reScaling.play());
-        //
-        Reflection reflection = new Reflection();
-        this.setEffect(reflection);
-        //
+       //Выпадающий список
         setOnContextMenuRequested(e->{
             if(fallingList == null)
                 fallingList = new FallingList(this);
             fallingList.show(this,e.getScreenX(),e.getScreenY());
-
         });
-
     }
+
+    // Взять информацию об элементе коллекции, который мы отображаем
     Toy getInfo(){
         if(this.getId() == null)
             return null;
         else // Модель медведя принадлежит главному боксу BearsLine, который сам является боксом
             return ((BearsLine)this.getParent().getParent()).getInfoAbout(Integer.valueOf(this.getId()));
     }
+
+    // Подрузить иконочку медведя из файловой системы
     public void loadImgFromFile(String path){
         File file = new File(path);
         if(!file.exists())
@@ -68,11 +71,12 @@ public class Bear extends javafx.scene.image.ImageView {
             this.getOwner().refreshVisible();
 
     }
+    // Я не помню, что и зачем делает этот метод..
     public BearsLine getOwner(){
         if( this.getParent() != null && (this.getParent().getParent() instanceof  BearsLine))
              return ((BearsLine) (this.getParent().getParent()));
         else {
-            System.out.println("Ну ничего, разберёмся)");
+            //System.out.println("Ну ничего, разберёмся)");
             return null;
         }
     }

@@ -1,8 +1,6 @@
 package vt.smt.GUI;
 
 import javafx.animation.FadeTransition;
-import javafx.animation.TranslateTransition;
-import javafx.application.Application;
 import javafx.application.Platform;
 import javafx.scene.Scene;
 import javafx.scene.control.Label;
@@ -11,12 +9,9 @@ import javafx.scene.image.Image;
 import javafx.scene.image.ImageView;
 import javafx.scene.layout.BorderPane;
 import javafx.scene.layout.HBox;
-import javafx.scene.layout.Priority;
-import javafx.scene.layout.VBox;
 import javafx.scene.media.Media;
 import javafx.scene.media.MediaPlayer;
 import javafx.scene.paint.Paint;
-import javafx.stage.Modality;
 import javafx.stage.Screen;
 import javafx.stage.Stage;
 import javafx.stage.StageStyle;
@@ -25,28 +20,28 @@ import javafx.util.Duration;
 import java.util.Random;
 
 /**
- * Created by semitro on 07.05.17.
+ * Падающие звёзды
  */
 public class FallingStar {
+    // Stage падающей звезды
     private Stage stage;
     private ImageView image;
     private HBox pane;
     public FallingStar(){
         stage = new Stage(StageStyle.TRANSPARENT);
-         pane = new HBox();
+
+        pane = new HBox();
         Scene scene = new Scene(pane,60,30, Paint.valueOf("transparent"));
-        stage.initModality(Modality.NONE);
-        //scene.setFill(n ull);
+       // stage.initModality(Modality.NONE);
         pane.setStyle("-fx-background-color: null;");
         stage.setScene(scene);
-
         image = new ImageView(new Image(getClass().getResourceAsStream("img/smallStar.png")));
         GaussianBlur blur = new GaussianBlur(0.4);
         image.setOpacity(0.8);
         image.setEffect(blur);
         image.setOnMouseEntered(e->{win();});
         image.setOnMouseClicked((e)->{win();});
-        image.setFocusTraversable(true);
+        //image.setFocusTraversable(false);
         pane.getChildren().add(image);
         pane.setOnMouseEntered((e)->{
             win();
@@ -56,8 +51,8 @@ public class FallingStar {
         stage.setY(Screen.getPrimary().getVisualBounds().getMinX() + Screen.getPrimary().getVisualBounds().getHeight() - 400);
         automaticFall();
     }
+
     public static void win(){
-        System.out.println("win");
         Stage st = new Stage();
         BorderPane box = new BorderPane();
 
@@ -77,6 +72,7 @@ public class FallingStar {
         player.play();
         st.show();
     }
+
     private void automaticFall(){
         Random rand = new Random(System.currentTimeMillis());
         Thread t = new Thread(()->{
@@ -93,10 +89,10 @@ public class FallingStar {
         t.setDaemon(true);
         t.start();
     }
+
     private void fall(){
         Random rand = new Random(System.currentTimeMillis());
         stage.show();
-
         Thread t = new Thread(()->{
             float u = 1.20f;
             double a = 0.00000028;

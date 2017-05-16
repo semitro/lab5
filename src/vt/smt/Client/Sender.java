@@ -1,21 +1,22 @@
 package vt.smt.Client;
 
 
+import vt.smt.Commands.GetAllBears;
+import vt.smt.Commands.ServerAnswer;
+import vt.smt.Commands.ServerCommand;
+
 import java.io.IOException;
 import java.io.ObjectInputStream;
 import java.io.ObjectOutputStream;
 import java.net.InetSocketAddress;
 import java.net.Socket;
-import vt.smt.Data.Toy;
-
 import java.nio.channels.AlreadyBoundException;
 import java.nio.channels.AlreadyConnectedException;
-import java.util.LinkedList;
-
-import vt.smt.Commands.*;
 /**
- * Created by semitro on 17.04.17.
+ * Класс для общения с сервером
+ * Да, синглтон
  */
+
 public class Sender {
     private Socket socket;
     private ObjectOutputStream out;
@@ -53,25 +54,28 @@ public class Sender {
         in = new ObjectInputStream(socket.getInputStream());
 
     }
+
     public static void initAddr(String host,int port) throws AlreadyConnectedException{
         if(instance != null)
             throw new AlreadyBoundException();
        host_ = host;
        port_ = port;
     }
+
     public static Sender getInstance() throws IOException{
         if(instance == null)
             instance = new Sender(host_,port_);
         return instance;
     }
+
     private void retryConect() throws  IOException{
         if(socket.isConnected())
             return;
         socket = new Socket(host_,port_);
         out = new ObjectOutputStream(socket.getOutputStream());
         in = new ObjectInputStream(socket.getInputStream());
-
     }
+
     /** Для общения с сервером используется паттерн "Команда" (ну, почти)
      *  Если Вы хотите отправить на сервер данные,
      *  должна существовать команда, принимающая в конструктор необходимые данные
@@ -81,6 +85,7 @@ public class Sender {
         out.writeObject(command);
         out.flush();
     }
+
     public ServerAnswer nextCommand(){
         try {
             return (ServerAnswer)in.readObject();

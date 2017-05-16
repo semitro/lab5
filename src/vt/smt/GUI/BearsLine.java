@@ -9,22 +9,23 @@ package vt.smt.GUI;
 import javafx.animation.FadeTransition;
 import javafx.animation.TranslateTransition;
 import javafx.application.Platform;
-import javafx.scene.control.Alert;
 import javafx.scene.control.ProgressIndicator;
 import javafx.scene.control.Tooltip;
 import javafx.scene.effect.BlurType;
 import javafx.scene.effect.InnerShadow;
 import javafx.scene.effect.MotionBlur;
+import javafx.scene.effect.Reflection;
 import javafx.scene.layout.HBox;
 import javafx.util.Duration;
+import vt.smt.Client.InputCommandsHandler;
 import vt.smt.Client.Sender;
+import vt.smt.Commands.GetAllBears;
 import vt.smt.Data.Toy;
+
 import java.io.File;
 import java.io.IOException;
 import java.util.LinkedList;
 import java.util.List;
-import vt.smt.Commands.*;
-import vt.smt.Client.InputCommandsHandler;
 public class BearsLine extends HBox implements vt.smt.Client.Executor{
     // Зависим от абстракции collection
     private List<Toy> collection = new LinkedList<>();
@@ -100,6 +101,7 @@ public class BearsLine extends HBox implements vt.smt.Client.Executor{
         this.getChildren().add(mainLine);
         InputCommandsHandler.start();
     }
+    // Не сосвем работает
     private void restoreConnection() {
         mainLine.getChildren().clear();
         mainLine.getChildren().add(waitingIndicator);
@@ -140,14 +142,7 @@ public class BearsLine extends HBox implements vt.smt.Client.Executor{
                     Integer.toString(collection.get(i).hashCode()));
 
             mainLine.getChildren().add(bear);
-            if(!collection.get(i).isClean()){
-                InnerShadow is = new InnerShadow();
-                is.setRadius(20);
-                is.setChoke(0.4);
-                is.setBlurType(BlurType.GAUSSIAN);
-                bear.setEffect(is);
-            }
-
+            dirtyBear(i);
         }
     }
 
@@ -156,6 +151,7 @@ public class BearsLine extends HBox implements vt.smt.Client.Executor{
             collection.add(element);
                 else
             collection.add(index, element);
+
 
         Platform.runLater(()->{
             if(index > collection.size())
@@ -187,7 +183,7 @@ public class BearsLine extends HBox implements vt.smt.Client.Executor{
             });
             if(collection.isEmpty()){
                 this.getChildren().add(titleses);
-                titleses.start(300,600); // Дописать
+                titleses.start(100,200); // Дописать
             }
         });
     }
@@ -206,10 +202,12 @@ public class BearsLine extends HBox implements vt.smt.Client.Executor{
             sh.setRadius(20.0);
             sh.setChoke(0.3999);
             sh.setBlurType(BlurType.GAUSSIAN);
+            sh.setInput(new Reflection());
             mainLine.getChildren().get(index).setEffect(sh);
         }
-        else
-            mainLine.getChildren().get(index).setEffect(null);
+        else {
+            mainLine.getChildren().get(index).setEffect(new Reflection());
+        }
 
     }
     public void setCollection(LinkedList<Toy> list){

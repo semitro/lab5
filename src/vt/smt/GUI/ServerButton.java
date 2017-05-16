@@ -12,7 +12,11 @@ import vt.smt.Commands.CommitChanges;
 import vt.smt.Commands.SortBears;
 
 import java.io.IOException;
-
+/**
+* Кнопочка снизу справа для отправления особых команд серверу
+* (Сортировка, фиксация изменений)
+* А также, уникальная кнопка 'Я прочёл лицензию'
+ ***/
 public class ServerButton extends ImageView {
     ContextMenu  menu = new ContextMenu();
     Image img;

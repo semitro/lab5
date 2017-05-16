@@ -9,8 +9,9 @@ import vt.smt.Commands.RemoveBear;
 import java.io.IOException;
 
 /**
- * Created by semitro on 23.03.17.
+ * Выпадающий список модификации медвежат
  */
+
 public class FallingList extends ContextMenu{
     BearGenerator bearGenerator;
     BearModifyder bearModifyder;
@@ -31,6 +32,7 @@ public class FallingList extends ContextMenu{
 
             MenuItem delete = new MenuItem("Удалить");
             Language.addListener(new MenuItemAdapter(delete,"FallingList.remove"));
+
             delete.setOnAction(e-> {
                 try {
                     Sender.getInstance().sendCommand(new RemoveBear(Integer.parseInt(bearCaller.getId())) );
@@ -42,7 +44,5 @@ public class FallingList extends ContextMenu{
             }
             );
             this.getItems().add(delete);
-
         }
-
 }

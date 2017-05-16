@@ -31,7 +31,8 @@ public class BearModifyder extends  BearWindow{
                 caller.loadImgFromFile(Integer.toString(caller.getInfo().hashCode()));
                 stage.close();
             }else{
-                vt.smt.Client.InputCommandsHandler.sendNotice("Прости, бродяга, Медведь уже не тот, кем он был раньше");
+                vt.smt.Client.InputCommandsHandler.sendNotice(
+                        Language.getString("BearsGenerator.CASReturnedFalse"));
                 try{
                     this.caller.getInfo();
                     initTitles();

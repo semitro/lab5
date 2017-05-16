@@ -3,23 +3,20 @@ package vt.smt.GUI;
 import javafx.animation.ScaleTransition;
 import javafx.scene.control.ContextMenu;
 import javafx.scene.control.MenuItem;
-import javafx.scene.effect.Light;
-import javafx.scene.effect.Lighting;
 import javafx.scene.image.Image;
 import javafx.scene.image.ImageView;
-import javafx.scene.paint.Color;
 import javafx.util.Duration;
 
-import javax.swing.*;
 import java.util.Locale;
-import java.util.ResourceBundle;
 
 /**
  * Кнопка, в которой выбираются языки
  */
 public class LanguagesButton extends ImageView {
+
     private Image img;
     private ContextMenu contextMenu;
+
     public LanguagesButton(){
         super();
         img = new Image(getClass().getResourceAsStream("img/planet.png"));
@@ -42,8 +39,8 @@ public class LanguagesButton extends ImageView {
                 contextMenu.show(this,e.getScreenX(),e.getScreenY()) );
 
     }
-    private void initEffects(){
 
+    private void initEffects(){
         ScaleTransition scaling = new ScaleTransition(Duration.valueOf("0.25s"),this);
         scaling.setAutoReverse(true);
         scaling.setToX(1.3); scaling.setToY(1.3);

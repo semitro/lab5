@@ -11,6 +11,9 @@ import vt.smt.Commands.InsertBear;
 
 import java.io.IOException;
 
+/**
+ * Окно генерации новых медведей
+ * * */
 public class BearGenerator extends BearWindow {
 
     @Override

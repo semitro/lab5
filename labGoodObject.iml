@@ -34,7 +34,22 @@
       </library>
     </orderEntry>
     <orderEntry type="library" name="ServerAPI " level="project" />
-    <orderEntry type="library" name="Data" level="project" />
     <orderEntry type="library" name="Commands" level="project" />
+    <orderEntry type="library" name="Data" level="project" />
+    <orderEntry type="library" name="Data1" level="project" />
+    <orderEntry type="library" name="Data (2)" level="project" />
+    <orderEntry type="library" name="DataMatata" level="project" />
+    <orderEntry type="library" name="Data (3)" level="project" />
+    <orderEntry type="module-library">
+      <library name="Data">
+        <CLASSES />
+        <JAVADOC />
+        <SOURCES>
+          <root url="jar://$MODULE_DIR$/share/Data.jar!/" />
+        </SOURCES>
+      </library>
+    </orderEntry>
+    <orderEntry type="library" name="Data (4)" level="project" />
+    <orderEntry type="library" name="Data (5)" level="project" />
   </component>
 </module>

@@ -1,18 +1,25 @@
 <component name="ArtifactManager">
-  <artifact name="labGoodObject:jar">
+  <artifact type="jar" name="labGoodObject:jar">
     <output-path>$PROJECT_DIR$/out/artifacts/labGoodObject_jar</output-path>
-    <root id="root">
-      <element id="archive" name="labGoodObject.jar">
-        <element id="module-output" name="labGoodObject" />
+    <root id="archive" name="labGoodObject.jar">
+      <element id="directory" name="META-INF">
+        <element id="file-copy" path="$PROJECT_DIR$/out/META-INF/MANIFEST.MF" />
       </element>
-      <element id="library" level="module" name="slf4j-nop" module-name="labGoodObject" />
+      <element id="module-output" name="labGoodObject" />
+      <element id="extracted-dir" path="$PROJECT_DIR$/share/Commands.jar" path-in-jar="/" />
+      <element id="library" level="project" name="Data (2)" />
+      <element id="extracted-dir" path="$PROJECT_DIR$/src/vt/smt/bridj-0.6.2.jar" path-in-jar="/" />
+      <element id="extracted-dir" path="$PROJECT_DIR$/src/vt/smt/Webcam.jar" path-in-jar="/" />
+      <element id="extracted-dir" path="$PROJECT_DIR$/src/vt/smt/slf4j-nop.jar" path-in-jar="/" />
+      <element id="library" level="project" name="DataMatata" />
+      <element id="extracted-dir" path="$PROJECT_DIR$/src/vt/smt/jackson.jar" path-in-jar="/" />
       <element id="library" level="project" name="Data" />
-      <element id="library" level="project" name="jackson" />
-      <element id="library" level="project" name="bridj-0.6.2" />
-      <element id="library" level="project" name="Webcam" />
       <element id="library" level="project" name="slf4j-api-1.7.2" />
       <element id="library" level="project" name="ServerAPI " />
-      <element id="library" level="project" name="Commands" />
+      <element id="library" level="project" name="Data1" />
+      <element id="library" level="project" name="Data (4)" />
+      <element id="extracted-dir" path="$PROJECT_DIR$/share/Data.jar" path-in-jar="/" />
+      <element id="library" level="project" name="Data (3)" />
     </root>
   </artifact>
 </component>

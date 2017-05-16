@@ -3,13 +3,11 @@ package vt.smt.GUI;
 import javafx.animation.FadeTransition;
 import javafx.application.Platform;
 import javafx.scene.control.Label;
-import javafx.scene.effect.Light;
-import javafx.scene.paint.Color;
 import javafx.util.Duration;
 
 /**
- * Created by semitro on 27.04.17.
- */
+ * Уведомление о.о
+ ***/
 public class Notice extends Label implements vt.smt.Client.NoticeSystem{
     private String css = " -fx-font-size: 19px;\n" +
             " -fx-font-family: Comic Sans MS;" +
@@ -19,6 +17,7 @@ public class Notice extends Label implements vt.smt.Client.NoticeSystem{
             "-fx-stroke: firebrick;\n" +
             " -fx-stroke-width: 2px;" +
             " -fx-opacity: 0.9;";
+
     Notice(){
         super("");
         this.setStyle(css);
@@ -31,6 +30,7 @@ public class Notice extends Label implements vt.smt.Client.NoticeSystem{
         fade.setDelay(Duration.valueOf("4s"));
         fade.setToValue(0);
     }
+
     @Override
     public void notice(String message){
         Platform.runLater(()->{

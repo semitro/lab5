@@ -10,23 +10,25 @@ import javafx.scene.layout.Pane;
 import javafx.scene.layout.VBox;
 import javafx.stage.Stage;
 import javafx.util.converter.DoubleStringConverter;
+import vt.smt.Data.Toy;
+
 import javax.imageio.ImageIO;
 import java.io.File;
-import vt.smt.Data.Toy;
 /**
  * Абстрактное окно взаимодействия с медведями (в выпадающем списке вызваются реализации)
  */
 public abstract class BearWindow {
     protected Stage stage;
-    protected Pane pane;
-    protected Button imageAvatar;
+    protected Pane pane = new Pane();
+    protected Button imageAvatar = new Button();
     protected Button addButton;
     protected ImageView imageView;
-    protected VBox rightBox;
-    protected HBox centerBox;
+    protected VBox rightBox = new VBox();
+    protected HBox centerBox = new HBox();
     protected CheckBox isCleanBox;
     protected TextField weightInput;
     protected TextField nameInput;
+    protected Label creationDate = new Label("fdfd"); // Дата создания медведика
     protected Image defaultImage;
     // Нужно знать, какой медведь нас вызвал
     protected Bear caller;
@@ -44,11 +46,8 @@ public abstract class BearWindow {
             }
         });
         stage = new Stage();
-        pane = new Pane();
-        rightBox = new VBox();
-        centerBox = new HBox();
 
-        imageAvatar = new Button();
+
         defaultImage = new Image(getClass().getResourceAsStream("img/defaultBear.png"));
         imageView = new ImageView(defaultImage);
 
@@ -70,9 +69,11 @@ public abstract class BearWindow {
 
         pane.getChildren().add(imageAvatar);
         Label topLabel = new Label("Я не знал, что здесь написать..");
-        rightBox.getChildren().add(topLabel);
-        Language.addListener(new LabelAdapter(topLabel,"BearsWindow.IDidntKnowWhatToWrite"));
+        topLabel.setText(caller.getInfo().getCreationTime().toString());
 
+        rightBox.getChildren().add(topLabel);
+        //Language.addListener(new LabelAdapter(topLabel,"BearsWindow.IDidntKnowWhatToWrite"));
+        Language.addListener(new DataZoneAdapter(topLabel,caller));
         nameInput = new TextField();
         rightBox.getChildren().add(nameInput);
 
