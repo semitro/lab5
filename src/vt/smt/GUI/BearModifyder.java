@@ -15,11 +15,15 @@ public class BearModifyder extends  BearWindow{
     protected void initActions(){
         addButton.setOnAction(e->{
             double weight = 0.5;
+
             try{weight = Double.parseDouble(weightInput.getText());}catch (Exception bad){}
+            if(nameInput.getText().trim().isEmpty()){
+                nameInput.setText("Иван");
+            }
             if(CAS()) {
                 try {
                     Sender.getInstance().sendCommand(new ChangeBear(
-                            new Toy(nameInput.getText(), weight, isCleanBox.isSelected()),
+                            new Toy(nameInput.getText().trim(), weight, isCleanBox.isSelected()),
                             Integer.parseInt(caller.getId())
                     ));
                 } catch (IOException exception) {

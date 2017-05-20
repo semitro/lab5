@@ -1,6 +1,8 @@
 package vt.smt.GUI;
 
 import com.github.sarxos.webcam.Webcam;
+import javafx.beans.value.ChangeListener;
+import javafx.beans.value.ObservableValue;
 import javafx.scene.Scene;
 import javafx.scene.control.*;
 import javafx.scene.image.Image;
@@ -9,6 +11,7 @@ import javafx.scene.layout.HBox;
 import javafx.scene.layout.Pane;
 import javafx.scene.layout.VBox;
 import javafx.stage.Stage;
+import javafx.util.StringConverter;
 import javafx.util.converter.DoubleStringConverter;
 import vt.smt.Data.Toy;
 
@@ -28,7 +31,6 @@ public abstract class BearWindow {
     protected CheckBox isCleanBox;
     protected TextField weightInput;
     protected TextField nameInput;
-    protected Label creationDate = new Label("fdfd"); // Дата создания медведика
     protected Image defaultImage;
     // Нужно знать, какой медведь нас вызвал
     protected Bear caller;
@@ -75,10 +77,35 @@ public abstract class BearWindow {
         //Language.addListener(new LabelAdapter(topLabel,"BearsWindow.IDidntKnowWhatToWrite"));
         Language.addListener(new DataZoneAdapter(topLabel,caller));
         nameInput = new TextField();
+        // Ограничение на максимально
+        nameInput.textProperty().addListener(new ChangeListener<String>() {
+            @Override
+            public void changed
+                    (ObservableValue<? extends String> observable, String oldValue, String newValue) {
+                final int maxLenght = 32;
+                if(newValue.length() > maxLenght){
+                    nameInput.setText(newValue.substring(0,maxLenght));
+                }
+            }
+        });
         rightBox.getChildren().add(nameInput);
 
         weightInput = new TextField();
-        weightInput.setTextFormatter(new TextFormatter<Double>(new DoubleStringConverter()));
+
+        // Ограничение на отрицательные числа
+        DoubleStringConverter converter= new DoubleStringConverter();
+        weightInput.setTextFormatter(new TextFormatter<Double>(new StringConverter<Double>() {
+            @Override
+            public String toString(Double object) {
+             return converter.toString(object);
+            }
+
+            @Override
+            public Double fromString(String string) {
+                return converter.fromString(string);
+            }
+        }));
+
         rightBox.getChildren().add(weightInput);
         isCleanBox = new CheckBox("Чистый");
         Language.addListener(new CheckBoxAdapter(isCleanBox,"BearsWindow.isClean"));
