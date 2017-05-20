@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<diagram program="umlet" version="14.2">
+  <zoom_level>7</zoom_level>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>49</x>
+      <y>182</y>
+      <w>343</w>
+      <h>119</h>
+    </coordinates>
+    <panel_attributes>ORM
+--
+_+ getDDL(obj: Object): String_
+_+ getInsertQuery(obj: Object): String_
+_+ getUpdateObjectQuery(id: int, obj: Object): String_
+_- getID(object Object): String_
+_- toPostgresTypee(javaType: String): String_
+_- toSQLString(data: Object): String_
+_- getAllPrimitives(object: Class): Field[]_
+_- getAllValues(ob: Object): Map&lt;String, String&gt;_</panel_attributes>
+    <additional_attributes/>
+  </element>
+</diagram>
